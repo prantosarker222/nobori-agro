@@ -1,493 +1,181 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 Nobori Agro | খাঁটি অর্গানিক সুপারফুড ও সৌর-শুকনো ভেষজ বাণিজ্য</title>
-  <meta name="description" content="Nobori Agro — Absolute botanical purity powered by solar precision tunnel dehydration. 100% organic moringa, hibiscus, spices, and superfoods directly from contracted agro-clusters.">
-  <meta name="theme-color" content="#1E3F20">
-  
-  <!-- Favicon & PWA -->
+  <title>Nobori Agro — Pure Organic Superfoods from Bangladesh</title>
+  <meta name="description" content="Nobori Agro delivers 100% organic, solar-dried botanicals and superfoods directly from contracted farms in Bangladesh. Moringa, hibiscus, turmeric and more.">
+  <meta name="theme-color" content="#2D5016">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
-  
-  <!-- FontAwesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="ann-inner">
+      <span class="ann-dot"></span>
+      <span id="ann-text">🌿 Current Batch #NB-2026-08 — Only <strong>14 slots</strong> remaining. Solar-dried, nitrogen-sealed. <a href="#order">Order now →</a></span>
+    </div>
+    <button class="ann-close" id="annClose" aria-label="Dismiss">×</button>
+  </div>
 
-  <!-- ==========================================================================
-       TOP TICKER BAR: LIVE HARVEST & BATCH NOTICES
-       ========================================================================== -->
-  <div class="top-ticker">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-      <div class="ticker-left">
-        <span class="ticker-badge">
-          <span class="ticker-pulse"></span>
-          <span data-i18n="batchNotice">CURRENT BATCH #NB-2026-08 • 86% RESERVED</span>
-        </span>
-        <span class="ticker-text" data-i18n="topTicker">
-          🌿 সরাসরি খামার থেকে: সিলেট ও বান্দরবানের সৌর টানেল ড্রায়ারে প্রক্রিয়াজাতকরণ চলছে | ১০০% বিশুদ্ধতা নিশ্চিত
-        </span>
-      </div>
-
-      <div class="ticker-right">
-        <div class="ticker-item">
-          <i class="fas fa-certificate" style="color: var(--terracotta-gold);"></i>
-          <span>ল্যাব টেস্ট রিপোর্ট: ০.০০% প্রিজারভেটিভ</span>
+  <!-- NAVIGATION -->
+  <header class="nav-header" id="navHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <span class="brand-leaf"><i class="fas fa-leaf"></i></span>
+        <div class="brand-name-block">
+          <span class="brand-title">NOBORI AGRO</span>
+          <span class="brand-tagline">Absolute Purity · Solar Precision</span>
         </div>
-        <button class="lang-switch-btn" id="langToggleBtn">
-          🌐 English
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#process" class="nav-link">Our Process</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#order" class="nav-link">Order</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" title="বাংলায় দেখুন">বাংলা</button>
+        <button class="cart-btn" id="cartBtn" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-  </div>
-
-  <!-- ==========================================================================
-       SMART STICKY HEADER & GLASS NAVIGATION
-       ========================================================================== -->
-  <header class="header-glass">
-    <div class="container nav-wrap">
-      <!-- Brand Logo -->
-      <a href="#" class="brand-identity">
-        <div class="brand-symbol">
-          <i class="fas fa-leaf"></i>
-        </div>
-        <div class="brand-text-block">
-          <div class="brand-title">
-            NOBORI <span>AGRO</span>
-          </div>
-          <span class="brand-motto">ABSOLUTE PURITY • SOLAR PRECISION</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#catalog" class="nav-link active">ক্যাটালগ (১০০ পণ্য)</a></li>
-          <li><a href="#batch-tracker" class="nav-link">লাইভ ব্যাচ ট্র্যাকার</a></li>
-          <li><a href="#solar-tech" class="nav-link">সৌর প্রযুক্তি</a></li>
-          <li><a href="#purity-promise" class="nav-link">বিশুদ্ধতার মানদণ্ড</a></li>
-          <li><a href="#sustainability" class="nav-link">কৃষক অংশীদারিত্ব</a></li>
-        </ul>
-      </nav>
-
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <!-- Predictive Search Button -->
-        <button class="nav-icon-btn" id="searchToggleBtn" title="পণ্য ও ব্যাচ অনুসন্ধান">
-          <i class="fas fa-search"></i>
-        </button>
-
-        <!-- Pre-Order Batch Cart Drawer -->
-        <button class="nav-icon-btn" id="cartDrawerOpenBtn" title="সংরক্ষিত ব্যাচ স্লট">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="badge-count cart-badge-count">0</span>
-        </button>
-
-        <!-- Main Pre-Order CTA -->
-        <a href="#catalog" class="preorder-pill-btn">
-          <i class="fas fa-lock"></i>
-          <span data-i18n="preOrderBtn">স্লট প্রি-অর্ডার</span>
-        </a>
-
-        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#products" class="mob-link">Products</a>
+      <a href="#process" class="mob-link">Our Process</a>
+      <a href="#story" class="mob-link">Our Story</a>
+      <a href="#order" class="mob-link">Order</a>
     </div>
   </header>
 
-  <!-- ==========================================================================
-       HERO SLIDER SECTION (SOLAR DRYER → MORINGA → HIBISCUS)
-       ========================================================================== -->
-  <section class="hero-slider-section">
-    <div class="container">
-      <div class="hero-slider-wrap">
-        <!-- Slide 1: Solar Precision Tunnel Dryer -->
-        <div class="hero-slide slide-solar active">
-          <div class="hero-content-grid">
-            <div>
-              <span class="hero-tag">
-                <i class="fas fa-sun"></i> সৌর নির্ভুলতা প্রযুক্তি (Solar Precision)
-              </span>
-              <h1 class="hero-heading">
-                রোদের শুদ্ধতায় <span>প্রকৃতির</span> আদিম প্রাণশক্তি।
-              </h1>
-              <p class="hero-description">
-                উচ্চ তাপমাত্রার কারখানা নয়—আমাদের নিয়ন্ত্রিত সৌর টানেল ড্রায়ারে ৩৮° সেলসিয়াসে শুকাতে থাকে কাঁচা বোটানিক্যালস। ধরে রাখে ৯৮.৪% সক্রিয় বায়ো-অ্যাক্টিভ পুষ্টি ও এনজাইম।
-              </p>
-              <div class="hero-btn-group">
-                <a href="#catalog" class="btn-primary-terracotta">
-                  <i class="fas fa-lock"></i>
-                  <span>তাত্ক্ষণিক ব্যাচ প্রি-অর্ডার করুন</span>
-                </a>
-                <a href="#solar-tech" class="btn-outline-glass">
-                  <i class="fas fa-microscope"></i>
-                  <span>সৌর প্রযুক্তি জানুন</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Hero Glass Feature Card -->
-            <div class="hero-glass-badge-card">
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-tint-slash"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">আর্দ্রতা নিয়ন্ত্রণ (<৪.০%)</h4>
-                  <p class="hero-spec-desc">ব্যাকটেরিয়া বা ফাঙ্গাস বৃদ্ধির কোনো সুযোগ নেই, সম্পূর্ণ প্রিজারভেটিভ-মুক্ত।</p>
-                </div>
-              </div>
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-dna"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">ক্লোরোফিল ও এনজাইম সুরক্ষা</h4>
-                  <p class="hero-spec-desc">ঐতিহ্যবাহী তাপে পুড়ে যাওয়া রোধ করে জীবিত পুষ্টি উপাদান অটুট রাখা হয়।</p>
-                </div>
-              </div>
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-qrcode"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">১০০% খামার থেকে প্যাকেট ট্র্যাকিং</h4>
-                  <p class="hero-spec-desc">প্রতিটি প্যাকেটে রয়েছে ব্যাচ কোড এবং চুক্তিবদ্ধ কৃষকের খামার অবস্থান।</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- HERO -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg">
+      <img src="hero.jpg" alt="Nobori Agro organic botanicals" class="hero-img" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text-block">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-pill"><i class="fas fa-sun"></i> Solar Precision Drying · Bangladesh</span>
         </div>
-
-        <!-- Slide 2: Moringa Superfood -->
-        <div class="hero-slide slide-moringa">
-          <div class="hero-content-grid">
-            <div>
-              <span class="hero-tag">
-                <i class="fas fa-seedling"></i> ট্রিপল-মাইক্রোনাইজড মরিঙ্গা
-              </span>
-              <h2 class="hero-heading">
-                অর্গানিক সজিনা পাতা <span>পরম</span> বিশুদ্ধতায়।
-              </h2>
-              <p class="hero-description">
-                কমলার চেয়ে ৭ গুণ বেশি ভিটামিন সি, দুধের চেয়ে ৪ গুণ বেশি ক্যালসিয়াম। সিলেটের ছায়াঘেরা বাগানের সতেজ পাতা দিয়ে প্রস্তুত আমাদের ফ্ল্যাগশিপ ব্যাচ।
-              </p>
-              <div class="hero-btn-group">
-                <a href="#catalog" class="btn-primary-terracotta">
-                  <i class="fas fa-check-circle"></i>
-                  <span data-i18n="secureBatch">পরবর্তী ব্যাচ বুক করুন</span>
-                </a>
-                <button class="btn-outline-glass" onclick="openProductModal(1)">
-                  <i class="fas fa-file-contract"></i>
-                  <span>ল্যাব সার্টিফিকেট দেখুন</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="hero-glass-badge-card">
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-medal"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">ল্যাব স্কোরে ৯৯.১% বিশুদ্ধতা</h4>
-                  <p class="hero-spec-desc">শূন্য রাসায়নিক, ভারী ধাতু মুক্ত এবং নাইট্রোজেন গ্যাস ফিলিংয়ে সংরক্ষিত।</p>
-                </div>
-              </div>
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-bolt"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">সেলুলার স্ট্যামিনা বুস্টার</h4>
-                  <p class="hero-spec-desc">৪৬+ অ্যান্টিঅক্সিডেন্ট ও ১৮টি প্রয়োজনীয় অ্যামিনো অ্যাসিড সমৃদ্ধ।</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <h1 class="hero-heading">Nature's purest<br><em>botanical power.</em></h1>
+        <p class="hero-subheading">100% organic superfoods, solar-dried at 38°C to preserve 98.4% of active nutrients. Sourced directly from contracted farms in Sylhet and Bandarban — traceable to every harvest.</p>
+        <p class="hero-subheading-bn" lang="bn">সিলেট ও বান্দরবানের চুক্তিবদ্ধ কৃষকদের কাছ থেকে সরাসরি ১০০% অর্গানিক সৌর-শুকনো সুপারফুড।</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary"><i class="fas fa-seedling"></i> Shop Products</a>
+          <a href="#process" class="btn-ghost"><i class="fas fa-play-circle"></i> See Our Process</a>
         </div>
-
-        <!-- Slide 3: Hibiscus & Lemon Wellness -->
-        <div class="hero-slide slide-hibiscus">
-          <div class="hero-content-grid">
-            <div>
-              <span class="hero-tag">
-                <i class="fas fa-spa"></i> সান-ক্রিস্টালাইজড রক্ত জবা
-              </span>
-              <h2 class="hero-heading">
-                হাতে তোলা <span>রক্ত জবা</span> ও লেবু ক্রিস্টাল।
-              </h2>
-              <p class="hero-description">
-                ইউভি-ফিল্টার কাঁচের নিচে সৌর-শুকনো রক্ত জবার পাপড়ি ও খাঁটি সাইট্রাস। হার্টের সুরক্ষায় ও উজ্জ্বল ত্বকের জন্য প্রিমিয়াম ভেষজ পানীয়।
-              </p>
-              <div class="hero-btn-group">
-                <a href="#catalog" class="btn-primary-terracotta">
-                  <i class="fas fa-shopping-basket"></i>
-                  <span>এখনই প্রি-অর্ডার করুন</span>
-                </a>
-                <button class="btn-outline-glass" onclick="openProductModal(45)">
-                  <i class="fas fa-microscope"></i>
-                  <span>অ্যান্থোসায়ানিন বিশ্লেষণ</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="hero-glass-badge-card">
-              <div class="hero-spec-item">
-                <div class="hero-spec-icon"><i class="fas fa-heartbeat"></i></div>
-                <div>
-                  <h4 class="hero-spec-title">কার্ডিও ও রক্তচাপ নিয়ন্ত্রণ</h4>
-                  <p class="hero-spec-desc">প্রাকৃতিক অ্যান্থোসায়ানিন সমৃদ্ধ খাঁটি লাল পাপড়ির অকৃত্রিম নির্যাস।</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slider Arrows -->
-        <div class="slider-nav-arrows">
-          <button class="slider-arrow-btn" id="heroPrevBtn" aria-label="Previous Slide">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="slider-arrow-btn" id="heroNextBtn" aria-label="Next Slide">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-
-        <!-- Slider Dots -->
-        <div class="slider-dots-wrap">
-          <div class="slider-dot active"></div>
-          <div class="slider-dot"></div>
-          <div class="slider-dot"></div>
+        <div class="hero-badges">
+          <div class="badge-item"><i class="fas fa-flask"></i><span>Lab Certified</span></div>
+          <div class="badge-item"><i class="fas fa-map-marked-alt"></i><span>Farm Traceable</span></div>
+          <div class="badge-item"><i class="fas fa-box"></i><span>Nitrogen Sealed</span></div>
+          <div class="badge-item"><i class="fas fa-leaf"></i><span>Zero Preservatives</span></div>
         </div>
       </div>
     </div>
+    <div class="scroll-cue"><i class="fas fa-chevron-down"></i></div>
   </section>
 
-  <!-- ==========================================================================
-       FLOATING TRUST CARDS (TRACEABILITY & PURITY)
-       ========================================================================== -->
-  <section class="trust-cards-section" id="purity-promise">
-    <div class="container">
-      <div class="trust-cards-grid">
-        <div class="trust-card">
-          <div class="trust-icon-box"><i class="fas fa-map-marked-alt"></i></div>
-          <div class="trust-info">
-            <h4>১০০% খামার ট্রেসেবিলিটি</h4>
-            <p>সিলেট ও বান্দরবানের চুক্তিবদ্ধ ক্লাস্টারের জিপিএস ও ফসল তোলার বিস্তারিত লগ।</p>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon-box"><i class="fas fa-flask"></i></div>
-          <div class="trust-info">
-            <h4>শূন্য রাসায়নিক প্রিজারভেটিভ</h4>
-            <p>ভারী ধাতু (০.০০ppm) ও কীটনাশকমুক্ত শতভাগ কাঁচা বোটানিক্যাল খাঁটি গুঁড়া।</p>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon-box"><i class="fas fa-sun"></i></div>
-          <div class="trust-info">
-            <h4>সৌর নির্ভুলতা ডিহাইড্রেশন</h4>
-            <p>নিয়ন্ত্রিত নিম্ন তাপে শুকানো—পুষ্টি ও প্রাকৃতিক রঙ ধরে রাখে ৯৮.৪% পর্যন্ত।</p>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon-box"><i class="fas fa-box-tissue"></i></div>
-          <div class="trust-info">
-            <h4>নাইট্রোজেন সিলড ফ্রেশনেস</h4>
-            <p>প্রি-অর্ডার নিশ্চিত হওয়ার পরই টাটকা চূর্ণ করে অক্সিজেন-মুক্ত সিলিং সম্পন্ন হয়।</p>
-          </div>
-        </div>
-      </div>
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item"><span class="stat-number">340+</span><span class="stat-label">Contracted Farmers</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat-item"><span class="stat-number">98.4%</span><span class="stat-label">Nutrient Retention</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat-item"><span class="stat-number">0ppm</span><span class="stat-label">Heavy Metals</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Solar Powered</span></div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       LIVE PRODUCTION BATCH QUEUE & TRANSPARENCY DASHBOARD
-       ========================================================================== -->
-  <section class="batch-queue-section" id="batch-tracker">
+  <!-- PRODUCTS -->
+  <section class="products-section" id="products">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">
-          <i class="fas fa-satellite-dish"></i> রিয়েল-টাইম প্রোডাকশন ট্র্যাকিং
-        </span>
-        <h2 class="section-title">লাইভ ব্যাচ রিজার্ভেশন কিউ</h2>
-        <p class="section-subtitle">
-          আমরা কোনো দীর্ঘদিনের পুরনো স্টক বিক্রি করি না। প্রতি সপ্তাহের ফসল সরাসরি সৌর ড্রায়ার হয়ে নাইট্রোজেন প্যাকড স্লটে সরাসরি আপনার কাছে পৌঁছায়।
-        </p>
+        <span class="section-eyebrow">Pure Organics · Direct from Farm</span>
+        <h2 class="section-title">Our Product Range</h2>
+        <p class="section-desc">Every product is solar-dried, lab-tested, and nitrogen-sealed fresh to order. No stock, no middlemen.</p>
       </div>
-
-      <div class="batch-tracker-card">
-        <div class="batch-header-bar">
-          <div class="batch-title-group">
-            <h3>
-              <i class="fas fa-layer-group" style="color: var(--terracotta-gold);"></i>
-              চলতি ফসল চক্র: ব্যাচ #NB-2026-08
-            </h3>
-            <p>ফসল সংগ্রহ এলাকা: সিলেট জৈন্তাপুর ও বান্দরবান রুমা এগ্রো-ক্লাস্টার</p>
-          </div>
-
-          <div class="batch-meta-pills">
-            <span class="batch-meta-pill">
-              মোট স্লট: <strong>১০০টি</strong>
-            </span>
-            <span class="batch-meta-pill">
-              সংরক্ষিত: <strong style="color: var(--terracotta-gold);">৮৬টি (৮৬%)</strong>
-            </span>
-            <span class="batch-meta-pill">
-              ডেলিভারি শুরু: <strong>২৪ আগস্ট ২০২৬</strong>
-            </span>
-          </div>
-        </div>
-
-        <!-- 4-Stage Visual Stepper -->
-        <div class="batch-stages-grid">
-          <div class="batch-stage-item completed">
-            <div class="stage-step-number"><i class="fas fa-check"></i></div>
-            <h4 class="stage-title">১. অর্গানিক ফসল উত্তোলন</h4>
-            <p class="stage-desc">ভোরের শিশিরভেজা কাঁচা পাতা ও শিকড় উত্তোলন সম্পন্ন।</p>
-            <span class="stage-status-badge status-completed">সম্পন্ন</span>
-          </div>
-
-          <div class="batch-stage-item in-progress">
-            <div class="stage-step-number"><i class="fas fa-sun fa-spin"></i></div>
-            <h4 class="stage-title">২. সৌর টানেল ডিহাইড্রেশন</h4>
-            <p class="stage-desc">৩৮° সেলসিয়াস নিয়ন্ত্রিত সৌর তাপে আর্দ্রতা নিষ্কাশন চলছে।</p>
-            <span class="stage-status-badge status-active">চলমান (৩৮°C)</span>
-          </div>
-
-          <div class="batch-stage-item">
-            <div class="stage-step-number">৩</div>
-            <h4 class="stage-title">৩. ক্রায়ো ন্যানো-মিলিং</h4>
-            <p class="stage-desc">ঠাণ্ডা তাপমাত্রায় সূক্ষ্ম মাইক্রোনাইজড ব্লেন্ডিং।</p>
-            <span class="stage-status-badge status-queued">কিউতে অপেক্ষমাণ</span>
-          </div>
-
-          <div class="batch-stage-item">
-            <div class="stage-step-number">৪</div>
-            <h4 class="stage-title">৪. নাইট্রোজেন সিলড কুরিয়ার</h4>
-            <p class="stage-desc">অক্সিজেন-মুক্ত ফুড গ্রেড জারে ডেলিভারির জন্য প্রেরণ।</p>
-            <span class="stage-status-badge status-queued">২৪ আগস্ট প্রস্তুত</span>
-          </div>
-        </div>
-
-        <!-- Allocation Progress & Action -->
-        <div class="batch-allocation-box">
-          <div class="alloc-progress-wrap">
-            <div class="alloc-labels">
-              <span>স্লট বুকিং অগ্রগতি</span>
-              <strong style="color: var(--forest-green);">৮৬/১০০ স্লট পূর্ণ</strong>
-            </div>
-            <div class="alloc-bar-track">
-              <div class="alloc-bar-fill" style="width: 86%;"></div>
-            </div>
-          </div>
-
-          <a href="#catalog" class="batch-cta-btn">
-            <i class="fas fa-lock"></i>
-            <span>অবশিষ্ট ১৪টি স্লটের একটি সংরক্ষণ করুন</span>
-          </a>
-        </div>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-cat="all">All Products</button>
+        <button class="filter-tab" data-cat="superfood">Superfoods</button>
+        <button class="filter-tab" data-cat="herbal">Herbal & Wellness</button>
+        <button class="filter-tab" data-cat="spice">Spices</button>
+        <button class="filter-tab" data-cat="dried-fruit">Dried Fruits</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="products-footer">
+        <a href="#order" class="btn-primary btn-lg"><i class="fas fa-lock"></i> Pre-Order Your Batch</a>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SEVEN CATALOG GROUPS & 100 PRODUCTS (HEADLESS COMMERCE ENGINE)
-       ========================================================================== -->
-  <section class="catalog-section" id="catalog">
+  <!-- PROCESS -->
+  <section class="process-section" id="process">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">
-          <i class="fas fa-seedling"></i> প্রিমিয়াম ক্যাটালগ (১০০টি ইনডেক্সড সুপারফুড)
-        </span>
-        <h2 class="section-title">খাঁটি সৌর-শুকনো ভেষজ ও অর্গানিক সংকলন</h2>
-        <p class="section-subtitle">
-          সাতটি স্বতন্ত্র ক্যাটাগরি—প্রতিটি পণ্যের সাথে রয়েছে সরাসরি ল্যাব সার্টিফিকেট ও সৌর আর্দ্রতার নিখুঁত পরিমাপ।
-        </p>
+      <div class="section-header section-header-light">
+        <span class="section-eyebrow-light">Farm to Table Transparency</span>
+        <h2 class="section-title-light">Solar Precision Process</h2>
+        <p class="section-desc-light">We don't just claim purity — we engineer it, step by step.</p>
       </div>
-
-      <!-- Controls & Filter Bar -->
-      <div class="catalog-controls-bar">
-        <!-- 7 Category Scroll Tabs -->
-        <div class="category-tabs-scroll" id="categoryTabsScroll">
-          <!-- Populated by app.js -->
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-icon"><i class="fas fa-seedling"></i></div>
+          <h3 class="step-title">Organic Harvest</h3>
+          <p class="step-desc">Early-morning harvest from GPS-tracked farms in Sylhet &amp; Bandarban under strict zero-chemical protocols.</p>
         </div>
-
-        <!-- Sort Select -->
-        <select class="catalog-sort-select" id="catalogSortSelect">
-          <option value="popular">জনপ্রিয়তার ক্রমানুসারে (Popular)</option>
-          <option value="bioactive">সর্বোচ্চ বায়ো-অ্যাক্টিভ স্কোর (Bio-Active)</option>
-          <option value="reserved">দ্রুততম স্লট পূরণ (Fastest Reserved)</option>
-          <option value="price-low">মূল্য: কম থেকে বেশি</option>
-          <option value="price-high">মূল্য: বেশি থেকে কম</option>
-        </select>
-      </div>
-
-      <!-- 12-Column Responsive Product Cards Grid -->
-      <div class="products-grid" id="productsGrid">
-        <!-- Populated reactively by app.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SOLAR DEHYDRATION VS INDUSTRIAL DRYING COMPARISON
-       ========================================================================== -->
-  <section class="comparison-section" id="solar-tech">
-    <div class="container">
-      <div class="comparison-grid">
-        <div class="comparison-text-block">
-          <span class="section-eyebrow"><i class="fas fa-bolt"></i> বৈজ্ঞানিক তুলনামূলক বিশ্লেষণ</span>
-          <h2>সাধারণ কারখানার তাপ বনাম নোবোরি সোলার প্রিসিশন</h2>
-          <p>
-            সাধারণ ইন্ডাস্ট্রিয়াল ড্রায়ারে ৬০°–৮০° সেলসিয়াসে পুষ্টি উপাদান নষ্ট হয়ে যায় এবং রঙ কালচে হয়। নোবোরি অ্যাগ্রোর প্যারাবলিক সোলার টানেল ড্রায়ারে বাতাস প্রাকৃতিকভাবে বিশুদ্ধ হয়ে নিখুঁত আর্দ্রতা নিষ্কাশন নিশ্চিত করে।
-          </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <div style="background: var(--forest-green-light); padding: 1rem; border-radius: var(--radius-md); flex: 1; min-width: 160px;">
-              <h4 style="color: var(--forest-green); font-size: 1.5rem; font-weight: 800;">৯৮.৪%</h4>
-              <p style="font-size: 0.8rem;">বায়ো-অ্যাক্টিভ পুষ্টি ধরে রাখার হার</p>
-            </div>
-            <div style="background: var(--terracotta-light); padding: 1rem; border-radius: var(--radius-md); flex: 1; min-width: 160px;">
-              <h4 style="color: var(--terracotta-gold); font-size: 1.5rem; font-weight: 800;"><৪.০%</h4>
-              <p style="font-size: 0.8rem;">সর্বোচ্চ আর্দ্রতা মাত্রা (Moisture)</p>
-            </div>
-          </div>
+        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-icon"><i class="fas fa-sun"></i></div>
+          <h3 class="step-title">Solar Tunnel Drying</h3>
+          <p class="step-desc">Parabolic solar tunnel dryers at precise 35–38°C preserve 98.4% of vitamins, enzymes, and phytonutrients.</p>
         </div>
-
-        <div class="comp-table-wrap">
-          <table class="comp-table">
+        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-icon"><i class="fas fa-flask"></i></div>
+          <h3 class="step-title">Lab Certification</h3>
+          <p class="step-desc">Every batch tested for heavy metals, pesticides, and moisture (&lt;4%). Certificate issued before sealing.</p>
+        </div>
+        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-icon"><i class="fas fa-box"></i></div>
+          <h3 class="step-title">Nitrogen Sealed</h3>
+          <p class="step-desc">Milled and immediately sealed in oxygen-free, food-grade packaging with unique batch QR code.</p>
+        </div>
+      </div>
+      <div class="comparison-block">
+        <h3 class="comparison-title">Solar Precision vs. Industrial Drying</h3>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
             <thead>
               <tr>
-                <th>মানদণ্ড / পরিমাপক</th>
-                <th>সাধারণ ইন্ডাস্ট্রিয়াল ড্রায়ার</th>
-                <th>🌿 নোবোরি সোলার প্রিসিশন</th>
+                <th>Metric</th>
+                <th class="col-bad">Industrial Dryers</th>
+                <th class="col-good">Nobori Solar Precision</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>শুকানোর তাপমাত্রা</strong></td>
-                <td class="loss-cell">৭০°C – ৯০°C (উচ্চ তাপ)</td>
-                <td class="winner-cell">৩৫°C – ৩৮°C (নিয়ন্ত্রিত কম তাপ)</td>
-              </tr>
-              <tr>
-                <td><strong>ভিটামিন সি ও এনজাইম</strong></td>
-                <td class="loss-cell">৬০–৭০% পুড়ে নষ্ট হয়</td>
-                <td class="winner-cell">৯৮.৪% অপরিবর্তিত থাকে</td>
-              </tr>
-              <tr>
-                <td><strong>রাসায়নিক প্রিজারভেটিভ</strong></td>
-                <td class="loss-cell">সালফার ডাই অক্সাইড ব্যবহার</td>
-                <td class="winner-cell">১০০% কেমিক্যাল মুক্ত</td>
-              </tr>
-              <tr>
-                <td><strong>প্যাকেজিং পরিবেশ</strong></td>
-                <td class="loss-cell">সাধারণ প্লাস্টিক প্যাকেট</td>
-                <td class="winner-cell">নাইট্রোজেন গ্যাস সিলড ফুড জার</td>
-              </tr>
-              <tr>
-                <td><strong>ফার্ম ট্রেসেবিলিটি</strong></td>
-                <td class="loss-cell">অজ্ঞাত উৎস ও দালাল ভিত্তিক</td>
-                <td class="winner-cell">প্রত্যক্ষ চুক্তিবদ্ধ কৃষক ও কিউআর লগ</td>
-              </tr>
+              <tr><td>Drying Temperature</td><td class="col-bad">70°C – 90°C</td><td class="col-good">35°C – 38°C</td></tr>
+              <tr><td>Vitamin C &amp; Enzyme Loss</td><td class="col-bad">60–70% destroyed</td><td class="col-good">Only 1.6% lost</td></tr>
+              <tr><td>Preservatives</td><td class="col-bad">Sulphur dioxide used</td><td class="col-good">100% chemical-free</td></tr>
+              <tr><td>Farm Traceability</td><td class="col-bad">Unknown middlemen</td><td class="col-good">GPS-logged, QR-tracked</td></tr>
+              <tr><td>Packaging</td><td class="col-bad">Standard plastic</td><td class="col-good">Nitrogen-sealed food jar</td></tr>
             </tbody>
           </table>
         </div>
@@ -495,255 +183,150 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SUSTAINABILITY & CONTRACT FARMING IMPACT
-       ========================================================================== -->
-  <section class="batch-queue-section" id="sustainability" style="margin-bottom: 0; background: var(--bg-surface);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow"><i class="fas fa-hands-helping"></i> পরিবেশ ও কৃষক ক্ষমতায়ন</span>
-        <h2 class="section-title">আমাদের টেকসই কৃষি প্রভাব</h2>
-        <p class="section-subtitle">
-          মধ্যস্বত্বভোগীদের পরিহার করে পার্বত্য অঞ্চল ও সিলেটের পাহাড়ি ক্ষুদ্র নৃগোষ্ঠী ও প্রান্তিক কৃষকদের সাথে সরাসরি ন্যায্য মূল্যে চুক্তিবদ্ধ অংশীদারিত্ব।
-        </p>
+  <!-- STORY -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-text">
+        <span class="section-eyebrow">Our Mission</span>
+        <h2 class="section-title">Grown with purpose.<br>Delivered with integrity.</h2>
+        <p>Nobori Agro was born from a simple conviction: Bangladesh's hills and valleys produce some of the world's most potent botanicals — yet post-harvest loss and middlemen rob both farmers and consumers of their true value.</p>
+        <p>We partner directly with <strong>340+ smallholder and indigenous farming families</strong> in Sylhet and Bandarban, paying fair prices and building a transparent supply chain from seed to seal.</p>
+        <p>Our solar tunnel dryers replace destructive industrial heat, returning to ancient wisdom — sun-drying — but with modern precision temperature control.</p>
+        <div class="story-stats">
+          <div class="story-stat"><span class="s-num">12,000+</span><span class="s-label">kg post-harvest loss prevented</span></div>
+          <div class="story-stat"><span class="s-num">340+</span><span class="s-label">farming families supported</span></div>
+        </div>
+        <a href="#order" class="btn-primary">Support Our Mission</a>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center;">
-        <div style="background: var(--bg-subtle); padding: 2.5rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
-          <i class="fas fa-users" style="font-size: 2.5rem; color: var(--forest-green); margin-bottom: 1rem;"></i>
-          <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--forest-green); margin-bottom: 0.35rem;">৩৪০+</h3>
-          <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark);">চুক্তিবদ্ধ প্রান্তিক ও আদিবাসী কৃষক পরিবার</p>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 2.5rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
-          <i class="fas fa-trash-restore-alt" style="font-size: 2.5rem; color: var(--terracotta-gold); margin-bottom: 1rem;"></i>
-          <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--terracotta-gold); margin-bottom: 0.35rem;">১২,০০০+ কেজি</h3>
-          <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark);">ফসল তোলার পরবর্তী অপচয় রোধ</p>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 2.5rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
-          <i class="fas fa-solar-panel" style="font-size: 2.5rem; color: #2E7D32; margin-bottom: 1rem;"></i>
-          <h3 style="font-size: 2.25rem; font-weight: 800; color: #2E7D32; margin-bottom: 0.35rem;">১০০%</h3>
-          <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark);">পরিচ্ছন্ন সৌরশক্তি চালিত ডিহাইড্রেশন ইউনিট</p>
+      <div class="story-visual">
+        <div class="story-img-wrap">
+          <img src="moringa.jpg" alt="Organic moringa powder from Nobori Agro" class="story-img">
+          <div class="story-img-badge"><i class="fas fa-shield-alt"></i><span>Lab Certified<br>Batch #NB-2026-08</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       MODALS & DRAWERS (INTERACTIVE)
-       ========================================================================== -->
-
-  <!-- 1. Predictive Live Search Modal -->
-  <div class="search-modal-overlay" id="searchModalOverlay">
-    <div class="search-modal-box">
-      <div class="search-input-header">
-        <i class="fas fa-search"></i>
-        <input type="text" id="liveSearchInput" class="live-search-input" placeholder="সজিনা পাতা, হিবিস্কাস, হলুদ, ড্রাগন ফ্রুট..." autocomplete="off">
-        <button class="search-close-btn" id="searchCloseBtn" aria-label="Close Search">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-
-      <div style="padding: 1rem 1.25rem 0.5rem;">
-        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase;">দ্রুত অনুসন্ধান ট্যাগ:</span>
-        <div class="search-tag-group" id="searchQuickTags" style="margin-top: 0.4rem;">
-          <!-- Injected by app.js -->
-        </div>
-      </div>
-
-      <div class="search-results-tray" id="searchResultsTray">
-        <p style="text-align: center; color: var(--text-light); padding: 2rem;">অনুসন্ধান করতে টাইপ করুন...</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. Product Inspector & Lab Certificate Modal -->
-  <div class="modal-overlay" id="productInspectorModal">
-    <div class="modal-dialog">
-      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close Modal">
-        <i class="fas fa-times"></i>
-      </button>
-      <div id="modalInspectorBody">
-        <!-- Injected reactively by app.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. Glass Pre-Order & Checkout Drawer -->
-  <div class="drawer-overlay" id="cartDrawerOverlay">
-    <div class="glass-drawer">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <h3>
-            <i class="fas fa-shopping-bag" style="color: var(--terracotta-gold);"></i>
-            <span data-i18n="drawerTitle">আপনার সংরক্ষিত ব্যাচ স্লট</span>
-          </h3>
-          <p data-i18n="drawerSubtitle">খামার থেকে সরাসরি নাইট্রোজেন সিলড প্যাকেজিং</p>
-        </div>
-        <button class="search-close-btn" id="drawerCloseBtn" aria-label="Close Drawer">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-
-      <div class="drawer-items-list" id="drawerItemsList">
-        <!-- Injected by app.js -->
-      </div>
-
-      <div class="drawer-footer">
-        <div class="drawer-summary-row">
-          <span data-i18n="subtotal">উপমোট</span>
-          <strong id="drawerSubtotalVal">৳০</strong>
-        </div>
-        <div class="drawer-summary-row">
-          <span data-i18n="deliveryFee">সৌর-প্যাক ডেলিভারি</span>
-          <strong id="drawerDeliveryVal">৳৮০</strong>
-        </div>
-        <div class="drawer-total-row">
-          <span data-i18n="totalPayable">সর্বমোট বরাদ্দ</span>
-          <strong id="drawerTotalVal">৳৮০</strong>
-        </div>
-
-        <button class="checkout-submit-btn" id="openCheckoutModalBtn">
-          <i class="fas fa-lock"></i>
-          <span data-i18n="checkoutBtn">ব্যাচ প্রি-অর্ডার নিশ্চিত করুন</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. One-Click Checkout Form Modal -->
-  <div class="modal-overlay" id="checkoutModalOverlay">
-    <div class="modal-dialog checkout-modal-dialog">
-      <button class="modal-close-btn" id="checkoutCloseBtn" aria-label="Close Modal">
-        <i class="fas fa-times"></i>
-      </button>
-
-      <div style="padding: 2rem;">
-        <div style="text-align: center; margin-bottom: 1.5rem;">
-          <div style="width: 50px; height: 50px; background: var(--forest-green-light); color: var(--forest-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin: 0 auto 0.5rem;">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3 style="color: var(--forest-green); font-size: 1.4rem;">ব্যাচ প্রি-অর্ডার স্লট কনফার্মেশন</h3>
-          <p style="font-size: 0.825rem; color: var(--text-muted);">সরাসরি খামার থেকে নাইট্রোজেন সিলড প্যাকেজিংয়ের জন্য তথ্য প্রদান করুন</p>
-        </div>
-
-        <form id="noboriPreOrderForm">
-          <div class="checkout-form-grid">
-            <div class="form-group-full">
-              <label class="form-label">আপনার পূর্ণ নাম *</label>
-              <input type="text" id="custName" class="form-input" placeholder="উদাঃ সাদিয়া রহমান" required>
-            </div>
-
-            <div>
-              <label class="form-label">মোবাইল নম্বর (SMS ট্র্যাকিং) *</label>
-              <input type="tel" id="custPhone" class="form-input" placeholder="017XXXXXXXX" required>
-            </div>
-
-            <div>
-              <label class="form-label">ডেলিভারি অঞ্চল *</label>
-              <select class="form-select" id="custCity">
-                <option value="dhaka">ঢাকা মেট্রো (৬০ টাকা)</option>
-                <option value="outside">সমগ্র বাংলাদেশ (১০০ টাকা)</option>
-              </select>
-            </div>
-
-            <div class="form-group-full">
-              <label class="form-label">বিস্তারিত ডেলিভারি ঠিকানা *</label>
-              <input type="text" id="custAddress" class="form-input" placeholder="বাড়ি, রোড, এলাকা, থানা ও জেলা" required>
-            </div>
-          </div>
-
-          <label class="form-label" style="margin-top: 0.5rem;">পেমেন্ট পদ্ধতি নির্বাচন করুন</label>
-          <div class="payment-methods-grid">
-            <div class="pay-radio-card active">
-              <i class="fas fa-mobile-alt"></i><br>বিকাশ ইনস্ট্যান্ট
-            </div>
-            <div class="pay-radio-card">
-              <i class="fas fa-wallet"></i><br>নগদ পেমেন্ট
-            </div>
-            <div class="pay-radio-card">
-              <i class="fas fa-truck"></i><br>ক্যাশ অন ডেলিভারি
-            </div>
-          </div>
-
-          <button type="submit" class="checkout-submit-btn">
-            <i class="fas fa-check-circle"></i>
-            <span>প্রি-অর্ডার স্লট লক করুন</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="footer-main">
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
     <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand">
-          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
-            <div style="width: 36px; height: 36px; background: var(--terracotta-gold); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 1.1rem;">
-              <i class="fas fa-leaf"></i>
-            </div>
-            <h3 style="margin: 0; font-size: 1.35rem;">NOBORI AGRO</h3>
-          </div>
-          <p>
-            "পরম বিশুদ্ধতা" আমাদের মূল দর্শন। সৌর নির্ভুলতা ডিহাইড্রেশনের মাধ্যমে আমরা প্রতিটি উদ্ভিজ্জ উপাদানের আদিম জীবনীশক্তিকে অক্ষত রেখে আধুনিক জীবনযাপনে পৌঁছে দিই।
-          </p>
-          <div style="display: flex; gap: 0.75rem; font-size: 1.1rem;">
-            <a href="#" style="color: #BAC7BC;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" style="color: #BAC7BC;"><i class="fab fa-instagram"></i></a>
-            <a href="#" style="color: #BAC7BC;"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" style="color: #BAC7BC;"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>ক্যাটালগ পণ্যসমূহ</h4>
-          <ul class="footer-links">
-            <li><a href="#catalog" onclick="setCategory('superfood')">সুপারফুড পাউডার (১৫)</a></li>
-            <li><a href="#catalog" onclick="setCategory('veg_spice')">সবজি ও মশলা পাউডার (১৫)</a></li>
-            <li><a href="#catalog" onclick="setCategory('fruits_snacks')">সৌর-শুকনো ফল (১৪)</a></li>
-            <li><a href="#catalog" onclick="setCategory('herbal_wellness')">ভেষজ সুস্থতা ও হার্বাল (১৫)</a></li>
-            <li><a href="#catalog" onclick="setCategory('local_innovations')">স্থানীয় উদ্ভাবন (১৪)</a></li>
-            <li><a href="#catalog" onclick="setCategory('natural_cosmetics')">প্রাকৃতিক রূপচর্চা (১৪)</a></li>
-            <li><a href="#catalog" onclick="setCategory('kitchen_blends')">কিচেন স্পাইস ব্লেন্ড (১৩)</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>স্বচ্ছতা ও বিজ্ঞান</h4>
-          <ul class="footer-links">
-            <li><a href="#solar-tech">সৌর টানেল প্রযুক্তি</a></li>
-            <li><a href="#batch-tracker">লাইভ ব্যাচ ট্র্যাকিং</a></li>
-            <li><a href="#purity-promise">ল্যাব রিপোর্ট ও সার্টিফিকেট</a></li>
-            <li><a href="#sustainability">চুক্তিবদ্ধ কৃষক অংশীদারিত্ব</a></li>
-            <li><a href="#">হোস্টলেস এপিআই ডকুমেন্টস</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>ব্যাচ রিলিজ নোটিফিকেশন</h4>
-          <div class="footer-newsletter-box">
-            <p>নতুন অর্গানিক ফসল তোলার সাথে সাথে সরাসরি নোটিফিকেশন পেতে আপনার ইমেইল দিন:</p>
-            <div class="footer-input-group">
-              <input type="email" class="footer-input" placeholder="আপনার ইমেইল ঠিকানা">
-              <button class="footer-btn">যুক্ত হন</button>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <span class="section-eyebrow">Customer Reviews</span>
+        <h2 class="section-title">What our customers say</h2>
       </div>
-
-      <div class="footer-bottom-bar">
-        <span>&copy; 2026 Nobori Agro Ltd. সর্বস্বত্ব সংরক্ষিত। Absolute Purity Architecture.</span>
-        <span>Headless Next.js + WooCommerce Store API Powered • Cloudflare Edge CDN</span>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The moringa powder is unlike anything I've tasted — bright green, fresh, zero bitterness. You can tell it's genuinely different from the supermarket version."</p>
+          <div class="reviewer"><div class="reviewer-avatar">SR</div><div><strong>Sadia Rahman</strong><span>Dhaka · Verified Buyer</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Hibiscus dried flowers arrived fresh, deep red, and incredibly fragrant. The nitrogen seal really makes a difference. Ordered three more batches!"</p>
+          <div class="reviewer"><div class="reviewer-avatar">KH</div><div><strong>Karim Hossain</strong><span>Chittagong · Verified Buyer</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"As a nutritionist, I tested the turmeric in my own lab. Curcumin content was outstanding — 4.8% vs 2.1% from typical market powder. Remarkable."</p>
+          <div class="reviewer"><div class="reviewer-avatar">TA</div><div><strong>Dr. Taslima Akter</strong><span>Sylhet · Nutritionist</span></div></div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="order-card">
+        <div class="order-left">
+          <span class="section-eyebrow-light">Current Batch · #NB-2026-08</span>
+          <h2 class="order-title">Reserve Your Batch</h2>
+          <p class="order-desc">We produce to order — no sitting stock. Fill the form, choose your products, and your batch is solar-dried, lab-certified, and sealed fresh.</p>
+          <div class="batch-progress-block">
+            <div class="batch-progress-labels"><span>Slots Reserved</span><strong>86 / 100</strong></div>
+            <div class="batch-progress-track"><div class="batch-progress-fill" style="width: 86%;"></div></div>
+            <p class="batch-urgency">⚡ Only 14 slots remaining — delivery starts August 24, 2026</p>
+          </div>
+          <div class="delivery-info-grid">
+            <div class="delivery-info-item"><i class="fas fa-truck"></i><div><strong>Dhaka Metro</strong><span>৳60 delivery</span></div></div>
+            <div class="delivery-info-item"><i class="fas fa-map-marked-alt"></i><div><strong>All Bangladesh</strong><span>৳100 delivery</span></div></div>
+          </div>
+          <div class="trust-list">
+            <div class="trust-list-item"><i class="fas fa-check"></i> No payment until dispatch</div>
+            <div class="trust-list-item"><i class="fas fa-check"></i> SMS confirmation within 24 hours</div>
+            <div class="trust-list-item"><i class="fas fa-check"></i> 100% refund if quality fails lab test</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <form class="order-form" id="orderForm">
+            <h3 class="form-title">Place Your Pre-Order</h3>
+            <div class="form-group"><label class="form-label" for="custName">Full Name *</label><input type="text" id="custName" class="form-input" placeholder="e.g. Sadia Rahman" required></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="custPhone">Phone *</label><input type="tel" id="custPhone" class="form-input" placeholder="017XXXXXXXX" required></div>
+              <div class="form-group"><label class="form-label" for="custCity">Zone *</label><select class="form-select" id="custCity"><option value="dhaka">Dhaka (৳60)</option><option value="outside">All BD (৳100)</option></select></div>
+            </div>
+            <div class="form-group"><label class="form-label" for="custAddress">Delivery Address *</label><input type="text" id="custAddress" class="form-input" placeholder="House, Road, Area, District" required></div>
+            <div class="form-group"><label class="form-label">Products *</label><div class="product-checkboxes" id="productCheckboxes"></div></div>
+            <div class="form-group"><label class="form-label">Payment Method</label>
+              <div class="pay-options">
+                <label class="pay-option"><input type="radio" name="payment" value="bkash" checked><span class="pay-label"><i class="fas fa-mobile-alt"></i> bKash</span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="nagad"><span class="pay-label"><i class="fas fa-wallet"></i> Nagad</span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="cod"><span class="pay-label"><i class="fas fa-truck"></i> Cash on Delivery</span></label>
+              </div>
+            </div>
+            <div class="form-group"><label class="form-label" for="custNotes">Notes (optional)</label><textarea id="custNotes" class="form-input form-textarea" placeholder="Any special instructions..."></textarea></div>
+            <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-lock"></i> Lock My Batch Slot</button>
+            <p class="form-note">Payment collected on dispatch. SMS confirmation within 24 hours.</p>
+          </form>
+          <div class="order-success" id="orderSuccess" style="display:none;">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Order Confirmed!</h3>
+            <p>Your batch slot is locked. We'll SMS you within 24 hours. Thank you for choosing purity! 🌿</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><span class="brand-leaf"><i class="fas fa-leaf"></i></span><span class="brand-title">NOBORI AGRO</span></div>
+        <p class="footer-about">Absolute purity from Bangladesh's finest organic farms. Solar-dried, lab-certified, nitrogen-sealed.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4 class="footer-heading">Products</h4><ul class="footer-links"><li><a href="#products">Superfoods</a></li><li><a href="#products">Herbal Wellness</a></li><li><a href="#products">Spices & Blends</a></li><li><a href="#products">Dried Fruits</a></li></ul></div>
+      <div class="footer-col"><h4 class="footer-heading">About</h4><ul class="footer-links"><li><a href="#process">Solar Process</a></li><li><a href="#story">Our Story</a></li><li><a href="#story">Farmer Partners</a></li><li><a href="#order">Pre-Order</a></li></ul></div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Batch Alerts</h4>
+        <p class="footer-newsletter-text">Get notified when a new batch is ready:</p>
+        <div class="footer-form"><input type="email" class="footer-input" placeholder="your@email.com"><button class="footer-btn">Subscribe</button></div>
+        <p class="footer-contact"><i class="fas fa-envelope"></i> hello@noboriagro.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>© 2026 Nobori Agro Ltd. All rights reserved.</span><span>Made with 🌿 in Bangladesh</span></div></div>
   </footer>
 
-  <!-- Main JavaScript Engine -->
+  <!-- CART DRAWER -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header"><h3><i class="fas fa-shopping-bag"></i> Your Pre-Order</h3><button class="drawer-close" id="drawerClose">×</button></div>
+    <div class="drawer-body" id="drawerBody"><p class="empty-cart">Your cart is empty. <a href="#products">Browse products →</a></p></div>
+    <div class="drawer-footer" id="drawerFooter" style="display:none;"><div class="drawer-total"><span>Subtotal</span><strong id="drawerTotal">৳0</strong></div><a href="#order" class="btn-primary btn-full" id="cartCheckoutBtn"><i class="fas fa-lock"></i> Proceed to Pre-Order</a></div>
+  </aside>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="product-modal" id="productModal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
