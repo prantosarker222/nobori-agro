@@ -50,17 +50,18 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <button class="lang-toggle-btn-header" id="langToggleBtn" title="Switch Language">
-          <i class="fas fa-globe"></i> <span>বাংলা</span>
+        <button class="header-action-btn lang-btn" id="langToggleBtn" title="Switch Language (বাংলা / English)" aria-label="Switch Language">
+          <i class="fas fa-globe"></i>
+          <span class="btn-text-label lang-label-text">বাংলা</span>
         </button>
 
-        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="View Shopping Cart">
-          <div class="cart-icon-wrap">
+        <button class="header-action-btn cart-btn" id="cartTriggerBtn" aria-label="View Shopping Basket" title="View Shopping Basket">
+          <div class="cart-icon-inner">
             <i class="fas fa-shopping-basket"></i>
             <span class="cart-badge-count" id="cartBadgeCount">0</span>
           </div>
           <div class="cart-price-peek">
-            <span class="peek-label">My Basket</span>
+            <span class="peek-label">Basket</span>
             <strong class="peek-total" id="peekTotal">৳0</strong>
           </div>
         </button>

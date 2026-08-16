@@ -2223,8 +2223,17 @@ function initLanguageToggle() {
   function toggleLang() {
     isBangla = !isBangla;
     const label = isBangla ? 'English' : 'বাংলা';
-    if (desktopBtn) desktopBtn.querySelector('span').textContent = label;
-    if (mobileBtn) mobileBtn.querySelector('span').textContent = label;
+    const activeLangText = isBangla ? 'বাংলা' : 'English';
+
+    if (desktopBtn) {
+      const span = desktopBtn.querySelector('span');
+      if (span) span.textContent = label;
+      desktopBtn.setAttribute('title', `Active: ${activeLangText} (Click to switch)`);
+    }
+    if (mobileBtn) {
+      const span = mobileBtn.querySelector('span');
+      if (span) span.textContent = label;
+    }
     renderProductCatalog();
   }
 
