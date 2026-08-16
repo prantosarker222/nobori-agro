@@ -157,52 +157,33 @@ input, select, textarea {
   padding-bottom: 0.75rem;
 }
 
-/* Brand Identity */
-.brand-block {
-  display: flex;
+/* Brand Identity Logo */
+.brand-logo-link {
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
-.brand-icon-box {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: #ffffff;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  box-shadow: var(--shadow-sm);
-  flex-shrink: 0;
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition-fast);
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
+.brand-logo-link:hover .brand-logo-img {
+  transform: scale(1.03);
 }
 
-.brand-name {
-  font-family: var(--font-heading);
-  font-size: 1.18rem;
-  font-weight: 900;
-  color: var(--primary);
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-}
-
-.brand-name span {
-  color: var(--accent);
-}
-
-.brand-sub {
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.footer-logo-img {
+  height: 54px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 /* Search Bar in Desktop Header */
@@ -2390,14 +2371,12 @@ input, select, textarea {
   }
 }
 
-@media (max-width: 380px) {
-  .products-grid-container {
-    grid-template-columns: 1fr;
-  }
-  .brand-sub {
-    display: none;
+@media (max-width: 480px) {
+  .brand-logo-img {
+    height: 38px;
   }
   .hero-main-title {
     font-size: 1.75rem;
   }
 }
+
