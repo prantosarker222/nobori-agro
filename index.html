@@ -36,15 +36,16 @@
       <!-- Desktop Search Bar -->
       <div class="header-search">
         <i class="fas fa-search search-icon"></i>
-        <input type="text" id="searchInput" placeholder="Search chicken, beef, mutton, snacks, fish, ghee..." autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Search chanachur, biscuits, chips, fish, vegetables, chicken..." autocomplete="off">
         <button class="search-clear" id="searchClearBtn" style="display: none;"><i class="fas fa-times"></i></button>
       </div>
 
       <!-- Navigation Links -->
       <nav class="desktop-nav">
-        <a href="#products" class="nav-item active">Fresh Meat</a>
-        <a href="#snacks-section" class="nav-item">Frozen Snacks</a>
-        <a href="#quality-promise" class="nav-item">Standards</a>
+        <a href="#products" class="nav-item active" onclick="filterCategory('all')">All Products</a>
+        <a href="#products" class="nav-item" onclick="filterCategory('snacks_dry')">Snacks &amp; Dry Food</a>
+        <a href="#products" class="nav-item" onclick="filterCategory('fish_veg')">Fish &amp; Vegetables</a>
+        <a href="#products" class="nav-item" onclick="filterCategory('frozen_meat')">Frozen Food</a>
         <a href="#order-now" class="nav-item">Order Now</a>
       </nav>
 
@@ -77,7 +78,7 @@
       <div class="container">
         <div class="mobile-search-inner">
           <i class="fas fa-search"></i>
-          <input type="search" id="mobileSearchInput" placeholder="Search chicken, beef, mutton, snacks, fish..." autocomplete="off">
+          <input type="search" id="mobileSearchInput" placeholder="Search snacks, biscuits, fish, vegetables, chicken..." autocomplete="off">
           <button class="mobile-search-clear" id="mobileSearchClearBtn" style="display: none;"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
@@ -85,12 +86,13 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-panel" id="mobileNavPanel">
-      <a href="#products" class="mob-nav-link"><i class="fas fa-drumstick-bite"></i> Fresh Poultry &amp; Cuts</a>
-      <a href="#snacks-section" class="mob-nav-link"><i class="fas fa-cookie-bite"></i> Frozen &amp; Ready-to-Cook</a>
-      <a href="#quality-promise" class="mob-nav-link"><i class="fas fa-certificate"></i> Halal &amp; Quality Standards</a>
+      <a href="#products" class="mob-nav-link" onclick="filterCategory('all')"><i class="fas fa-th-large"></i> All Products (110)</a>
+      <a href="#products" class="mob-nav-link" onclick="filterCategory('snacks_dry')"><i class="fas fa-cookie"></i> Snacks &amp; Dry Foods (30)</a>
+      <a href="#products" class="mob-nav-link" onclick="filterCategory('fish_veg')"><i class="fas fa-fish"></i> Fish &amp; Fresh Vegetables (33)</a>
+      <a href="#products" class="mob-nav-link" onclick="filterCategory('frozen_meat')"><i class="fas fa-snowflake"></i> Frozen Food, Poultry &amp; Mutton (47)</a>
       <a href="#order-now" class="mob-nav-link highlight"><i class="fas fa-bolt"></i> Instant Express Order</a>
       <div class="mob-nav-contact">
-        <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="mob-wa-btn">
+        <a href="https://wa.me/8801771167094?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20place%20an%20order" target="_blank" class="mob-wa-btn">
           <i class="fab fa-whatsapp"></i> Order on WhatsApp
         </a>
       </div>
@@ -162,51 +164,30 @@
       <!-- Section Header -->
       <div class="section-heading-wrap">
         <div class="heading-left">
-          <span class="eyebrow-accent"><i class="fas fa-award"></i> Fresh Inventory</span>
-          <h2 class="section-title">Farm Meat, Poultry &amp; Frozen Delights</h2>
-          <p class="section-subtitle">Over 128 signature cuts, whole birds, snacks, red meat, seafood &amp; dairy essentials.</p>
+          <span class="eyebrow-accent"><i class="fas fa-award"></i> Store Catalog</span>
+          <h2 class="section-title">Fresh, Frozen &amp; Ready-to-Eat Foods</h2>
+          <p class="section-subtitle">Chanachur &amp; dry snacks, fresh fish &amp; vegetables, and premium frozen food delivered across Dhaka.</p>
         </div>
 
         <div class="category-summary-pill">
-          <span id="productCounterText">Showing 128 Products</span>
+          <span id="productCounterText">Showing 110 Products</span>
         </div>
       </div>
 
-      <!-- Mobile Scrollable Category Filter Pills -->
+      <!-- Mobile Scrollable Category Filter Pills (3 Major Categories) -->
       <div class="category-pills-scroll-wrapper">
         <div class="category-pills-bar">
           <button class="cat-tab active" data-category="all">
-            <i class="fas fa-th-large"></i> All (128)
+            <i class="fas fa-th-large"></i> All Items (110)
           </button>
-          <button class="cat-tab" data-category="cuts">
-            <i class="fas fa-drumstick-bite"></i> Prime Cuts (15)
+          <button class="cat-tab" data-category="snacks_dry">
+            <i class="fas fa-cookie"></i> 1. Snacks &amp; Dry Foods (30)
           </button>
-          <button class="cat-tab" data-category="whole">
-            <i class="fas fa-feather"></i> Whole Birds (13)
+          <button class="cat-tab" data-category="fish_veg">
+            <i class="fas fa-fish"></i> 2. Fish &amp; Fresh Vegetables (33)
           </button>
-          <button class="cat-tab" data-category="snacks" id="snacksTab">
-            <i class="fas fa-cookie-bite"></i> Ready-to-Cook (25)
-          </button>
-          <button class="cat-tab" data-category="marinated">
-            <i class="fas fa-fire-burner"></i> Marinated BBQ (12)
-          </button>
-          <button class="cat-tab" data-category="redmeat">
-            <i class="fas fa-cow"></i> Beef &amp; Mutton (14)
-          </button>
-          <button class="cat-tab" data-category="seafood">
-            <i class="fas fa-fish"></i> Fish &amp; Seafood (15)
-          </button>
-          <button class="cat-tab" data-category="dairy">
-            <i class="fas fa-egg"></i> Eggs &amp; Dairy (11)
-          </button>
-          <button class="cat-tab" data-category="specialties">
-            <i class="fas fa-kitchen-set"></i> Offal &amp; Soup (8)
-          </button>
-          <button class="cat-tab" data-category="deli">
-            <i class="fas fa-pizza-slice"></i> Deli &amp; Cold Cuts (8)
-          </button>
-          <button class="cat-tab" data-category="spices">
-            <i class="fas fa-mortar-pestle"></i> Spices &amp; Oil (7)
+          <button class="cat-tab" data-category="frozen_meat" id="snacksTab">
+            <i class="fas fa-snowflake"></i> 3. Frozen Food, Poultry &amp; Mutton (47)
           </button>
         </div>
       </div>
@@ -318,7 +299,7 @@
               <i class="fas fa-motorcycle"></i>
               <div>
                 <strong>Delivery Rates</strong>
-                <span>Dhaka Metro: ৳60 &bull; Free on orders ৳1,500+</span>
+                <span>Dhaka Metro: ৳80 &bull; Free on orders ৳1,500+</span>
               </div>
             </div>
 
@@ -335,7 +316,7 @@
             <div class="help-icon"><i class="fab fa-whatsapp"></i></div>
             <div>
               <strong>Order via WhatsApp</strong>
-              <span>Hotline: +880 1700-000000</span>
+              <span>Hotline: +880 1771-167094</span>
             </div>
           </div>
         </div>
@@ -474,36 +455,36 @@
           <div class="footer-social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/8801700000000" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/8801771167094" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
         <div class="footer-links-col">
-          <h4>Fresh Cuts</h4>
+          <h4>Categories</h4>
           <ul>
-            <li><a href="#products" onclick="filterCategory('cuts')">Breast Boneless</a></li>
-            <li><a href="#products" onclick="filterCategory('cuts')">Thigh Boneless</a></li>
-            <li><a href="#products" onclick="filterCategory('cuts')">Drumsticks</a></li>
-            <li><a href="#products" onclick="filterCategory('cuts')">Wings</a></li>
-            <li><a href="#products" onclick="filterCategory('cuts')">Full Leg Boneless</a></li>
+            <li><a href="#products" onclick="filterCategory('snacks_dry')">Snacks, Chanachur &amp; Chips</a></li>
+            <li><a href="#products" onclick="filterCategory('snacks_dry')">Biscuits &amp; Dry Bakery</a></li>
+            <li><a href="#products" onclick="filterCategory('fish_veg')">Fresh River Fish &amp; Prawns</a></li>
+            <li><a href="#products" onclick="filterCategory('fish_veg')">Farm Fresh Vegetables</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Frozen Poultry &amp; Meat</a></li>
           </ul>
         </div>
 
         <div class="footer-links-col">
-          <h4>Whole &amp; Snacks</h4>
+          <h4>Popular Frozen</h4>
           <ul>
-            <li><a href="#products" onclick="filterCategory('whole')">Broiler Whole</a></li>
-            <li><a href="#products" onclick="filterCategory('whole')">Sonali Chicken</a></li>
-            <li><a href="#products" onclick="filterCategory('whole')">Deshi Duck</a></li>
-            <li><a href="#products" onclick="filterCategory('snacks')">Samosa &amp; Spring Roll</a></li>
-            <li><a href="#products" onclick="filterCategory('snacks')">Nuggets &amp; Sausage</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Chicken Breast &amp; Thigh</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Whole Broiler &amp; Sonali</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Deshi Duck &amp; Mutton</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Samosa, Nuggets &amp; Sausage</a></li>
+            <li><a href="#products" onclick="filterCategory('frozen_meat')">Frozen Green Peas &amp; Corn</a></li>
           </ul>
         </div>
 
         <div class="footer-contact-col">
           <h4>Customer Care</h4>
           <p><i class="fas fa-map-marker-alt"></i> Dhaka Hub, Bangladesh</p>
-          <p><i class="fas fa-phone"></i> +880 1700-000000</p>
+          <p><i class="fas fa-phone"></i> +880 1771-167094</p>
           <p><i class="fas fa-envelope"></i> orders@noboriagro.com</p>
           <p><i class="fas fa-clock"></i> 7:00 AM – 9:00 PM Daily</p>
         </div>
@@ -537,14 +518,14 @@
       <i class="fas fa-bolt"></i>
       <span>Order</span>
     </a>
-    <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="mob-bottom-item wa-item">
+    <a href="https://wa.me/8801771167094?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20place%20an%20order" target="_blank" class="mob-bottom-item wa-item">
       <i class="fab fa-whatsapp"></i>
       <span>WhatsApp</span>
     </a>
   </nav>
 
   <!-- ===================== FLOATING WHATSAPP BUTTON (DESKTOP) ===================== -->
-  <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="floating-wa-btn" title="Order via WhatsApp" aria-label="WhatsApp Order">
+  <a href="https://wa.me/8801771167094?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20place%20an%20order" target="_blank" class="floating-wa-btn" title="Order via WhatsApp" aria-label="WhatsApp Order">
     <i class="fab fa-whatsapp"></i>
     <span class="floating-wa-tooltip">Chat &amp; Order</span>
   </a>
@@ -586,11 +567,11 @@
       </div>
       <div class="cart-subtotal-row text-muted">
         <span>Delivery</span>
-        <span id="cartDeliveryVal">৳60</span>
+        <span id="cartDeliveryVal">৳80</span>
       </div>
       <div class="cart-total-row">
         <span>Total</span>
-        <strong id="cartTotalVal">৳60</strong>
+        <strong id="cartTotalVal">৳80</strong>
       </div>
 
       <a href="#order-now" class="btn-checkout-drawer" id="checkoutDrawerBtn">
