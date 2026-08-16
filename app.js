@@ -589,10 +589,10 @@ function openProductModal(productId) {
         <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.55;">${p.desc}</p>
         
         <div class="modal-specs-list">
-          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal Slaughter:</strong>&nbsp; Certified Muslim butcher team</div>
-          <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage:</strong>&nbsp; 0&deg;C &ndash; 4&deg;C Chilled Cold Chain</div>
-          <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Preparation:</strong>&nbsp; 100% Cleaned, ready to cook</div>
-          <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Insulated van within 2 hours</div>
+          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal:</strong>&nbsp; 100% Hand-Slaughtered</div>
+          <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage:</strong>&nbsp; 0&deg;C &ndash; 4&deg;C Cold Chain</div>
+          <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Prep:</strong>&nbsp; Cleaned &amp; Dressed</div>
+          <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Express within 2 hours</div>
         </div>
 
         <button class="btn-hero-primary" style="width: 100%; justify-content: center;" onclick="addToCart(${p.id}); closeProductModal();">
