@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NOBORI AGRO — Fresh Halal Poultry & Gourmet Cuts Design System
+   NOBORI AGRO — Fresh Poultry & Gourmet Cuts Design System
    ========================================================================== */
 
 /* ---------- CSS Custom Properties & Design Tokens ---------- */
@@ -869,7 +869,7 @@ input, select, textarea {
   color: #ffffff;
 }
 
-.card-halal-stamp {
+.card-fresh-stamp {
   position: absolute;
   top: 0.65rem;
   right: 0.65rem;

@@ -19,7 +19,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Top Snack",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Crispy, crunchy spicy traditional Chanachur with fried peanuts, lentils, and crispy sev noodles."
   },
   {
@@ -33,7 +32,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Extra Jhal",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Spicy mustard oil infused chanachur with roasted peanuts and hot chili flakes."
   },
   {
@@ -47,7 +45,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Smoky Flavor",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Smoky BBQ flavored modern chanachur snack with zesty seasoning."
   },
   {
@@ -61,7 +58,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Hot Crunch",
     "badgeType": "",
-    "halal": true,
     "desc": "Fiery hot spicy chanachur blend for tea-time and afternoon munching."
   },
   {
@@ -75,7 +71,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Traditional",
     "badgeType": "",
-    "halal": true,
     "desc": "Pure mustard oil aroma and crunchy lentil nuggets with fried cashews and peanuts."
   },
   {
@@ -89,7 +84,6 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Sweet & Sour",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Perfect harmony of tangy tamarind, sweet raisins, and spicy crunchy chickpea flour sev."
   },
   {
@@ -103,7 +97,6 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Kids Favorite",
     "badgeType": "",
-    "halal": true,
     "desc": "Crispy golden potato crinkle chips tossed with tangy tomato seasoning."
   },
   {
@@ -117,7 +110,6 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Classic",
     "badgeType": "",
-    "halal": true,
     "desc": "Light, melt-in-the-mouth salted potato cracker rings."
   },
   {
@@ -131,7 +123,6 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Creamy Onion",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Gourmet wave potato chips seasoned with creamy french sour cream and garden chives."
   },
   {
@@ -145,7 +136,6 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Classic Salt",
     "badgeType": "",
-    "halal": true,
     "desc": "Pure sliced thin farm potato crisps sprinkled with fine sea salt."
   },
   {
@@ -159,7 +149,6 @@ const PRODUCTS = [
     "img": "nacho_chips.jpg",
     "badge": "Spicy Twist",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Crunchy kurkure puff twists with fiery Indian chatpata masala."
   },
   {
@@ -173,7 +162,6 @@ const PRODUCTS = [
     "img": "nacho_chips.jpg",
     "badge": "Nacho Cheese",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Crunchy triangular corn tortilla chips loaded with melted nacho cheddar flavor."
   },
   {
@@ -187,7 +175,6 @@ const PRODUCTS = [
     "img": "toast_biscuits.jpg",
     "badge": "Tea Companion",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Crisp twice-baked toast biscuits flavored with cardamom and sesame seeds."
   },
   {
@@ -201,7 +188,6 @@ const PRODUCTS = [
     "img": "dry_cake.jpg",
     "badge": "Bakery Special",
     "badgeType": "",
-    "halal": true,
     "desc": "Sweet golden crunchy dry cake slices baked with vanilla butter flavor."
   },
   {
@@ -215,7 +201,6 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Crunchy Nuts",
     "badgeType": "",
-    "halal": true,
     "desc": "Rich bakery cookies packed with roasted chopped peanut chunks."
   },
   {
@@ -229,7 +214,6 @@ const PRODUCTS = [
     "img": "toast_biscuits.jpg",
     "badge": "Crispy Crackers",
     "badgeType": "",
-    "halal": true,
     "desc": "Light, airy salted square biscuits perfect for tea-time and cheese dips."
   },
   {
@@ -243,7 +227,6 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Pure Butter",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Assorted Danish butter cookies in a reusable royal blue gift tin."
   },
   {
@@ -257,7 +240,6 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Viral Hit",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Ultra-thin, paper-crisp potato crackers sprinkled with fiery spices."
   },
   {
@@ -271,7 +253,6 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Smile Cookie",
     "badgeType": "",
-    "halal": true,
     "desc": "Rich, melt-in-the-mouth butter cookies with a signature smile design."
   },
   {
@@ -285,7 +266,6 @@ const PRODUCTS = [
     "img": "chocolate_biscuits.jpg",
     "badge": "Chocolate Biscuit",
     "badgeType": "",
-    "halal": true,
     "desc": "Dark cocoa biscuits filled with sweet vanilla cream. Twist, lick, dunk."
   },
   {
@@ -299,7 +279,6 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Fresh Roast",
     "badgeType": "",
-    "halal": true,
     "desc": "Crispy fried golden peanuts tossed with fine salt for snacking."
   },
   {
@@ -313,7 +292,6 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Chatpata",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Crunchy roasted peanuts coated in tangy chaat masala and chili powder."
   },
   {
@@ -327,7 +305,6 @@ const PRODUCTS = [
     "img": "fried_peas.jpg",
     "badge": "Super Crunchy",
     "badgeType": "",
-    "halal": true,
     "desc": "Deep fried crispy whole green peas dusted with salt and hot spices."
   },
   {
@@ -341,7 +318,6 @@ const PRODUCTS = [
     "img": "dal_bhaja.jpg",
     "badge": "Crispy Dal",
     "badgeType": "",
-    "halal": true,
     "desc": "Fried crunchy yellow lentils seasoned with black salt and red pepper."
   },
   {
@@ -355,7 +331,6 @@ const PRODUCTS = [
     "img": "nimki.jpg",
     "badge": "Home Recipe",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Flaky triangular flour crisps flavored with black cumin seeds (kalo jeere)."
   },
   {
@@ -369,7 +344,6 @@ const PRODUCTS = [
     "img": "nimki.jpg",
     "badge": "Artisanal",
     "badgeType": "",
-    "halal": true,
     "desc": "Layered crisp puff pastry dipped in light sugar syrup and ghee."
   },
   {
@@ -383,7 +357,6 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Premium Nuts",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Gourmet slow-roasted whole cashews and California almonds with pink salt."
   },
   {
@@ -397,7 +370,6 @@ const PRODUCTS = [
     "img": "jhal_muri.jpg",
     "badge": "Street Snack",
     "badgeType": "",
-    "halal": true,
     "desc": "Puffed rice blended with chanachur, spices, and fried peanuts. Just add oil & onions."
   },
   {
@@ -411,7 +383,6 @@ const PRODUCTS = [
     "img": "puffed_rice.jpg",
     "badge": "100% Urea Free",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Naturally hand-roasted white puffed rice from country paddy. Chemical-free."
   },
   {
@@ -425,7 +396,6 @@ const PRODUCTS = [
     "img": "puffed_rice.jpg",
     "badge": "Crispy Chira",
     "badgeType": "",
-    "halal": true,
     "desc": "Deep fried crispy flattened rice tossed with peanuts, curry leaves, and green chili."
   },
   {
@@ -439,7 +409,6 @@ const PRODUCTS = [
     "img": "rui_fish.jpg",
     "badge": "Daily River Catch",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Fresh large river Rui scaled, gutted, and portioned into clean curry slices."
   },
   {
@@ -453,7 +422,6 @@ const PRODUCTS = [
     "img": "katla_fish.jpg",
     "badge": "Fatty Petti",
     "badgeType": "",
-    "halal": true,
     "desc": "Rich Katla belly portions sliced for traditional Bengali fish kalia."
   },
   {
@@ -467,7 +435,6 @@ const PRODUCTS = [
     "img": "pabda_fish.jpg",
     "badge": "Sweet River",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Silky, delicate Pabda fish dressed and ready for mustard oil shorshe jhol."
   },
   {
@@ -481,7 +448,6 @@ const PRODUCTS = [
     "img": "tengra_fish.jpg",
     "badge": "Haor Fresh",
     "badgeType": "",
-    "halal": true,
     "desc": "Small freshwater Tengra fish cleaned for potato and tomato curry."
   },
   {
@@ -495,7 +461,6 @@ const PRODUCTS = [
     "img": "shing_fish.jpg",
     "badge": "Nutritious",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Naturally wholesome live catfish dressed clean. Highly recommended health broth fish."
   },
   {
@@ -509,7 +474,6 @@ const PRODUCTS = [
     "img": "magur_fish.jpg",
     "badge": "Native Catch",
     "badgeType": "",
-    "halal": true,
     "desc": "Cleaned native Magur catfish portioned for nourishing light stew."
   },
   {
@@ -523,7 +487,6 @@ const PRODUCTS = [
     "img": "koi_fish.jpg",
     "badge": "Tel Koi Cut",
     "badgeType": "",
-    "halal": true,
     "desc": "Fat climbing perch Koi fish scaled and cleaned for traditional Tel Koi bhuna."
   },
   {
@@ -537,7 +500,6 @@ const PRODUCTS = [
     "img": "ilish_fish.jpg",
     "badge": "Padma King",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Authentic silver Padma river Ilish with maximum natural oil content and supreme aroma."
   },
   {
@@ -551,7 +513,6 @@ const PRODUCTS = [
     "img": "ilish_fish.jpg",
     "badge": "Ready to Cook",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Convenient pre-cut thick Ilish slices ready for Shorshe Ilish and Bhaja."
   },
   {
@@ -565,7 +526,6 @@ const PRODUCTS = [
     "img": "prawns.jpg",
     "badge": "Peeled & Deveined",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Black tiger sea prawns peeled, deveined with tail on for Chingri Malaikari."
   },
   {
@@ -579,7 +539,6 @@ const PRODUCTS = [
     "img": "jumbo_prawns.jpg",
     "badge": "Jumbo River",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Giant freshwater river prawns with rich head fat for royal roasts."
   },
   {
@@ -593,7 +552,6 @@ const PRODUCTS = [
     "img": "fish_fillet.jpg",
     "badge": "100% Boneless",
     "badgeType": "",
-    "halal": true,
     "desc": "Pure white boneless fish fillets. Ideal for fish fry, fish fingers, and baking."
   },
   {
@@ -607,7 +565,6 @@ const PRODUCTS = [
     "img": "potatoes.jpg",
     "badge": "Deshi Lal",
     "badgeType": "",
-    "halal": true,
     "desc": "Firm red soil farm potatoes for rich curry gravies and aloo bhorta."
   },
   {
@@ -621,7 +578,6 @@ const PRODUCTS = [
     "img": "potatoes.jpg",
     "badge": "Value Bag",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Large smooth skin baking and frying white potatoes."
   },
   {
@@ -635,7 +591,6 @@ const PRODUCTS = [
     "img": "onions.jpg",
     "badge": "Deshi Aromatic",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Pungent, thin-skinned local red onions with intense natural aroma."
   },
   {
@@ -649,7 +604,6 @@ const PRODUCTS = [
     "img": "tomatoes.jpg",
     "badge": "Farm Red",
     "badgeType": "",
-    "halal": true,
     "desc": "Juicy garden fresh red tomatoes for salads and rich curries."
   },
   {
@@ -663,7 +617,6 @@ const PRODUCTS = [
     "img": "green_chilies.jpg",
     "badge": "Fresh Spicy",
     "badgeType": "",
-    "halal": true,
     "desc": "Crisp, spicy green chilies picked fresh from rural farmland."
   },
   {
@@ -677,7 +630,6 @@ const PRODUCTS = [
     "img": "garlic.jpg",
     "badge": "Pungent",
     "badgeType": "",
-    "halal": true,
     "desc": "Aromatic local small garlic cloves rich in allicin."
   },
   {
@@ -691,7 +643,6 @@ const PRODUCTS = [
     "img": "ginger.jpg",
     "badge": "Juicy Root",
     "badgeType": "",
-    "halal": true,
     "desc": "Firm, juicy ginger roots for daily cooking and morning tea."
   },
   {
@@ -705,7 +656,6 @@ const PRODUCTS = [
     "img": "cauliflower.jpg",
     "badge": "Winter Crop",
     "badgeType": "",
-    "halal": true,
     "desc": "Clean, tight white curd cauliflower freshly harvested."
   },
   {
@@ -719,7 +669,6 @@ const PRODUCTS = [
     "img": "cabbage.jpg",
     "badge": "Crisp Leaves",
     "badgeType": "",
-    "halal": true,
     "desc": "Dense, crisp green cabbage for bhaji, salads, and rolls."
   },
   {
@@ -733,7 +682,6 @@ const PRODUCTS = [
     "img": "eggplant.jpg",
     "badge": "Tender",
     "badgeType": "",
-    "halal": true,
     "desc": "Glossy purple long eggplants ideal for Begun Bhaja and shutki jhol."
   },
   {
@@ -747,7 +695,6 @@ const PRODUCTS = [
     "img": "carrots.jpg",
     "badge": "Sweet Crunch",
     "badgeType": "",
-    "halal": true,
     "desc": "Sweet, vibrant orange farm carrots for salads, halwa, and stews."
   },
   {
@@ -761,7 +708,6 @@ const PRODUCTS = [
     "img": "cucumbers.jpg",
     "badge": "Hydrating",
     "badgeType": "",
-    "halal": true,
     "desc": "Crisp local green cucumbers packed with refreshing moisture."
   },
   {
@@ -775,7 +721,6 @@ const PRODUCTS = [
     "img": "bottle_gourd.jpg",
     "badge": "Kochi Lau",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Tender young bottle gourd for Chingri Lau and light fish stews."
   },
   {
@@ -789,7 +734,6 @@ const PRODUCTS = [
     "img": "raw_papaya.jpg",
     "badge": "Digestive",
     "badgeType": "",
-    "halal": true,
     "desc": "Nutritious raw green papaya for curries, tenderizing meat, and salads."
   },
   {
@@ -803,7 +747,6 @@ const PRODUCTS = [
     "img": "bottle_gourd.jpg",
     "badge": "Farm Fresh",
     "badgeType": "",
-    "halal": true,
     "desc": "Young pointed gourds for potol bhaja and potol dorma."
   },
   {
@@ -817,7 +760,6 @@ const PRODUCTS = [
     "img": "bitter_gourd.jpg",
     "badge": "Health Tonic",
     "badgeType": "",
-    "halal": true,
     "desc": "Small crisp bitter gourds for crunchy potato bhaji and health juicing."
   },
   {
@@ -831,7 +773,6 @@ const PRODUCTS = [
     "img": "okra.jpg",
     "badge": "Tender Pods",
     "badgeType": "",
-    "halal": true,
     "desc": "Young tender ladyfingers for crispy bhaji and mustard fish curry."
   },
   {
@@ -845,7 +786,6 @@ const PRODUCTS = [
     "img": "spinach.jpg",
     "badge": "Iron Loaded",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Tender green spinach leaves harvested fresh in the morning."
   },
   {
@@ -859,7 +799,6 @@ const PRODUCTS = [
     "img": "red_spinach.jpg",
     "badge": "Deshi Shak",
     "badgeType": "",
-    "halal": true,
     "desc": "Vibrant purple-red amaranth leaves for garlic-seasoned bhaji."
   },
   {
@@ -873,7 +812,6 @@ const PRODUCTS = [
     "img": "coriander.jpg",
     "badge": "Fresh Herb",
     "badgeType": "",
-    "halal": true,
     "desc": "Aromatic green coriander leaves for garnishing curries and chutneys."
   },
   {
@@ -887,7 +825,6 @@ const PRODUCTS = [
     "img": "lemons.jpg",
     "badge": "Vitamin C",
     "badgeType": "",
-    "halal": true,
     "desc": "Thin-skinned aromatic Kagoji limes loaded with fresh juice."
   },
   {
@@ -901,7 +838,6 @@ const PRODUCTS = [
     "img": "breast_boneless.jpg",
     "badge": "Best Seller",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "100% tender, skinless, boneless chicken breast fillet. High protein, frozen sealed."
   },
   {
@@ -915,7 +851,6 @@ const PRODUCTS = [
     "img": "thigh_boneless.jpg",
     "badge": "Juiciest Cut",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Succulent boneless chicken thigh meat. Naturally tender and juicy."
   },
   {
@@ -929,7 +864,6 @@ const PRODUCTS = [
     "img": "drumsticks.jpg",
     "badge": "Kids Favorite",
     "badgeType": "",
-    "halal": true,
     "desc": "Plump, skin-on fresh chicken drumsticks. Trimmed and ready for frying or baking."
   },
   {
@@ -943,7 +877,6 @@ const PRODUCTS = [
     "img": "wings.jpg",
     "badge": "Hot Wings",
     "badgeType": "",
-    "halal": true,
     "desc": "Freshly portioned two-joint chicken wings. Great for glazed wings and BBQ."
   },
   {
@@ -957,7 +890,6 @@ const PRODUCTS = [
     "img": "full_leg_boneless.jpg",
     "badge": "Chef Choice",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Thigh and drumstick combined, deboned and trimmed with precision."
   },
   {
@@ -971,7 +903,6 @@ const PRODUCTS = [
     "img": "full_leg.jpg",
     "badge": "Classic Cut",
     "badgeType": "",
-    "halal": true,
     "desc": "Whole chicken leg quarter (thigh + drumstick). Perfect for oven roasting and biryani."
   },
   {
@@ -985,8 +916,7 @@ const PRODUCTS = [
     "img": "whole_chicken_skin_on.jpg",
     "badge": "Daily Fresh",
     "badgeType": "badge-accent",
-    "halal": true,
-    "desc": "100% Halal slaughtered farm-fresh broiler chicken with natural skin."
+    "desc": "100% farm-fresh broiler chicken with natural skin."
   },
   {
     "id": 71,
@@ -999,7 +929,6 @@ const PRODUCTS = [
     "img": "whole_chicken_skinless.jpg",
     "badge": "Clean Cut",
     "badgeType": "",
-    "halal": true,
     "desc": "Hygienically skinned and dressed whole chicken. Perfectly trimmed."
   },
   {
@@ -1013,7 +942,6 @@ const PRODUCTS = [
     "img": "sonali_chicken.jpg",
     "badge": "Heritage Breed",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Firm indigenous crossbreed chicken. Deshi-like aromatic taste for roast."
   },
   {
@@ -1027,7 +955,6 @@ const PRODUCTS = [
     "img": "sonali_chicken.jpg",
     "badge": "Popular Size",
     "badgeType": "",
-    "halal": true,
     "desc": "Medium mature Sonali bird. Optimum meat-to-bone ratio for family dinner roasts."
   },
   {
@@ -1041,7 +968,6 @@ const PRODUCTS = [
     "img": "sonali_chicken.jpg",
     "badge": "Family Pack",
     "badgeType": "",
-    "halal": true,
     "desc": "Fully mature farm-reared Sonali bird for rich slow-cooked curry."
   },
   {
@@ -1055,7 +981,6 @@ const PRODUCTS = [
     "img": "deshi_duck.jpg",
     "badge": "Village Fresh",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Locally raised farm duck from Haor wetlands. Rich, savory dark meat for bhuna."
   },
   {
@@ -1069,7 +994,6 @@ const PRODUCTS = [
     "img": "deshi_duck.jpg",
     "badge": "Winter Special",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Large Haor duck with rich natural fat layer for authentic duck bhuna."
   },
   {
@@ -1083,7 +1007,6 @@ const PRODUCTS = [
     "img": "roast_chicken.jpg",
     "badge": "Traditional",
     "badgeType": "",
-    "halal": true,
     "desc": "Free-range local deshi chicken with deep natural meat aroma."
   },
   {
@@ -1097,7 +1020,6 @@ const PRODUCTS = [
     "img": "roast_chicken.jpg",
     "badge": "100% Organic",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Raised purely on organic greens and natural grains. Zero commercial feeds."
   },
   {
@@ -1111,7 +1033,6 @@ const PRODUCTS = [
     "img": "roast_chicken.jpg",
     "badge": "High Protein",
     "badgeType": "",
-    "halal": true,
     "desc": "Skinless, fully dressed tender quail birds. Nutrient-dense delicacy."
   },
   {
@@ -1125,7 +1046,6 @@ const PRODUCTS = [
     "img": "roast_chicken.jpg",
     "badge": "Value Pack",
     "badgeType": "",
-    "halal": true,
     "desc": "Family value pack of 8 cleaned quails. Ideal for spicy deep fry and roast."
   },
   {
@@ -1139,7 +1059,6 @@ const PRODUCTS = [
     "img": "roast_chicken.jpg",
     "badge": "Health Broth",
     "badgeType": "",
-    "halal": true,
     "desc": "Clean dressed pigeon pair. Traditional convalescent remedy for vitality."
   },
   {
@@ -1153,7 +1072,6 @@ const PRODUCTS = [
     "img": "liver_gizzard.jpg",
     "badge": "Cleaned",
     "badgeType": "",
-    "halal": true,
     "desc": "Washed and cleaned fresh chicken liver and gizzard. High iron."
   },
   {
@@ -1167,7 +1085,6 @@ const PRODUCTS = [
     "img": "chicken_feet.jpg",
     "badge": "Collagen Rich",
     "badgeType": "",
-    "halal": true,
     "desc": "Cleaned and peeled chicken feet for rich natural bone broth."
   },
   {
@@ -1181,7 +1098,6 @@ const PRODUCTS = [
     "img": "drumsticks.jpg",
     "badge": "Stock & Broth",
     "badgeType": "",
-    "halal": true,
     "desc": "Chicken back and neck bones for clear broth, ramen stock, and baby food."
   },
   {
@@ -1195,7 +1111,6 @@ const PRODUCTS = [
     "img": "chicken_bologna.jpg",
     "badge": "Family Pack",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Premium seasoned chicken cold-cut loaf. Slice thin for breakfast sandwiches."
   },
   {
@@ -1209,7 +1124,6 @@ const PRODUCTS = [
     "img": "chicken_samosa.jpg",
     "badge": "Crispy Snack",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Flaky pastry filled with spiced minced chicken breast, green chilies, and onions."
   },
   {
@@ -1223,7 +1137,6 @@ const PRODUCTS = [
     "img": "chicken_samosa.jpg",
     "badge": "Save ৳30",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Party pack of 20 crispy chicken samosas. Deep fry or air fry straight from frozen."
   },
   {
@@ -1237,7 +1150,6 @@ const PRODUCTS = [
     "img": "chicken_spring_roll.jpg",
     "badge": "Party Hit",
     "badgeType": "",
-    "halal": true,
     "desc": "Crispy rolls stuffed with shredded tender chicken and crunchy seasonal vegetables."
   },
   {
@@ -1251,7 +1163,6 @@ const PRODUCTS = [
     "img": "chicken_spring_roll.jpg",
     "badge": "Family Pack",
     "badgeType": "",
-    "halal": true,
     "desc": "Value bundle of 20 crunchy chicken spring rolls for evening snacks."
   },
   {
@@ -1265,8 +1176,7 @@ const PRODUCTS = [
     "img": "chicken_sausage.jpg",
     "badge": "Breakfast Hit",
     "badgeType": "",
-    "halal": true,
-    "desc": "Lightly smoked Halal chicken sausage links. Perfect for breakfast platters."
+    "desc": "Lightly smoked chicken sausage links. Perfect for breakfast platters."
   },
   {
     "id": 91,
@@ -1279,7 +1189,6 @@ const PRODUCTS = [
     "img": "chicken_sausage.jpg",
     "badge": "Cheese Burst",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Chicken sausage infused with melty mozzarella and cheddar cheese chunks."
   },
   {
@@ -1293,7 +1202,6 @@ const PRODUCTS = [
     "img": "chicken_nuggets.jpg",
     "badge": "Crispy Golden",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "100% pure chicken breast in golden seasoned breadcrumb coating. Ready in 4 minutes."
   },
   {
@@ -1307,7 +1215,6 @@ const PRODUCTS = [
     "img": "chicken_nuggets.jpg",
     "badge": "Best Value",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Mega box of 24 chicken nuggets. Perfect for kids tiffin and party snacks."
   },
   {
@@ -1321,7 +1228,6 @@ const PRODUCTS = [
     "img": "chicken_meatball.jpg",
     "badge": "Gourmet",
     "badgeType": "",
-    "halal": true,
     "desc": "Juicy seasoned chicken meatballs for pasta, soup, and sweet-sour glaze."
   },
   {
@@ -1335,7 +1241,6 @@ const PRODUCTS = [
     "img": "chicken_popcorn.jpg",
     "badge": "Crunchy",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Bite-sized chicken breast chunks in ultra-crispy southern spiced batter."
   },
   {
@@ -1349,7 +1254,6 @@ const PRODUCTS = [
     "img": "burger_patty.jpg",
     "badge": "Jumbo Size",
     "badgeType": "",
-    "halal": true,
     "desc": "Thick juicy seasoned minced chicken patties. Pan-fry in 3 minutes for burgers."
   },
   {
@@ -1363,7 +1267,6 @@ const PRODUCTS = [
     "img": "shami_kabab.jpg",
     "badge": "Traditional",
     "badgeType": "",
-    "halal": true,
     "desc": "Slow-cooked shredded chicken with chana daal and aromatic spices."
   },
   {
@@ -1377,7 +1280,6 @@ const PRODUCTS = [
     "img": "seekh_kabab.jpg",
     "badge": "Mughlai",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Minced chicken skewers blended with mint, coriander, and roasted spices."
   },
   {
@@ -1391,7 +1293,6 @@ const PRODUCTS = [
     "img": "momos.jpg",
     "badge": "Tibetan Style",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Juicy chicken momos folded in translucent dough. Steam for 6 mins."
   },
   {
@@ -1405,7 +1306,6 @@ const PRODUCTS = [
     "img": "frozen_peas.jpg",
     "badge": "IQF Sweet",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Individually quick frozen tender green sweet peas. Ready to cook in 2 minutes."
   },
   {
@@ -1419,7 +1319,6 @@ const PRODUCTS = [
     "img": "sweet_corn.jpg",
     "badge": "Golden Sweet",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Juicy golden sweet corn kernels for salads, soups, and butter corn."
   },
   {
@@ -1433,7 +1332,6 @@ const PRODUCTS = [
     "img": "mixed_veg.jpg",
     "badge": "Healthy Mix",
     "badgeType": "",
-    "halal": true,
     "desc": "Diced carrots, sweet corn, green peas, and green beans flash-frozen for fried rice."
   },
   {
@@ -1447,7 +1345,6 @@ const PRODUCTS = [
     "img": "french_fries.jpg",
     "badge": "Crispy Fries",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Crispy crinkle cut potato fries. Fry straight from freezer for 3 minutes."
   },
   {
@@ -1461,7 +1358,6 @@ const PRODUCTS = [
     "img": "hash_browns.jpg",
     "badge": "Breakfast Hit",
     "badgeType": "",
-    "halal": true,
     "desc": "Shredded potato patties seasoned for golden pan-frying."
   },
   {
@@ -1475,7 +1371,6 @@ const PRODUCTS = [
     "img": "mutton_curry_cut.jpg",
     "badge": "100% Khashi",
     "badgeType": "badge-accent",
-    "halal": true,
     "desc": "Authentic young male castrated goat (Khashi). Mild aroma, succulent meat for rezala."
   },
   {
@@ -1489,7 +1384,6 @@ const PRODUCTS = [
     "img": "mutton_boneless.jpg",
     "badge": "Solid Khashi",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Pure deboned mutton pieces. Perfect for Mutton Biryani, Korma, and Haleem."
   },
   {
@@ -1503,7 +1397,6 @@ const PRODUCTS = [
     "img": "mutton_leg_raan.jpg",
     "badge": "Raan Roast",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Whole goat leg quarter trimmed and scored for traditional slow roasted Raan Mussallam."
   },
   {
@@ -1517,7 +1410,6 @@ const PRODUCTS = [
     "img": "mutton_chops.jpg",
     "badge": "Mutton Chops",
     "badgeType": "",
-    "halal": true,
     "desc": "Rib chop cuts with tender meat and rib bone. Marinate and pan sear with spices."
   },
   {
@@ -1531,7 +1423,6 @@ const PRODUCTS = [
     "img": "mutton_keema.jpg",
     "badge": "Mutton Keema",
     "badgeType": "",
-    "halal": true,
     "desc": "Fine minced fresh goat meat. Unbeatable rich aroma for keema matar and kofta."
   },
   {
@@ -1545,7 +1436,6 @@ const PRODUCTS = [
     "img": "mutton_paya.jpg",
     "badge": "Khashi Paya",
     "badgeType": "badge-gold",
-    "halal": true,
     "desc": "Carefully dressed young goat trotters for winter morning paya and naan."
   }
 ];
@@ -1607,7 +1497,7 @@ function renderProductCatalog() {
         <div class="product-thumb-box" onclick="openProductModal(${item.id})">
           <img src="${item.img}" alt="${item.name}" loading="lazy">
           ${item.badge ? `<span class="card-badge-tag ${item.badgeType}">${item.badge}</span>` : ''}
-          <span class="card-halal-stamp"><i class="fas fa-check-circle"></i> Halal</span>
+          <span class="card-fresh-stamp"><i class="fas fa-check-circle"></i> Fresh</span>
         </div>
 
         <div class="product-body-info">
@@ -1856,7 +1746,7 @@ function openProductModal(productId) {
         <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.55;">${p.desc}</p>
         
         <div class="modal-specs-list">
-          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal:</strong>&nbsp; 100% Hand-Slaughtered</div>
+          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Fresh:</strong>&nbsp; 100% Hand-Slaughtered</div>
           <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage:</strong>&nbsp; 0&deg;C &ndash; 4&deg;C Cold Chain</div>
           <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Prep:</strong>&nbsp; Cleaned &amp; Dressed</div>
           <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Express within 2 hours</div>

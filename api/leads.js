@@ -39,6 +39,6 @@ module.exports = async (req, res) => {
         status: "active",
         service: "Nobori Agro Fresh Poultry & Cuts API",
         version: "3.0.0",
-        standard: "100% Hand-Slaughtered Halal & 0-4°C Cold Chain Packaging"
+        standard: "100% Premium Quality & 0-4°C Cold Chain Packaging"
     });
 };
