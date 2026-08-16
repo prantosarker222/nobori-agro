@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Nobori Agro | Farm-Fresh Halal Poultry, Prime Cuts & Frozen Delights</title>
   <meta name="description" content="Order 100% Halal farm-fresh chicken, tender boneless cuts, local duck, and ready-to-cook snacks. Delivered chilled in unbroken cold-chain packaging across Dhaka.">
-  <meta name="theme-color" content="#1a4d2e">
+  <meta name="theme-color" content="#164228">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍗</text></svg>">
@@ -27,10 +29,10 @@
     <div class="container top-ann-inner">
       <div class="ann-badge">
         <i class="fas fa-shield-halved"></i>
-        <span>100% Halal Slaughtered</span>
+        <span>100% Halal</span>
       </div>
       <div class="ann-text" id="annText">
-        🚚 <strong>Chilled Express Delivery:</strong> Farm-fresh cuts processed daily at 0–4°C &bull; Free delivery on orders over ৳1,500
+        🚚 <strong>Express Cold-Chain:</strong> Dressed daily at 0–4°C &bull; Free delivery over ৳1,500
       </div>
       <div class="ann-right">
         <button class="lang-toggle-btn" id="langToggleBtn" title="Switch Language">
@@ -70,15 +72,19 @@
         <a href="#recipes" class="nav-item">Cooking Tips</a>
       </nav>
 
-      <!-- Cart & User Actions -->
+      <!-- Header Actions -->
       <div class="header-actions">
+        <button class="lang-toggle-btn-mobile" id="mobileLangToggleBtn" title="Language">
+          <span>বাংলা</span>
+        </button>
+
         <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="View Shopping Cart">
           <div class="cart-icon-wrap">
             <i class="fas fa-shopping-basket"></i>
             <span class="cart-badge-count" id="cartBadgeCount">0</span>
           </div>
           <div class="cart-price-peek">
-            <span class="peek-label">My Cart</span>
+            <span class="peek-label">My Basket</span>
             <strong class="peek-total" id="peekTotal">৳0</strong>
           </div>
         </button>
@@ -89,24 +95,36 @@
       </div>
     </div>
 
+    <!-- Mobile Quick Search Strip (Sticky under header on mobile) -->
+    <div class="mobile-search-strip">
+      <div class="container">
+        <div class="mobile-search-inner">
+          <i class="fas fa-search"></i>
+          <input type="search" id="mobileSearchInput" placeholder="Search chicken cuts, duck, samosa..." autocomplete="off">
+          <button class="mobile-search-clear" id="mobileSearchClearBtn" style="display: none;"><i class="fas fa-times-circle"></i></button>
+        </div>
+      </div>
+    </div>
+
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-panel" id="mobileNavPanel">
-      <div class="mobile-search-wrap">
-        <i class="fas fa-search"></i>
-        <input type="text" id="mobileSearchInput" placeholder="Search 19+ fresh poultry items...">
-      </div>
       <a href="#products" class="mob-nav-link"><i class="fas fa-drumstick-bite"></i> Fresh Poultry &amp; Cuts</a>
       <a href="#snacks-section" class="mob-nav-link"><i class="fas fa-cookie-bite"></i> Frozen &amp; Ready-to-Cook</a>
       <a href="#quality-promise" class="mob-nav-link"><i class="fas fa-certificate"></i> Halal &amp; Quality Standards</a>
       <a href="#recipes" class="mob-nav-link"><i class="fas fa-utensils"></i> Chef Cooking Guides</a>
       <a href="#order-now" class="mob-nav-link highlight"><i class="fas fa-bolt"></i> Instant Express Order</a>
+      <div class="mob-nav-contact">
+        <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="mob-wa-btn">
+          <i class="fab fa-whatsapp"></i> Order on WhatsApp
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- ===================== HERO SECTION ===================== -->
-  <section class="hero-banner">
+  <section class="hero-banner" id="hero">
     <div class="hero-image-bg">
-      <img src="poultry_hero.jpg" alt="Farm Fresh Poultry and Chicken Cuts Nobori Agro" class="hero-main-img">
+      <img src="poultry_hero.jpg" alt="Farm Fresh Poultry and Chicken Cuts Nobori Agro" class="hero-main-img" loading="eager">
       <div class="hero-gradient-overlay"></div>
     </div>
 
@@ -154,11 +172,11 @@
           </div>
           <div class="trust-pill">
             <i class="fas fa-hand-holding-heart"></i>
-            <span>Zero Water Injection</span>
+            <span>Zero Water Soaking</span>
           </div>
           <div class="trust-pill">
             <i class="fas fa-truck-fast"></i>
-            <span>2-Hr Express Delivery</span>
+            <span>2-Hr Express Dispatch</span>
           </div>
         </div>
       </div>
@@ -172,7 +190,7 @@
         <div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div>
         <div class="feature-info">
           <h4>100% Cleaned &amp; Dressed</h4>
-          <p>No feathers, no slime, perfectly trimmed ready for cooking.</p>
+          <p>No feathers, zero slime, perfectly trimmed ready for cooking.</p>
         </div>
       </div>
 
@@ -180,7 +198,7 @@
         <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
         <div class="feature-info">
           <h4>Antibiotic-Residue Free</h4>
-          <p>Raised on clean vegetarian grain feeds with zero growth hormones.</p>
+          <p>Raised on clean vegetarian grain feeds with zero hormones.</p>
         </div>
       </div>
 
@@ -188,7 +206,7 @@
         <div class="feature-icon"><i class="fas fa-temperature-arrow-down"></i></div>
         <div class="feature-info">
           <h4>Chilled, Never Spoiled</h4>
-          <p>Insulated thermal packaging maintains natural juicy tenderness.</p>
+          <p>Insulated thermal packs retain natural juicy tenderness.</p>
         </div>
       </div>
 
@@ -196,7 +214,7 @@
         <div class="feature-icon"><i class="fas fa-scale-balanced"></i></div>
         <div class="feature-info">
           <h4>Accurate Net Weight</h4>
-          <p>What you pay is the exact weighed dressed meat — zero shrinkage.</p>
+          <p>You pay for exact dressed meat weight — zero shrinkage.</p>
         </div>
       </div>
     </div>
@@ -218,23 +236,25 @@
         </div>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="category-pills-bar">
-        <button class="cat-tab active" data-category="all">
-          <i class="fas fa-th-large"></i> All Products (19)
-        </button>
-        <button class="cat-tab" data-category="cuts">
-          <i class="fas fa-drumstick-bite"></i> Prime Cuts &amp; Boneless (6)
-        </button>
-        <button class="cat-tab" data-category="whole">
-          <i class="fas fa-feather"></i> Fresh Whole Birds (5)
-        </button>
-        <button class="cat-tab" data-category="snacks" id="snacksTab">
-          <i class="fas fa-cookie-bite"></i> Ready-to-Cook Snacks (6)
-        </button>
-        <button class="cat-tab" data-category="specialties">
-          <i class="fas fa-kitchen-set"></i> Offal &amp; Clean Specialties (2)
-        </button>
+      <!-- Mobile Scrollable Category Filter Pills -->
+      <div class="category-pills-scroll-wrapper">
+        <div class="category-pills-bar">
+          <button class="cat-tab active" data-category="all">
+            <i class="fas fa-th-large"></i> All (19)
+          </button>
+          <button class="cat-tab" data-category="cuts">
+            <i class="fas fa-drumstick-bite"></i> Prime Cuts (6)
+          </button>
+          <button class="cat-tab" data-category="whole">
+            <i class="fas fa-feather"></i> Whole Birds (5)
+          </button>
+          <button class="cat-tab" data-category="snacks" id="snacksTab">
+            <i class="fas fa-cookie-bite"></i> Ready-to-Cook (6)
+          </button>
+          <button class="cat-tab" data-category="specialties">
+            <i class="fas fa-kitchen-set"></i> Offal &amp; Clean (2)
+          </button>
+        </div>
       </div>
 
       <!-- Product Cards Grid (Populated dynamically by app.js) -->
@@ -278,7 +298,7 @@
           <div class="showcase-card">
             <i class="fas fa-play"></i>
             <strong>Chicken Samosa</strong>
-            <span>Crispy Triangular</span>
+            <span>Crispy 10 Pcs</span>
           </div>
         </div>
       </div>
@@ -392,8 +412,8 @@
           <div class="helpline-card">
             <div class="help-icon"><i class="fab fa-whatsapp"></i></div>
             <div>
-              <strong>Order via Phone / WhatsApp</strong>
-              <span>Direct Hotline: 01700-000000</span>
+              <strong>Order via WhatsApp Hotline</strong>
+              <span>Instant Chat: +880 1700-000000</span>
             </div>
           </div>
         </div>
@@ -405,13 +425,13 @@
 
             <div class="form-group">
               <label for="orderName">Full Name <span class="req">*</span></label>
-              <input type="text" id="orderName" class="form-control" placeholder="e.g. Tanvir Ahmed" required>
+              <input type="text" id="orderName" class="form-control" placeholder="e.g. Tanvir Ahmed" autocomplete="name" required>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
                 <label for="orderPhone">Phone Number <span class="req">*</span></label>
-                <input type="tel" id="orderPhone" class="form-control" placeholder="017XXXXXXXX" required>
+                <input type="tel" id="orderPhone" class="form-control" placeholder="017XXXXXXXX" inputmode="tel" autocomplete="tel" required>
               </div>
 
               <div class="form-group">
@@ -430,7 +450,7 @@
 
             <div class="form-group">
               <label for="orderAddress">Full Street Address <span class="req">*</span></label>
-              <input type="text" id="orderAddress" class="form-control" placeholder="House no, Road no, Apartment, Landmark" required>
+              <input type="text" id="orderAddress" class="form-control" placeholder="House no, Road no, Apartment, Landmark" autocomplete="street-address" required>
             </div>
 
             <div class="form-group">
@@ -503,7 +523,7 @@
           <div class="footer-social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/8801700000000" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -544,6 +564,39 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===================== STICKY APP BOTTOM NAVIGATION BAR (MOBILE ONLY) ===================== -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+    <a href="#hero" class="mob-bottom-item active" id="mobTabHome">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#products" class="mob-bottom-item" id="mobTabProducts">
+      <i class="fas fa-drumstick-bite"></i>
+      <span>Products</span>
+    </a>
+    <button class="mob-bottom-item mob-bottom-cart-btn" id="mobBottomCartBtn" aria-label="Cart">
+      <div class="mob-cart-icon-wrapper">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="mob-cart-badge" id="mobCartBadge">0</span>
+      </div>
+      <span class="mob-cart-label">Cart</span>
+    </button>
+    <a href="#order-now" class="mob-bottom-item" id="mobTabOrder">
+      <i class="fas fa-bolt"></i>
+      <span>Order</span>
+    </a>
+    <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="mob-bottom-item wa-item">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- ===================== FLOATING WHATSAPP BUTTON (DESKTOP & TABLET) ===================== -->
+  <a href="https://wa.me/8801700000000?text=Hello%20Nobori%20Agro%2C%20I%20want%20to%20order%20fresh%20poultry" target="_blank" class="floating-wa-btn" title="Order via WhatsApp" aria-label="WhatsApp Order">
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-wa-tooltip">Chat &amp; Order</span>
+  </a>
 
   <!-- ===================== SLIDE-IN CART DRAWER ===================== -->
   <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>

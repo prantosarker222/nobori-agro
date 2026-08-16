@@ -298,7 +298,7 @@ const $ = id => document.getElementById(id);
 const $$ = selector => document.querySelectorAll(selector);
 
 /* ==========================================================================
-   RENDER PRODUCT CATALOG
+   RENDER PRODUCT CATALOG (WITH ON-CARD QUANTITY STEPPERS)
    ========================================================================== */
 function renderProductCatalog() {
   const container = $('productsGridContainer');
@@ -322,10 +322,10 @@ function renderProductCatalog() {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-        <i class="fas fa-search" style="font-size: 2.5rem; color: var(--text-light); margin-bottom: 1rem;"></i>
+      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+        <i class="fas fa-search" style="font-size: 2.2rem; color: var(--text-light); margin-bottom: 0.85rem;"></i>
         <h3 style="font-family: var(--font-heading); color: var(--text-main); margin-bottom: 0.35rem;">No products found</h3>
-        <p>Try searching for "Breast", "Nuggets", "Duck", or select another category.</p>
+        <p style="font-size: 0.88rem;">Try searching for "Breast", "Nuggets", "Duck", or reset filters.</p>
       </div>
     `;
     return;
@@ -348,7 +348,7 @@ function renderProductCatalog() {
           <h3 class="product-item-title" onclick="openProductModal(${item.id})">${displayName}</h3>
           <p class="product-item-desc">${item.desc}</p>
           <div class="product-pack-spec">
-            <i class="fas fa-weight-hanging"></i> ${item.unit} &bull; Chilled
+            <i class="fas fa-weight-hanging"></i> ${item.unit}
           </div>
 
           <div class="product-card-bottom">
@@ -357,10 +357,20 @@ function renderProductCatalog() {
               <span class="price-unit">/ ${item.unit}</span>
             </div>
 
-            <button class="btn-card-add ${inCart ? 'added' : ''}" onclick="addToCart(${item.id})">
-              <i class="fas ${inCart ? 'fa-check' : 'fa-plus'}"></i>
-              <span>${inCart ? 'Added (' + inCart.qty + ')' : (isBangla ? 'অর্ডার করুন' : 'Add')}</span>
-            </button>
+            <div class="card-action-wrap">
+              ${inCart ? `
+                <div class="card-qty-stepper">
+                  <button class="card-stepper-btn" onclick="changeCartQty(${item.id}, -1)" aria-label="Decrease quantity">-</button>
+                  <span class="card-stepper-val">${inCart.qty}</span>
+                  <button class="card-stepper-btn" onclick="changeCartQty(${item.id}, 1)" aria-label="Increase quantity">+</button>
+                </div>
+              ` : `
+                <button class="btn-card-add" onclick="addToCart(${item.id})">
+                  <i class="fas fa-plus"></i>
+                  <span>${isBangla ? 'কিনুন' : 'Add'}</span>
+                </button>
+              `}
+            </div>
           </div>
         </div>
       </article>
@@ -378,6 +388,9 @@ function initFilterTabs() {
       tab.classList.add('active');
       currentCategory = tab.dataset.category;
       renderProductCatalog();
+      
+      // Auto-scroll category into view on mobile
+      tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
   });
 }
@@ -389,6 +402,7 @@ function filterCategory(catName) {
     targetTab.classList.add('active');
     currentCategory = catName;
     renderProductCatalog();
+    targetTab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
 }
 
@@ -404,21 +418,25 @@ function initSearchInputs() {
   const desktopSearch = $('searchInput');
   const mobileSearch = $('mobileSearchInput');
   const clearBtn = $('searchClearBtn');
+  const mobileClearBtn = $('mobileSearchClearBtn');
 
   function handleSearch(val) {
     searchQuery = val.trim();
     if (clearBtn) clearBtn.style.display = searchQuery ? 'block' : 'none';
+    if (mobileClearBtn) mobileClearBtn.style.display = searchQuery ? 'block' : 'none';
+    
+    // Sync both inputs
+    if (desktopSearch && desktopSearch.value !== val) desktopSearch.value = val;
+    if (mobileSearch && mobileSearch.value !== val) mobileSearch.value = val;
+
     renderProductCatalog();
   }
 
   desktopSearch?.addEventListener('input', e => handleSearch(e.target.value));
   mobileSearch?.addEventListener('input', e => handleSearch(e.target.value));
 
-  clearBtn?.addEventListener('click', () => {
-    if (desktopSearch) desktopSearch.value = '';
-    if (mobileSearch) mobileSearch.value = '';
-    handleSearch('');
-  });
+  clearBtn?.addEventListener('click', () => handleSearch(''));
+  mobileClearBtn?.addEventListener('click', () => handleSearch(''));
 }
 
 /* ==========================================================================
@@ -436,8 +454,12 @@ function addToCart(productId) {
   }
 
   updateCartDisplay();
-  openCartDrawer();
   renderProductCatalog();
+  
+  // Trigger gentle vibration if mobile supports it
+  if (navigator.vibrate) {
+    navigator.vibrate(25);
+  }
 }
 
 function changeCartQty(productId, delta) {
@@ -465,11 +487,14 @@ function updateCartDisplay() {
   const deliveryFee = subtotal >= 1500 || subtotal === 0 ? 0 : 60;
   const total = subtotal + deliveryFee;
 
-  // Update Header Badges
+  // Update Header Badges & Mobile Bottom Bar Badge
   const badgeCount = $('cartBadgeCount');
+  const mobCartBadge = $('mobCartBadge');
   const peekTotal = $('peekTotal');
   const drawerItemCount = $('drawerItemCount');
+
   if (badgeCount) badgeCount.textContent = count;
+  if (mobCartBadge) mobCartBadge.textContent = count;
   if (peekTotal) peekTotal.textContent = `৳${subtotal}`;
   if (drawerItemCount) drawerItemCount.textContent = `${count} items`;
 
@@ -478,7 +503,7 @@ function updateCartDisplay() {
   const shippingFill = $('shippingFill');
   if (shippingMsg && shippingFill) {
     if (subtotal >= 1500) {
-      shippingMsg.innerHTML = `🎉 You have unlocked <span class="badge-free">FREE DELIVERY!</span>`;
+      shippingMsg.innerHTML = `🎉 You unlocked <span class="badge-free">FREE DELIVERY!</span>`;
       shippingFill.style.width = '100%';
     } else {
       const remaining = 1500 - subtotal;
@@ -561,13 +586,13 @@ function openProductModal(productId) {
         <span class="product-cat-label">${p.catLabel}</span>
         <h2>${isBangla ? p.nameBn : p.name}</h2>
         <div class="modal-price-tag">৳${p.price} <span>/ ${p.unit}</span></div>
-        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">${p.desc}</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.55;">${p.desc}</p>
         
         <div class="modal-specs-list">
-          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal Integrity:</strong>&nbsp; Hand-slaughtered by trained Muslim butchers</div>
-          <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage State:</strong>&nbsp; Chilled (0&deg;C &ndash; 4&deg;C), Never Stale</div>
-          <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Dressing:</strong>&nbsp; 100% Cleaned, Feather-free, Ready to cook</div>
-          <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Insulated cold-van dispatch within 2 hours</div>
+          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal Slaughter:</strong>&nbsp; Certified Muslim butcher team</div>
+          <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage:</strong>&nbsp; 0&deg;C &ndash; 4&deg;C Chilled Cold Chain</div>
+          <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Preparation:</strong>&nbsp; 100% Cleaned, ready to cook</div>
+          <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Insulated van within 2 hours</div>
         </div>
 
         <button class="btn-hero-primary" style="width: 100%; justify-content: center;" onclick="addToCart(${p.id}); closeProductModal();">
@@ -673,14 +698,51 @@ function resetOrderForm() {
    LANGUAGE TOGGLE (EN <-> BN)
    ========================================================================== */
 function initLanguageToggle() {
-  const btn = $('langToggleBtn');
-  if (!btn) return;
+  const desktopBtn = $('langToggleBtn');
+  const mobileBtn = $('mobileLangToggleBtn');
 
-  btn.addEventListener('click', () => {
+  function toggleLang() {
     isBangla = !isBangla;
-    btn.querySelector('span').textContent = isBangla ? 'English' : 'বাংলা';
+    const label = isBangla ? 'English' : 'বাংলা';
+    if (desktopBtn) desktopBtn.querySelector('span').textContent = label;
+    if (mobileBtn) mobileBtn.querySelector('span').textContent = label;
     renderProductCatalog();
-  });
+  }
+
+  desktopBtn?.addEventListener('click', toggleLang);
+  mobileBtn?.addEventListener('click', toggleLang);
+}
+
+/* ==========================================================================
+   MOBILE BOTTOM BAR & SCROLL SPY
+   ========================================================================== */
+function initMobileBottomNav() {
+  const homeTab = $('mobTabHome');
+  const prodTab = $('mobTabProducts');
+  const orderTab = $('mobTabOrder');
+  const mobCartBtn = $('mobBottomCartBtn');
+
+  mobCartBtn?.addEventListener('click', openCartDrawer);
+
+  // Update active tab on scroll
+  const sections = [
+    { el: $('hero'), tab: homeTab },
+    { el: $('products'), tab: prodTab },
+    { el: $('order-now'), tab: orderTab }
+  ];
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 200;
+    sections.forEach(({ el, tab }) => {
+      if (!el || !tab) return;
+      const top = el.offsetTop;
+      const height = el.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        $$('.mob-bottom-item').forEach(i => i.classList.remove('active'));
+        tab.classList.add('active');
+      }
+    });
+  }, { passive: true });
 }
 
 /* ==========================================================================
@@ -732,6 +794,7 @@ function initializeApp() {
   populateOrderCheckboxes();
   initOrderForm();
   initLanguageToggle();
+  initMobileBottomNav();
   initMobileMenu();
   initEventListeners();
   updateCartDisplay();
