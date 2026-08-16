@@ -3,328 +3,611 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nobori Agro — Pure Organic Superfoods from Bangladesh</title>
-  <meta name="description" content="Nobori Agro delivers 100% organic, solar-dried botanicals and superfoods directly from contracted farms in Bangladesh. Moringa, hibiscus, turmeric and more.">
-  <meta name="theme-color" content="#2D5016">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <title>Nobori Agro | Farm-Fresh Halal Poultry, Prime Cuts & Frozen Delights</title>
+  <meta name="description" content="Order 100% Halal farm-fresh chicken, tender boneless cuts, local duck, and ready-to-cook snacks. Delivered chilled in unbroken cold-chain packaging across Dhaka.">
+  <meta name="theme-color" content="#1a4d2e">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍗</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans + Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announcement-bar" id="announcementBar">
-    <div class="ann-inner">
-      <span class="ann-dot"></span>
-      <span id="ann-text">🌿 Current Batch #NB-2026-08 — Only <strong>14 slots</strong> remaining. Solar-dried, nitrogen-sealed. <a href="#order">Order now →</a></span>
+
+  <!-- ===================== TOP HEADER TICKER ===================== -->
+  <div class="top-announcement">
+    <div class="container top-ann-inner">
+      <div class="ann-badge">
+        <i class="fas fa-shield-halved"></i>
+        <span>100% Halal Slaughtered</span>
+      </div>
+      <div class="ann-text" id="annText">
+        🚚 <strong>Chilled Express Delivery:</strong> Farm-fresh cuts processed daily at 0–4°C &bull; Free delivery on orders over ৳1,500
+      </div>
+      <div class="ann-right">
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Switch Language">
+          <i class="fas fa-globe"></i> <span>বাংলা</span>
+        </button>
+        <a href="tel:+8801700000000" class="ann-phone"><i class="fas fa-phone"></i> 01700-000000</a>
+      </div>
     </div>
-    <button class="ann-close" id="annClose" aria-label="Dismiss">×</button>
   </div>
 
-  <!-- NAVIGATION -->
-  <header class="nav-header" id="navHeader">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo" id="brandLogo">
-        <span class="brand-leaf"><i class="fas fa-leaf"></i></span>
-        <div class="brand-name-block">
-          <span class="brand-title">NOBORI AGRO</span>
-          <span class="brand-tagline">Absolute Purity · Solar Precision</span>
+  <!-- ===================== MAIN NAVBAR ===================== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-wrap">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-block">
+        <div class="brand-icon-box">
+          <i class="fas fa-drumstick-bite"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NOBORI <span>AGRO</span></span>
+          <span class="brand-sub">FRESH POULTRY &amp; GOURMET CUTS</span>
         </div>
       </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="#products" class="nav-link">Products</a>
-        <a href="#process" class="nav-link">Our Process</a>
-        <a href="#story" class="nav-link">Our Story</a>
-        <a href="#order" class="nav-link">Order</a>
+
+      <!-- Desktop Search Bar -->
+      <div class="header-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search chicken breast, drumstick, samosa, nuggets..." autocomplete="off">
+        <button class="search-clear" id="searchClearBtn" style="display: none;"><i class="fas fa-times"></i></button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="desktop-nav">
+        <a href="#products" class="nav-item active">Fresh Meat</a>
+        <a href="#snacks-section" class="nav-item">Frozen Snacks</a>
+        <a href="#quality-promise" class="nav-item">Our Standards</a>
+        <a href="#recipes" class="nav-item">Cooking Tips</a>
       </nav>
-      <div class="nav-actions">
-        <button class="lang-btn" id="langBtn" title="বাংলায় দেখুন">বাংলা</button>
-        <button class="cart-btn" id="cartBtn" aria-label="Cart">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="cart-count" id="cartCount">0</span>
+
+      <!-- Cart & User Actions -->
+      <div class="header-actions">
+        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="View Shopping Cart">
+          <div class="cart-icon-wrap">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-badge-count" id="cartBadgeCount">0</span>
+          </div>
+          <div class="cart-price-peek">
+            <span class="peek-label">My Cart</span>
+            <strong class="peek-total" id="peekTotal">৳0</strong>
+          </div>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#products" class="mob-link">Products</a>
-      <a href="#process" class="mob-link">Our Process</a>
-      <a href="#story" class="mob-link">Our Story</a>
-      <a href="#order" class="mob-link">Order</a>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+      <div class="mobile-search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="mobileSearchInput" placeholder="Search 19+ fresh poultry items...">
+      </div>
+      <a href="#products" class="mob-nav-link"><i class="fas fa-drumstick-bite"></i> Fresh Poultry &amp; Cuts</a>
+      <a href="#snacks-section" class="mob-nav-link"><i class="fas fa-cookie-bite"></i> Frozen &amp; Ready-to-Cook</a>
+      <a href="#quality-promise" class="mob-nav-link"><i class="fas fa-certificate"></i> Halal &amp; Quality Standards</a>
+      <a href="#recipes" class="mob-nav-link"><i class="fas fa-utensils"></i> Chef Cooking Guides</a>
+      <a href="#order-now" class="mob-nav-link highlight"><i class="fas fa-bolt"></i> Instant Express Order</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero-section" id="hero">
-    <div class="hero-bg">
-      <img src="hero.jpg" alt="Nobori Agro organic botanicals" class="hero-img" loading="eager">
-      <div class="hero-overlay"></div>
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero-banner">
+    <div class="hero-image-bg">
+      <img src="poultry_hero.jpg" alt="Farm Fresh Poultry and Chicken Cuts Nobori Agro" class="hero-main-img">
+      <div class="hero-gradient-overlay"></div>
     </div>
-    <div class="container hero-content">
-      <div class="hero-text-block">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-pill"><i class="fas fa-sun"></i> Solar Precision Drying · Bangladesh</span>
+
+    <div class="container hero-inner">
+      <div class="hero-content-card">
+        <div class="hero-tag-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="heroTag">100% Hand-Slaughtered Halal &bull; Antibiotic-Free</span>
         </div>
-        <h1 class="hero-heading">Nature's purest<br><em>botanical power.</em></h1>
-        <p class="hero-subheading">100% organic superfoods, solar-dried at 38°C to preserve 98.4% of active nutrients. Sourced directly from contracted farms in Sylhet and Bandarban — traceable to every harvest.</p>
-        <p class="hero-subheading-bn" lang="bn">সিলেট ও বান্দরবানের চুক্তিবদ্ধ কৃষকদের কাছ থেকে সরাসরি ১০০% অর্গানিক সৌর-শুকনো সুপারফুড।</p>
-        <div class="hero-actions">
-          <a href="#products" class="btn-primary"><i class="fas fa-seedling"></i> Shop Products</a>
-          <a href="#process" class="btn-ghost"><i class="fas fa-play-circle"></i> See Our Process</a>
+
+        <h1 class="hero-main-title">
+          Farm-Fresh Chicken &amp;<br>
+          <em>Gourmet Prime Cuts.</em>
+        </h1>
+
+        <p class="hero-lead-text" data-i18n="heroLead">
+          Directly from bio-secure farms to your kitchen. Hygienically dressed, precision-portioned, and delivered under a strict <strong>0–4°C unbroken cold chain</strong>.
+        </p>
+
+        <p class="hero-lead-bn" lang="bn">
+          সরাসরি খামার থেকে সংগৃহীত ১০০% হালাল ও অ্যান্টিবায়োটিকমুক্ত ফ্রেশ মুরগি, বোনলেস কাট ও ফ্রোজেন স্ন্যাকস।
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group">
+          <a href="#products" class="btn-hero-primary">
+            <i class="fas fa-drumstick-bite"></i>
+            <span>Shop Fresh Cuts</span>
+          </a>
+          <a href="#order-now" class="btn-hero-secondary">
+            <i class="fas fa-bolt"></i>
+            <span>Quick Order Form</span>
+          </a>
         </div>
-        <div class="hero-badges">
-          <div class="badge-item"><i class="fas fa-flask"></i><span>Lab Certified</span></div>
-          <div class="badge-item"><i class="fas fa-map-marked-alt"></i><span>Farm Traceable</span></div>
-          <div class="badge-item"><i class="fas fa-box"></i><span>Nitrogen Sealed</span></div>
-          <div class="badge-item"><i class="fas fa-leaf"></i><span>Zero Preservatives</span></div>
+
+        <!-- Trust Metric Badges -->
+        <div class="hero-trust-row">
+          <div class="trust-pill">
+            <i class="fas fa-check-circle"></i>
+            <span>Daily Fresh Stock</span>
+          </div>
+          <div class="trust-pill">
+            <i class="fas fa-snowflake"></i>
+            <span>0–4°C Chilled Pack</span>
+          </div>
+          <div class="trust-pill">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>Zero Water Injection</span>
+          </div>
+          <div class="trust-pill">
+            <i class="fas fa-truck-fast"></i>
+            <span>2-Hr Express Delivery</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="scroll-cue"><i class="fas fa-chevron-down"></i></div>
   </section>
 
-  <!-- STATS BAR -->
-  <section class="stats-bar">
-    <div class="container stats-grid">
-      <div class="stat-item"><span class="stat-number">340+</span><span class="stat-label">Contracted Farmers</span></div>
-      <div class="stat-sep"></div>
-      <div class="stat-item"><span class="stat-number">98.4%</span><span class="stat-label">Nutrient Retention</span></div>
-      <div class="stat-sep"></div>
-      <div class="stat-item"><span class="stat-number">0ppm</span><span class="stat-label">Heavy Metals</span></div>
-      <div class="stat-sep"></div>
-      <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Solar Powered</span></div>
+  <!-- ===================== VALUE PROPOSITION BAR ===================== -->
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div>
+        <div class="feature-info">
+          <h4>100% Cleaned &amp; Dressed</h4>
+          <p>No feathers, no slime, perfectly trimmed ready for cooking.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+        <div class="feature-info">
+          <h4>Antibiotic-Residue Free</h4>
+          <p>Raised on clean vegetarian grain feeds with zero growth hormones.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fas fa-temperature-arrow-down"></i></div>
+        <div class="feature-info">
+          <h4>Chilled, Never Spoiled</h4>
+          <p>Insulated thermal packaging maintains natural juicy tenderness.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fas fa-scale-balanced"></i></div>
+        <div class="feature-info">
+          <h4>Accurate Net Weight</h4>
+          <p>What you pay is the exact weighed dressed meat — zero shrinkage.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- ===================== MAIN PRODUCT CATALOG ===================== -->
   <section class="products-section" id="products">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Pure Organics · Direct from Farm</span>
-        <h2 class="section-title">Our Product Range</h2>
-        <p class="section-desc">Every product is solar-dried, lab-tested, and nitrogen-sealed fresh to order. No stock, no middlemen.</p>
+      <!-- Section Header -->
+      <div class="section-heading-wrap">
+        <div class="heading-left">
+          <span class="eyebrow-accent"><i class="fas fa-award"></i> Premium Farm Inventory</span>
+          <h2 class="section-title">Explore Our Fresh &amp; Frozen Collection</h2>
+          <p class="section-subtitle">All 19 signature poultry items, whole birds, customized cuts, and chef-crafted snacks.</p>
+        </div>
+
+        <div class="category-summary-pill">
+          <span id="productCounterText">Showing 19 Products</span>
+        </div>
       </div>
-      <div class="filter-tabs" id="filterTabs">
-        <button class="filter-tab active" data-cat="all">All Products</button>
-        <button class="filter-tab" data-cat="superfood">Superfoods</button>
-        <button class="filter-tab" data-cat="herbal">Herbal & Wellness</button>
-        <button class="filter-tab" data-cat="spice">Spices</button>
-        <button class="filter-tab" data-cat="dried-fruit">Dried Fruits</button>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-pills-bar">
+        <button class="cat-tab active" data-category="all">
+          <i class="fas fa-th-large"></i> All Products (19)
+        </button>
+        <button class="cat-tab" data-category="cuts">
+          <i class="fas fa-drumstick-bite"></i> Prime Cuts &amp; Boneless (6)
+        </button>
+        <button class="cat-tab" data-category="whole">
+          <i class="fas fa-feather"></i> Fresh Whole Birds (5)
+        </button>
+        <button class="cat-tab" data-category="snacks" id="snacksTab">
+          <i class="fas fa-cookie-bite"></i> Ready-to-Cook Snacks (6)
+        </button>
+        <button class="cat-tab" data-category="specialties">
+          <i class="fas fa-kitchen-set"></i> Offal &amp; Clean Specialties (2)
+        </button>
       </div>
-      <div class="products-grid" id="productsGrid"></div>
-      <div class="products-footer">
-        <a href="#order" class="btn-primary btn-lg"><i class="fas fa-lock"></i> Pre-Order Your Batch</a>
+
+      <!-- Product Cards Grid (Populated dynamically by app.js) -->
+      <div class="products-grid-container" id="productsGridContainer">
+        <!-- Rendered by app.js -->
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="process-section" id="process">
-    <div class="container">
-      <div class="section-header section-header-light">
-        <span class="section-eyebrow-light">Farm to Table Transparency</span>
-        <h2 class="section-title-light">Solar Precision Process</h2>
-        <p class="section-desc-light">We don't just claim purity — we engineer it, step by step.</p>
+  <!-- ===================== HIGHLIGHT BANNER: SNACKS & READY TO COOK ===================== -->
+  <section class="snacks-promo-section" id="snacks-section">
+    <div class="container snacks-promo-card">
+      <div class="snacks-promo-text">
+        <span class="badge-promo"><i class="fas fa-fire"></i> Quick Treats</span>
+        <h2>Chef-Crafted Chicken Snacks &amp; Bologna</h2>
+        <p>Crunchy chicken samosas, golden spring rolls, juicy sausages, and delicious meatballs. Made with 100% pure chicken breast meat &bull; Zero added MSG &bull; Ready in 5 minutes.</p>
+        <div class="promo-points">
+          <span><i class="fas fa-check"></i> 100% Real Chicken Mince</span>
+          <span><i class="fas fa-check"></i> Crispy Restaurant Quality</span>
+          <span><i class="fas fa-check"></i> Sealed in Deep-Freeze Packs</span>
+        </div>
+        <button class="btn-promo-filter" onclick="filterBySnacks()">View All Snacks &rarr;</button>
       </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">01</div>
-          <div class="step-icon"><i class="fas fa-seedling"></i></div>
-          <h3 class="step-title">Organic Harvest</h3>
-          <p class="step-desc">Early-morning harvest from GPS-tracked farms in Sylhet &amp; Bandarban under strict zero-chemical protocols.</p>
-        </div>
-        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-number">02</div>
-          <div class="step-icon"><i class="fas fa-sun"></i></div>
-          <h3 class="step-title">Solar Tunnel Drying</h3>
-          <p class="step-desc">Parabolic solar tunnel dryers at precise 35–38°C preserve 98.4% of vitamins, enzymes, and phytonutrients.</p>
-        </div>
-        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-number">03</div>
-          <div class="step-icon"><i class="fas fa-flask"></i></div>
-          <h3 class="step-title">Lab Certification</h3>
-          <p class="step-desc">Every batch tested for heavy metals, pesticides, and moisture (&lt;4%). Certificate issued before sealing.</p>
-        </div>
-        <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-number">04</div>
-          <div class="step-icon"><i class="fas fa-box"></i></div>
-          <h3 class="step-title">Nitrogen Sealed</h3>
-          <p class="step-desc">Milled and immediately sealed in oxygen-free, food-grade packaging with unique batch QR code.</p>
-        </div>
-      </div>
-      <div class="comparison-block">
-        <h3 class="comparison-title">Solar Precision vs. Industrial Drying</h3>
-        <div class="comparison-table-wrap">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Metric</th>
-                <th class="col-bad">Industrial Dryers</th>
-                <th class="col-good">Nobori Solar Precision</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Drying Temperature</td><td class="col-bad">70°C – 90°C</td><td class="col-good">35°C – 38°C</td></tr>
-              <tr><td>Vitamin C &amp; Enzyme Loss</td><td class="col-bad">60–70% destroyed</td><td class="col-good">Only 1.6% lost</td></tr>
-              <tr><td>Preservatives</td><td class="col-bad">Sulphur dioxide used</td><td class="col-good">100% chemical-free</td></tr>
-              <tr><td>Farm Traceability</td><td class="col-bad">Unknown middlemen</td><td class="col-good">GPS-logged, QR-tracked</td></tr>
-              <tr><td>Packaging</td><td class="col-bad">Standard plastic</td><td class="col-good">Nitrogen-sealed food jar</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORY -->
-  <section class="story-section" id="story">
-    <div class="container story-grid">
-      <div class="story-text">
-        <span class="section-eyebrow">Our Mission</span>
-        <h2 class="section-title">Grown with purpose.<br>Delivered with integrity.</h2>
-        <p>Nobori Agro was born from a simple conviction: Bangladesh's hills and valleys produce some of the world's most potent botanicals — yet post-harvest loss and middlemen rob both farmers and consumers of their true value.</p>
-        <p>We partner directly with <strong>340+ smallholder and indigenous farming families</strong> in Sylhet and Bandarban, paying fair prices and building a transparent supply chain from seed to seal.</p>
-        <p>Our solar tunnel dryers replace destructive industrial heat, returning to ancient wisdom — sun-drying — but with modern precision temperature control.</p>
-        <div class="story-stats">
-          <div class="story-stat"><span class="s-num">12,000+</span><span class="s-label">kg post-harvest loss prevented</span></div>
-          <div class="story-stat"><span class="s-num">340+</span><span class="s-label">farming families supported</span></div>
-        </div>
-        <a href="#order" class="btn-primary">Support Our Mission</a>
-      </div>
-      <div class="story-visual">
-        <div class="story-img-wrap">
-          <img src="moringa.jpg" alt="Organic moringa powder from Nobori Agro" class="story-img">
-          <div class="story-img-badge"><i class="fas fa-shield-alt"></i><span>Lab Certified<br>Batch #NB-2026-08</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Customer Reviews</span>
-        <h2 class="section-title">What our customers say</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"The moringa powder is unlike anything I've tasted — bright green, fresh, zero bitterness. You can tell it's genuinely different from the supermarket version."</p>
-          <div class="reviewer"><div class="reviewer-avatar">SR</div><div><strong>Sadia Rahman</strong><span>Dhaka · Verified Buyer</span></div></div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"Hibiscus dried flowers arrived fresh, deep red, and incredibly fragrant. The nitrogen seal really makes a difference. Ordered three more batches!"</p>
-          <div class="reviewer"><div class="reviewer-avatar">KH</div><div><strong>Karim Hossain</strong><span>Chittagong · Verified Buyer</span></div></div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"As a nutritionist, I tested the turmeric in my own lab. Curcumin content was outstanding — 4.8% vs 2.1% from typical market powder. Remarkable."</p>
-          <div class="reviewer"><div class="reviewer-avatar">TA</div><div><strong>Dr. Taslima Akter</strong><span>Sylhet · Nutritionist</span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ORDER -->
-  <section class="order-section" id="order">
-    <div class="container">
-      <div class="order-card">
-        <div class="order-left">
-          <span class="section-eyebrow-light">Current Batch · #NB-2026-08</span>
-          <h2 class="order-title">Reserve Your Batch</h2>
-          <p class="order-desc">We produce to order — no sitting stock. Fill the form, choose your products, and your batch is solar-dried, lab-certified, and sealed fresh.</p>
-          <div class="batch-progress-block">
-            <div class="batch-progress-labels"><span>Slots Reserved</span><strong>86 / 100</strong></div>
-            <div class="batch-progress-track"><div class="batch-progress-fill" style="width: 86%;"></div></div>
-            <p class="batch-urgency">⚡ Only 14 slots remaining — delivery starts August 24, 2026</p>
+      <div class="snacks-promo-graphic">
+        <div class="promo-items-showcase">
+          <div class="showcase-card">
+            <i class="fas fa-hotdog"></i>
+            <strong>Chicken Sausage</strong>
+            <span>10 Pcs Pack</span>
           </div>
-          <div class="delivery-info-grid">
-            <div class="delivery-info-item"><i class="fas fa-truck"></i><div><strong>Dhaka Metro</strong><span>৳60 delivery</span></div></div>
-            <div class="delivery-info-item"><i class="fas fa-map-marked-alt"></i><div><strong>All Bangladesh</strong><span>৳100 delivery</span></div></div>
+          <div class="showcase-card">
+            <i class="fas fa-cookie"></i>
+            <strong>Chicken Nuggets</strong>
+            <span>Crispy 12 Pcs</span>
           </div>
-          <div class="trust-list">
-            <div class="trust-list-item"><i class="fas fa-check"></i> No payment until dispatch</div>
-            <div class="trust-list-item"><i class="fas fa-check"></i> SMS confirmation within 24 hours</div>
-            <div class="trust-list-item"><i class="fas fa-check"></i> 100% refund if quality fails lab test</div>
+          <div class="showcase-card">
+            <i class="fas fa-cubes"></i>
+            <strong>Chicken Bologna</strong>
+            <span>1200gm Loaf</span>
+          </div>
+          <div class="showcase-card">
+            <i class="fas fa-play"></i>
+            <strong>Chicken Samosa</strong>
+            <span>Crispy Triangular</span>
           </div>
         </div>
-        <div class="order-right">
-          <form class="order-form" id="orderForm">
-            <h3 class="form-title">Place Your Pre-Order</h3>
-            <div class="form-group"><label class="form-label" for="custName">Full Name *</label><input type="text" id="custName" class="form-input" placeholder="e.g. Sadia Rahman" required></div>
-            <div class="form-row">
-              <div class="form-group"><label class="form-label" for="custPhone">Phone *</label><input type="tel" id="custPhone" class="form-input" placeholder="017XXXXXXXX" required></div>
-              <div class="form-group"><label class="form-label" for="custCity">Zone *</label><select class="form-select" id="custCity"><option value="dhaka">Dhaka (৳60)</option><option value="outside">All BD (৳100)</option></select></div>
-            </div>
-            <div class="form-group"><label class="form-label" for="custAddress">Delivery Address *</label><input type="text" id="custAddress" class="form-input" placeholder="House, Road, Area, District" required></div>
-            <div class="form-group"><label class="form-label">Products *</label><div class="product-checkboxes" id="productCheckboxes"></div></div>
-            <div class="form-group"><label class="form-label">Payment Method</label>
-              <div class="pay-options">
-                <label class="pay-option"><input type="radio" name="payment" value="bkash" checked><span class="pay-label"><i class="fas fa-mobile-alt"></i> bKash</span></label>
-                <label class="pay-option"><input type="radio" name="payment" value="nagad"><span class="pay-label"><i class="fas fa-wallet"></i> Nagad</span></label>
-                <label class="pay-option"><input type="radio" name="payment" value="cod"><span class="pay-label"><i class="fas fa-truck"></i> Cash on Delivery</span></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUALITY & HALAL STANDARDS ===================== -->
+  <section class="standards-section" id="quality-promise">
+    <div class="container">
+      <div class="section-center-head">
+        <span class="eyebrow-accent"><i class="fas fa-shield-heart"></i> The Nobori Standard</span>
+        <h2>Why Chefs &amp; Families Trust Nobori Agro</h2>
+        <p>We treat food hygiene and Halal integrity as our highest priority.</p>
+      </div>
+
+      <div class="standards-grid">
+        <div class="standard-card">
+          <div class="std-icon"><i class="fas fa-hands-praying"></i></div>
+          <h3>100% Hand-Slaughtered Halal</h3>
+          <p>Each bird is slaughtered individually by certified Muslim slaughterers following strict Islamic rites. No mechanical stunning or machine cuts.</p>
+        </div>
+
+        <div class="standard-card">
+          <div class="std-icon"><i class="fas fa-snowflake"></i></div>
+          <h3>0&deg;C to 4&deg;C Unbroken Chill Chain</h3>
+          <p>Immediately after dressing, cuts enter rapid air-chilling tunnels to prevent bacterial reproduction and seal in succulent tenderness.</p>
+        </div>
+
+        <div class="standard-card">
+          <div class="std-icon"><i class="fas fa-droplet-slash"></i></div>
+          <h3>0% Added Water or Chemicals</h3>
+          <p>Local markets often soak meat in water to increase weight. At Nobori Agro, we guarantee zero water soaking, zero chlorine washes, and zero bleaching.</p>
+        </div>
+
+        <div class="standard-card">
+          <div class="std-icon"><i class="fas fa-box-open"></i></div>
+          <h3>Vacuum Sealed Food-Grade Trays</h3>
+          <p>Packed in food-grade sealed trays that can be stored directly in your refrigerator or freezer without messy dripping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COOKING & CHEF TIPS ===================== -->
+  <section class="recipes-section" id="recipes">
+    <div class="container">
+      <div class="section-center-head">
+        <span class="eyebrow-accent"><i class="fas fa-utensils"></i> Kitchen Secrets</span>
+        <h2>How to Cook Nobori Cuts to Perfection</h2>
+        <p>Get juicy restaurant results at home with these easy pro tips.</p>
+      </div>
+
+      <div class="recipe-cards-grid">
+        <div class="recipe-card">
+          <div class="recipe-tag"><i class="fas fa-fire"></i> Searing &amp; Grilling</div>
+          <h3>Tender Boneless Breast</h3>
+          <p>Because our chicken breast is 100% water-free, sear on medium-high heat for only 4-5 minutes per side with butter, garlic, and rosemary for supreme juiciness.</p>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-tag"><i class="fas fa-bowl-food"></i> Traditional Curries</div>
+          <h3>Deshi Duck &amp; Sonali Chicken</h3>
+          <p>Slow simmer with whole garam masala, roasted cumin, and mustard oil. Duck cuts develop rich, deep gravy flavor when cooked on low flame for 45 minutes.</p>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-tag"><i class="fas fa-temperature-high"></i> Snacks in 4 Mins</div>
+          <h3>Samosas &amp; Nuggets</h3>
+          <p>Deep fry straight from freezer into preheated 180°C oil without defrosting for maximum golden crunch and bubbling pastry shells.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTANT DIRECT ORDER FORM ===================== -->
+  <section class="order-section" id="order-now">
+    <div class="container">
+      <div class="order-wrapper-card">
+        <!-- Order Info Column -->
+        <div class="order-info-col">
+          <span class="eyebrow-accent-light"><i class="fas fa-bolt"></i> Instant Booking</span>
+          <h2 class="order-col-title">Place Your Order Today</h2>
+          <p class="order-col-desc">Select your desired poultry cuts or snacks. We will confirm your delivery address and dispatch via thermal insulated delivery vans.</p>
+
+          <div class="order-perks">
+            <div class="perk-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Flexible Delivery Slots</strong>
+                <span>Morning (8AM–12PM) &bull; Evening (4PM–8PM)</span>
               </div>
             </div>
-            <div class="form-group"><label class="form-label" for="custNotes">Notes (optional)</label><textarea id="custNotes" class="form-input form-textarea" placeholder="Any special instructions..."></textarea></div>
-            <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-lock"></i> Lock My Batch Slot</button>
-            <p class="form-note">Payment collected on dispatch. SMS confirmation within 24 hours.</p>
+
+            <div class="perk-item">
+              <i class="fas fa-motorcycle"></i>
+              <div>
+                <strong>Express Delivery Rates</strong>
+                <span>Dhaka Metro: ৳60 &bull; Free on orders ৳1,500+</span>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <i class="fas fa-hand-holding-dollar"></i>
+              <div>
+                <strong>Flexible Payment Modes</strong>
+                <span>Cash on Delivery, bKash, Nagad, or Card POS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="help-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <strong>Order via Phone / WhatsApp</strong>
+              <span>Direct Hotline: 01700-000000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Form Column -->
+        <div class="order-form-col">
+          <form id="expressOrderForm" class="express-form">
+            <h3 class="form-heading">Customer &amp; Delivery Details</h3>
+
+            <div class="form-group">
+              <label for="orderName">Full Name <span class="req">*</span></label>
+              <input type="text" id="orderName" class="form-control" placeholder="e.g. Tanvir Ahmed" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="orderPhone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="orderPhone" class="form-control" placeholder="017XXXXXXXX" required>
+              </div>
+
+              <div class="form-group">
+                <label for="orderArea">Delivery Area <span class="req">*</span></label>
+                <select id="orderArea" class="form-control">
+                  <option value="Gulshan/Banani/Baridhara">Gulshan / Banani / Baridhara</option>
+                  <option value="Dhanmondi/Mohammadpur">Dhanmondi / Mohammadpur</option>
+                  <option value="Uttara/Mirpur">Uttara / Mirpur</option>
+                  <option value="Bashundhara/Badda">Bashundhara / Badda / Khilkhet</option>
+                  <option value="Motijheel/Old Dhaka">Motijheel / Old Dhaka</option>
+                  <option value="Other Dhaka Metro">Other Dhaka Metro</option>
+                  <option value="Outside Dhaka">Outside Dhaka (Frozen Courier)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderAddress">Full Street Address <span class="req">*</span></label>
+              <input type="text" id="orderAddress" class="form-control" placeholder="House no, Road no, Apartment, Landmark" required>
+            </div>
+
+            <div class="form-group">
+              <label>Select Items to Order <span class="req">*</span></label>
+              <div class="product-selector-box" id="productSelectorBox">
+                <!-- Checkboxes populated by app.js -->
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Payment Method</label>
+              <div class="payment-pills">
+                <label class="pay-radio">
+                  <input type="radio" name="orderPayment" value="cod" checked>
+                  <span class="pay-btn"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                </label>
+                <label class="pay-radio">
+                  <input type="radio" name="orderPayment" value="bkash">
+                  <span class="pay-btn"><i class="fas fa-mobile-screen"></i> bKash</span>
+                </label>
+                <label class="pay-radio">
+                  <input type="radio" name="orderPayment" value="nagad">
+                  <span class="pay-btn"><i class="fas fa-wallet"></i> Nagad</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderNotes">Special Instructions (Optional)</label>
+              <input type="text" id="orderNotes" class="form-control" placeholder="e.g. Cut whole chicken into 8 curry pieces">
+            </div>
+
+            <button type="submit" class="btn-submit-order" id="submitOrderBtn">
+              <i class="fas fa-lock"></i>
+              <span>Confirm &amp; Place Order</span>
+            </button>
+
+            <p class="form-disclaimer">
+              🔒 We verify each order with a quick phone call before dispatching chilled cuts.
+            </p>
           </form>
-          <div class="order-success" id="orderSuccess" style="display:none;">
-            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-            <h3>Order Confirmed!</h3>
-            <p>Your batch slot is locked. We'll SMS you within 24 hours. Thank you for choosing purity! 🌿</p>
+
+          <!-- Success Alert Card -->
+          <div class="order-success-screen" id="orderSuccessScreen" style="display: none;">
+            <div class="success-check-icon"><i class="fas fa-check"></i></div>
+            <h3>Order Placed Successfully!</h3>
+            <p>Thank you for choosing <strong>Nobori Agro</strong>. Our dispatch team will call you shortly to confirm the cut preferences and dispatch your chilled package.</p>
+            <button class="btn-order-another" onclick="resetOrderForm()">Place Another Order</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand-col">
-        <div class="footer-logo"><span class="brand-leaf"><i class="fas fa-leaf"></i></span><span class="brand-title">NOBORI AGRO</span></div>
-        <p class="footer-about">Absolute purity from Bangladesh's finest organic farms. Solar-dried, lab-certified, nitrogen-sealed.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-block footer-brand">
+            <div class="brand-icon-box"><i class="fas fa-drumstick-bite"></i></div>
+            <div class="brand-text">
+              <span class="brand-name">NOBORI <span>AGRO</span></span>
+              <span class="brand-sub">100% FRESH HALAL POULTRY</span>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Bangladesh's trusted destination for premium farm-fresh chicken, gourmet boneless cuts, local duck, and hygienic frozen snacks.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Fresh Chicken Cuts</h4>
+          <ul>
+            <li><a href="#products" onclick="filterCategory('cuts')">Breast Boneless</a></li>
+            <li><a href="#products" onclick="filterCategory('cuts')">Thigh Boneless</a></li>
+            <li><a href="#products" onclick="filterCategory('cuts')">Chicken Drumsticks</a></li>
+            <li><a href="#products" onclick="filterCategory('cuts')">Chicken Wings</a></li>
+            <li><a href="#products" onclick="filterCategory('cuts')">Full Leg Boneless</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Whole Birds &amp; Snacks</h4>
+          <ul>
+            <li><a href="#products" onclick="filterCategory('whole')">Broiler Whole (Skin On/Less)</a></li>
+            <li><a href="#products" onclick="filterCategory('whole')">Sonali Chicken (Pakistani)</a></li>
+            <li><a href="#products" onclick="filterCategory('whole')">Deshi Local Duck</a></li>
+            <li><a href="#products" onclick="filterCategory('snacks')">Chicken Samosa &amp; Spring Roll</a></li>
+            <li><a href="#products" onclick="filterCategory('snacks')">Chicken Nuggets &amp; Sausage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4>Customer Care</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Dhaka Cold-Chain Processing Hub, Bangladesh</p>
+          <p><i class="fas fa-phone"></i> Hotline: +880 1700-000000</p>
+          <p><i class="fas fa-envelope"></i> orders@noboriagro.com</p>
+          <p><i class="fas fa-clock"></i> Delivery Hours: 7:00 AM – 9:00 PM Daily</p>
         </div>
       </div>
-      <div class="footer-col"><h4 class="footer-heading">Products</h4><ul class="footer-links"><li><a href="#products">Superfoods</a></li><li><a href="#products">Herbal Wellness</a></li><li><a href="#products">Spices & Blends</a></li><li><a href="#products">Dried Fruits</a></li></ul></div>
-      <div class="footer-col"><h4 class="footer-heading">About</h4><ul class="footer-links"><li><a href="#process">Solar Process</a></li><li><a href="#story">Our Story</a></li><li><a href="#story">Farmer Partners</a></li><li><a href="#order">Pre-Order</a></li></ul></div>
-      <div class="footer-col">
-        <h4 class="footer-heading">Batch Alerts</h4>
-        <p class="footer-newsletter-text">Get notified when a new batch is ready:</p>
-        <div class="footer-form"><input type="email" class="footer-input" placeholder="your@email.com"><button class="footer-btn">Subscribe</button></div>
-        <p class="footer-contact"><i class="fas fa-envelope"></i> hello@noboriagro.com</p>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Nobori Agro Ltd. All rights reserved. 100% Halal Certified.</span>
+        <span>Secure Cold-Chain Agro Commerce &bull; Powered by Vercel Edge</span>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container"><span>© 2026 Nobori Agro Ltd. All rights reserved.</span><span>Made with 🌿 in Bangladesh</span></div></div>
   </footer>
 
-  <!-- CART DRAWER -->
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="drawer-header"><h3><i class="fas fa-shopping-bag"></i> Your Pre-Order</h3><button class="drawer-close" id="drawerClose">×</button></div>
-    <div class="drawer-body" id="drawerBody"><p class="empty-cart">Your cart is empty. <a href="#products">Browse products →</a></p></div>
-    <div class="drawer-footer" id="drawerFooter" style="display:none;"><div class="drawer-total"><span>Subtotal</span><strong id="drawerTotal">৳0</strong></div><a href="#order" class="btn-primary btn-full" id="cartCheckoutBtn"><i class="fas fa-lock"></i> Proceed to Pre-Order</a></div>
-  </aside>
+  <!-- ===================== SLIDE-IN CART DRAWER ===================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <div class="drawer-title-group">
+        <i class="fas fa-shopping-basket"></i>
+        <h3>Your Fresh Basket</h3>
+        <span class="drawer-item-count" id="drawerItemCount">0 items</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
 
-  <!-- PRODUCT MODAL -->
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-  <div class="product-modal" id="productModal">
-    <button class="modal-close" id="modalClose">×</button>
-    <div class="modal-body" id="modalBody"></div>
+    <!-- Free Delivery Progress Tracker -->
+    <div class="cart-free-shipping-bar">
+      <div class="shipping-msg" id="shippingMsg">
+        Add <strong>৳1,500</strong> for <span class="badge-free">FREE DELIVERY</span>
+      </div>
+      <div class="shipping-track">
+        <div class="shipping-fill" id="shippingFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-drawer-body" id="cartDrawerBody">
+      <!-- Populated by app.js -->
+    </div>
+
+    <!-- Cart Drawer Footer -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotalVal">৳0</strong>
+      </div>
+      <div class="cart-subtotal-row text-muted">
+        <span>Estimated Delivery</span>
+        <span id="cartDeliveryVal">৳60</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Payable</span>
+        <strong id="cartTotalVal">৳60</strong>
+      </div>
+
+      <a href="#order-now" class="btn-checkout-drawer" id="checkoutDrawerBtn">
+        <i class="fas fa-bolt"></i>
+        <span>Proceed to Checkout</span>
+      </a>
+      <button class="btn-continue-shopping" id="continueShoppingBtn">
+        &larr; Add More Fresh Items
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== PRODUCT QUICK-VIEW MODAL ===================== -->
+  <div class="product-modal-backdrop" id="productModalBackdrop"></div>
+  <div class="product-modal-card" id="productModalCard">
+    <button class="modal-close-trigger" id="modalCloseTrigger" aria-label="Close Preview">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-content-area" id="modalContentArea">
+      <!-- Injected by app.js -->
+    </div>
   </div>
 
   <script src="app.js"></script>

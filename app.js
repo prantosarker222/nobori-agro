@@ -1,399 +1,744 @@
-/* ============================================================
-   NOBORI AGRO — Application Engine
-   ============================================================ */
+/* ==========================================================================
+   NOBORI AGRO — Fresh Poultry & Gourmet Meat Store Engine
+   ========================================================================== */
 
 'use strict';
 
-/* ---- Product Catalog ---- */
+/* ==========================================================================
+   19 OFFICIAL NOBORI AGRO PRODUCTS
+   ========================================================================== */
 const PRODUCTS = [
-  // Superfoods
-  { id: 1,  name: 'Moringa Leaf Powder', nameBn: 'মরিঙ্গা পাতা পাউডার', cat: 'superfood', img: 'moringa.jpg', price: 320, unit: '100g', badge: 'Best Seller', badgeClass: 'badge-gold', desc: 'Triple-micronized organic moringa from Sylhet gardens. 46+ antioxidants, 18 amino acids, 7× vitamin C of oranges.' },
-  { id: 2,  name: 'Dried Hibiscus Petals', nameBn: 'রক্ত জবার পাপড়ি', cat: 'superfood', img: 'hibiscus.jpg', price: 280, unit: '80g', badge: 'New Batch', badgeClass: '', desc: 'Sun-crystallized under UV-filter glass. Deep anthocyanins for heart health and vibrant herbal drinks.' },
-  { id: 3,  name: 'Organic Turmeric Powder', nameBn: 'অর্গানিক হলুদ পাউডার', cat: 'spice', img: 'turmeric.jpg', price: 180, unit: '150g', badge: 'Lab Verified', badgeClass: '', desc: '4.8% curcumin content — nearly 2× the market standard. Solar-dried at 38°C, zero sulphur dioxide.' },
-  { id: 4,  name: 'Spirulina Powder', nameBn: 'স্পিরুলিনা পাউডার', cat: 'superfood', img: 'moringa.jpg', price: 480, unit: '60g', badge: 'Premium', badgeClass: 'badge-gold', desc: 'High-protein blue-green microalgae. 60%+ protein content, B12 rich, iron-dense superfood.' },
-  { id: 5,  name: 'Dried Neem Leaf', nameBn: 'নিম পাতা গুঁড়া', cat: 'herbal', img: 'moringa.jpg', price: 140, unit: '100g', badge: null, badgeClass: '', desc: 'Powerful antimicrobial and detox herb. Cold-processed to retain azadirachtin and polyphenols.' },
-  { id: 6,  name: 'Holy Basil (Tulsi) Powder', nameBn: 'তুলসী পাতা পাউডার', cat: 'herbal', img: 'hibiscus.jpg', price: 160, unit: '80g', badge: null, badgeClass: '', desc: 'Adaptogenic stress-reliever with potent eugenol content. Dried from Bandarban forest groves.' },
-  { id: 7,  name: 'Wild Turmeric (Amba Haldi)', nameBn: 'আম হলুদ পাউডার', cat: 'spice', img: 'turmeric.jpg', price: 240, unit: '100g', badge: 'Rare', badgeClass: '', desc: 'Curcuma aromatica — rare forest variety with 8% curcuminoids and a distinctly aromatic profile.' },
-  { id: 8,  name: 'Sun-Dried Dragon Fruit', nameBn: 'সৌর-শুকনো ড্রাগন ফ্রুট', cat: 'dried-fruit', img: 'hibiscus.jpg', price: 560, unit: '100g', badge: 'Premium', badgeClass: 'badge-gold', desc: 'Vivid pink pitaya slices, solar-dehydrated to lock in betacyanins and antioxidants without added sugar.' },
-  { id: 9,  name: 'Amla (Gooseberry) Powder', nameBn: 'আমলকী পাউডার', cat: 'superfood', img: 'moringa.jpg', price: 200, unit: '100g', badge: null, badgeClass: '', desc: 'One of nature\'s densest vitamin C sources. Tart, tangy, and remarkably bioavailable in solar-dried form.' },
-  { id: 10, name: 'Black Seed (Nigella) Whole', nameBn: 'কালোজিরা', cat: 'herbal', img: 'turmeric.jpg', price: 210, unit: '150g', badge: null, badgeClass: '', desc: 'Pristine Nigella sativa seeds with thymoquinone levels verified by third-party labs.' },
-  { id: 11, name: 'Ginger Powder (Sylheti)', nameBn: 'সিলেটি আদা পাউডার', cat: 'spice', img: 'turmeric.jpg', price: 160, unit: '150g', badge: 'Bestseller', badgeClass: 'badge-gold', desc: 'Aromatic hill ginger from Sylhet — higher gingerol content, zero fillers or starch.' },
-  { id: 12, name: 'Dried Jackfruit Chips', nameBn: 'সৌর-শুকনো কাঁঠাল চিপস', cat: 'dried-fruit', img: 'hibiscus.jpg', price: 260, unit: '120g', badge: null, badgeClass: '', desc: 'Naturally sweet jackfruit dehydrated at 38°C — not fried, no sugar coating. Pure tropical crunch.' },
+  // 1. PRIME CUTS & BONELESS
+  {
+    id: 1,
+    name: 'Broiler Chicken Breast Bone Less',
+    nameBn: 'ব্রয়লার চিকেন ব্রেস্ট বোনলেস',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 420,
+    unit: '500g',
+    img: 'breast_cuts.jpg',
+    badge: 'Best Seller',
+    badgeType: 'badge-accent',
+    halal: true,
+    desc: '100% tender, skinless, boneless chicken breast fillet. Zero fat, high protein, perfect for steaks, grilling, and stir-fry.'
+  },
+  {
+    id: 2,
+    name: 'Broiler Chicken Thai Bone Less',
+    nameBn: 'ব্রয়লার চিকেন থাই বোনলেস',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 460,
+    unit: '500g',
+    img: 'thigh_cuts.jpg',
+    badge: 'Juiciest Cut',
+    badgeType: 'badge-gold',
+    halal: true,
+    desc: 'Succulent boneless chicken thigh meat. Naturally tender and juicy, ideal for Chicken Tikka, Shawarma, and BBQ.'
+  },
+  {
+    id: 3,
+    name: 'Broiler Chicken Drumstick',
+    nameBn: 'ব্রয়লার চিকেন ড্রামস্টিক',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 380,
+    unit: '500g (4-5 pcs)',
+    img: 'drumsticks.jpg',
+    badge: 'Kids Favorite',
+    badgeType: '',
+    halal: true,
+    desc: 'Plump, skin-on fresh chicken drumsticks. Trimmed and ready for crispy frying, baking, or rich spicy roast.'
+  },
+  {
+    id: 4,
+    name: 'Broiler Chicken Wings',
+    nameBn: 'ব্রয়লার চিকেন উইংস',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 280,
+    unit: '500g',
+    img: 'wings_cuts.jpg',
+    badge: 'Hot Wings',
+    badgeType: '',
+    halal: true,
+    desc: 'Freshly portioned two-joint chicken wings. Great for Buffalo glazed wings, BBQ platters, and snacks.'
+  },
+  {
+    id: 5,
+    name: 'Broiler Chicken Full Leg Bone Less',
+    nameBn: 'ব্রয়লার চিকেন ফুল লেগ বোনলেস',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 440,
+    unit: '500g',
+    img: 'thigh_cuts.jpg',
+    badge: 'Chef Choice',
+    badgeType: 'badge-gold',
+    halal: true,
+    desc: 'Thigh and drumstick combined, deboned and trimmed with precision for gourmet cutlets and Japanese Teriyaki.'
+  },
+  {
+    id: 6,
+    name: 'Broiler Chicken Full Leg',
+    nameBn: 'ব্রয়লার চিকেন ফুল লেগ',
+    cat: 'cuts',
+    catLabel: 'Prime Cuts',
+    price: 340,
+    unit: '500g (2 pcs)',
+    img: 'drumsticks.jpg',
+    badge: 'Classic Cut',
+    badgeType: '',
+    halal: true,
+    desc: 'Whole chicken leg quarter (thigh + drumstick). Perfect for oven roasting, tandoori, and biryani.'
+  },
+
+  // 2. FRESH WHOLE BIRDS
+  {
+    id: 7,
+    name: 'Broiler Whole Chicken Skin On',
+    nameBn: 'ব্রয়লার সম্পূর্ণ মুরগি (স্কিন সহ)',
+    cat: 'whole',
+    catLabel: 'Whole Bird',
+    price: 230,
+    unit: '1 kg (Dressed)',
+    img: 'whole_chicken.jpg',
+    badge: 'Daily Fresh',
+    badgeType: 'badge-accent',
+    halal: true,
+    desc: '100% Halal slaughtered farm-fresh broiler chicken with natural skin for enhanced moisture during curry and roasting.'
+  },
+  {
+    id: 8,
+    name: 'Broiler Whole Chicken Skin Less',
+    nameBn: 'ব্রয়লার সম্পূর্ণ মুরগি (স্কিন ছাড়া)',
+    cat: 'whole',
+    catLabel: 'Whole Bird',
+    price: 260,
+    unit: '1 kg (Dressed)',
+    img: 'whole_chicken.jpg',
+    badge: 'Clean Cut',
+    badgeType: '',
+    halal: true,
+    desc: 'Hygienically skinned and dressed whole chicken. Perfectly trimmed of excess fat, ready to cut into curry pieces.'
+  },
+  {
+    id: 9,
+    name: 'Sonali Chicken (Pakistani) - 5-600gm',
+    nameBn: 'সোনালি মুরগি (পাকিস্তানি) - ৫-৬০০ গ্রাম',
+    cat: 'whole',
+    catLabel: 'Whole Bird',
+    price: 320,
+    unit: '500-600g pc',
+    img: 'whole_chicken.jpg',
+    badge: 'Heritage Breed',
+    badgeType: 'badge-gold',
+    halal: true,
+    desc: 'Firm, flavorful indigenous crossbreed chicken. Deshi-like aromatic taste, optimal for traditional Bengali chicken roast and rezala.'
+  },
+  {
+    id: 10,
+    name: 'Deshi Duck - Local',
+    nameBn: 'দেশি হাঁস - লোকাল',
+    cat: 'whole',
+    catLabel: 'Whole Bird',
+    price: 650,
+    unit: '1 pc (~1.2kg)',
+    img: 'whole_chicken.jpg',
+    badge: 'Village Fresh',
+    badgeType: 'badge-gold',
+    halal: true,
+    desc: 'Locally raised farm duck from Haor/rural wetlands. Rich, savory dark meat that pairs wonderfully with bhuna khichuri.'
+  },
+  {
+    id: 11,
+    name: 'Roast/Local Chicken',
+    nameBn: 'রোস্ট / দেশি মুরগি',
+    cat: 'whole',
+    catLabel: 'Whole Bird',
+    price: 420,
+    unit: '1 pc (approx 800g)',
+    img: 'whole_chicken.jpg',
+    badge: 'Traditional',
+    badgeType: '',
+    halal: true,
+    desc: 'Free-range local deshi chicken. Highly nutritious with deep natural meat aroma for home-style broths and curry.'
+  },
+
+  // 3. READY-TO-COOK & FROZEN SNACKS
+  {
+    id: 12,
+    name: 'Chicken Bologna (1200gm)',
+    nameBn: 'চিকেন বোলোনিয়া (১২০০ গ্রাম)',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 750,
+    unit: '1200g Loaf',
+    img: 'breast_cuts.jpg',
+    badge: 'Family Pack',
+    badgeType: 'badge-gold',
+    halal: true,
+    desc: 'Premium seasoned chicken cold-cut loaf. Slice thin for breakfast sandwiches, subs, salads, and pizza toppings.'
+  },
+  {
+    id: 13,
+    name: 'Chicken Samosa',
+    nameBn: 'চিকেন সমুচা',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 240,
+    unit: '10 pcs pack',
+    img: 'wings_cuts.jpg',
+    badge: 'Crispy Snack',
+    badgeType: 'badge-accent',
+    halal: true,
+    desc: 'Flaky pastry filled with spiced minced chicken breast, green chilies, and fresh onions. Fry straight from freezer.'
+  },
+  {
+    id: 14,
+    name: 'Chicken Spring Roll',
+    nameBn: 'চিকেন স্প্রিং রোল',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 260,
+    unit: '10 pcs pack',
+    img: 'wings_cuts.jpg',
+    badge: 'Party Hit',
+    badgeType: '',
+    halal: true,
+    desc: 'Crispy golden rolls stuffed with shredded tender chicken and crunchy seasonal vegetables with Asian aromatics.'
+  },
+  {
+    id: 15,
+    name: 'Chicken Sausage',
+    nameBn: 'চিকেন সসেজ',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 290,
+    unit: '10 pcs pack',
+    img: 'drumsticks.jpg',
+    badge: 'Breakfast Hit',
+    badgeType: '',
+    halal: true,
+    desc: 'Lightly smoked Halal chicken sausage links. Perfect for breakfast platters, hotdogs, pastas, and stir-fries.'
+  },
+  {
+    id: 16,
+    name: 'Chicken Nuggets',
+    nameBn: 'চিকেন নাগেটস',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 320,
+    unit: '12 pcs pack',
+    img: 'breast_cuts.jpg',
+    badge: 'Crispy Golden',
+    badgeType: 'badge-accent',
+    halal: true,
+    desc: '100% pure minced chicken breast inside a golden seasoned breadcrumb coating. Ready in 4 minutes.'
+  },
+  {
+    id: 17,
+    name: 'Chicken Meat Ball',
+    nameBn: 'চিকেন মিট বল',
+    cat: 'snacks',
+    catLabel: 'Ready to Cook',
+    price: 310,
+    unit: '20 pcs pack',
+    img: 'thigh_cuts.jpg',
+    badge: 'Gourmet',
+    badgeType: '',
+    halal: true,
+    desc: 'Juicy, seasoned chicken meatballs. Great for creamy pasta, chicken ball soup, and spicy sweet-sour glaze.'
+  },
+
+  // 4. OFFAL & CLEAN SPECIALTIES
+  {
+    id: 18,
+    name: 'Broiler Chicken Liver-Gizzard',
+    nameBn: 'ব্রয়লার মুরগির কলিজা ও গিলা',
+    cat: 'specialties',
+    catLabel: 'Offal & Cleaned',
+    price: 190,
+    unit: '500g pack',
+    img: 'thigh_cuts.jpg',
+    badge: 'Cleaned',
+    badgeType: '',
+    halal: true,
+    desc: 'Meticulously washed and cleaned fresh chicken liver and gizzard. High iron and nutrient density for spicy bhuna.'
+  },
+  {
+    id: 19,
+    name: 'Broiler Chicken Feet (Clean)',
+    nameBn: 'ব্রয়লার মুরগির পা (পরিষ্কার)',
+    cat: 'specialties',
+    catLabel: 'Offal & Cleaned',
+    price: 150,
+    unit: '500g pack',
+    img: 'wings_cuts.jpg',
+    badge: 'Collagen Rich',
+    badgeType: '',
+    halal: true,
+    desc: 'Deeply cleansed and peeled chicken feet. Ideal for rich natural bone broth, collagen soups, and traditional stews.'
+  }
 ];
 
-/* ---- State ---- */
+/* ==========================================================================
+   APPLICATION STATE
+   ========================================================================== */
 let cart = [];
-let currentCat = 'all';
-let isBn = false;
+let currentCategory = 'all';
+let searchQuery = '';
+let isBangla = false;
 
-/* ---- Translations ---- */
-const T = {
-  en: {
-    addToCart: 'Add to Cart',
-    remove: 'Remove',
-    preorder: 'Pre-Order This',
-    origin: 'Origin:',
-    moisture: 'Moisture:',
-    curcumin: 'Purity:',
-    batch: 'Current Batch:',
-    labCert: 'Lab Certified'
-  },
-  bn: {
-    addToCart: 'কার্টে যোগ করুন',
-    remove: 'সরান',
-    preorder: 'প্রি-অর্ডার করুন',
-    origin: 'উৎস:',
-    moisture: 'আর্দ্রতা:',
-    curcumin: 'বিশুদ্ধতা:',
-    batch: 'চলতি ব্যাচ:',
-    labCert: 'ল্যাব সার্টিফাইড'
-  }
-};
-const t = key => (isBn ? T.bn[key] : T.en[key]) || key;
-
-/* ---- DOM References ---- */
+/* ==========================================================================
+   DOM HELPERS
+   ========================================================================== */
 const $ = id => document.getElementById(id);
-const $$ = sel => document.querySelectorAll(sel);
+const $$ = selector => document.querySelectorAll(selector);
 
-/* ---- Render Products ---- */
-function renderProducts() {
-  const grid = $('productsGrid');
-  const filtered = currentCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === currentCat);
+/* ==========================================================================
+   RENDER PRODUCT CATALOG
+   ========================================================================== */
+function renderProductCatalog() {
+  const container = $('productsGridContainer');
+  if (!container) return;
 
-  if (!filtered.length) {
-    grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;padding:3rem 0;">No products in this category yet.</p>';
+  // Filter products by category and search
+  const filtered = PRODUCTS.filter(item => {
+    const matchesCat = currentCategory === 'all' || item.cat === currentCategory;
+    const matchesSearch = searchQuery === '' || 
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.nameBn.includes(searchQuery) ||
+      item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCat && matchesSearch;
+  });
+
+  // Update counter
+  const counter = $('productCounterText');
+  if (counter) {
+    counter.textContent = `Showing ${filtered.length} Products`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+        <i class="fas fa-search" style="font-size: 2.5rem; color: var(--text-light); margin-bottom: 1rem;"></i>
+        <h3 style="font-family: var(--font-heading); color: var(--text-main); margin-bottom: 0.35rem;">No products found</h3>
+        <p>Try searching for "Breast", "Nuggets", "Duck", or select another category.</p>
+      </div>
+    `;
     return;
   }
 
-  grid.innerHTML = filtered.map(p => `
-    <article class="product-card" onclick="openModal(${p.id})" data-id="${p.id}">
-      <div class="product-img-wrap">
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
-        ${p.badge ? `<span class="product-badge ${p.badgeClass}">${p.badge}</span>` : ''}
-        <button class="product-quick-add" onclick="event.stopPropagation(); addToCart(${p.id})" title="${t('addToCart')}">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
-      <div class="product-info">
-        <div class="product-cat">${catLabel(p.cat)}</div>
-        <div class="product-name">${isBn ? p.nameBn : p.name}</div>
-        <div class="product-desc">${p.desc.substring(0, 80)}…</div>
-        <div class="product-footer">
-          <div class="product-price">৳${p.price} <span>/ ${p.unit}</span></div>
-          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(${p.id})">${t('addToCart')}</button>
+  container.innerHTML = filtered.map(item => {
+    const inCart = cart.find(c => c.id === item.id);
+    const displayName = isBangla ? item.nameBn : item.name;
+
+    return `
+      <article class="product-item-card" data-id="${item.id}">
+        <div class="product-thumb-box" onclick="openProductModal(${item.id})">
+          <img src="${item.img}" alt="${item.name}" loading="lazy">
+          ${item.badge ? `<span class="card-badge-tag ${item.badgeType}">${item.badge}</span>` : ''}
+          <span class="card-halal-stamp"><i class="fas fa-check-circle"></i> Halal</span>
         </div>
-      </div>
-    </article>
-  `).join('');
+
+        <div class="product-body-info">
+          <span class="product-cat-label">${item.catLabel}</span>
+          <h3 class="product-item-title" onclick="openProductModal(${item.id})">${displayName}</h3>
+          <p class="product-item-desc">${item.desc}</p>
+          <div class="product-pack-spec">
+            <i class="fas fa-weight-hanging"></i> ${item.unit} &bull; Chilled
+          </div>
+
+          <div class="product-card-bottom">
+            <div class="price-box">
+              <span class="price-num">৳${item.price}</span>
+              <span class="price-unit">/ ${item.unit}</span>
+            </div>
+
+            <button class="btn-card-add ${inCart ? 'added' : ''}" onclick="addToCart(${item.id})">
+              <i class="fas ${inCart ? 'fa-check' : 'fa-plus'}"></i>
+              <span>${inCart ? 'Added (' + inCart.qty + ')' : (isBangla ? 'অর্ডার করুন' : 'Add')}</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
 }
 
-function catLabel(cat) {
-  const labels = {
-    superfood: 'Superfood',
-    herbal: 'Herbal & Wellness',
-    spice: 'Spice',
-    'dried-fruit': 'Dried Fruit'
-  };
-  return labels[cat] || cat;
-}
-
-/* ---- Category Filters ---- */
-function initFilters() {
-  $$('.filter-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      $$('.filter-tab').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCat = btn.dataset.cat;
-      renderProducts();
+/* ==========================================================================
+   CATEGORY & SEARCH HANDLERS
+   ========================================================================== */
+function initFilterTabs() {
+  $$('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      $$('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentCategory = tab.dataset.category;
+      renderProductCatalog();
     });
   });
 }
 
-/* ---- Cart Logic ---- */
-function addToCart(id) {
-  const product = PRODUCTS.find(p => p.id === id);
+function filterCategory(catName) {
+  const targetTab = document.querySelector(`.cat-tab[data-category="${catName}"]`);
+  if (targetTab) {
+    $$('.cat-tab').forEach(t => t.classList.remove('active'));
+    targetTab.classList.add('active');
+    currentCategory = catName;
+    renderProductCatalog();
+  }
+}
+
+function filterBySnacks() {
+  filterCategory('snacks');
+  const prodSec = $('products');
+  if (prodSec) {
+    prodSec.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function initSearchInputs() {
+  const desktopSearch = $('searchInput');
+  const mobileSearch = $('mobileSearchInput');
+  const clearBtn = $('searchClearBtn');
+
+  function handleSearch(val) {
+    searchQuery = val.trim();
+    if (clearBtn) clearBtn.style.display = searchQuery ? 'block' : 'none';
+    renderProductCatalog();
+  }
+
+  desktopSearch?.addEventListener('input', e => handleSearch(e.target.value));
+  mobileSearch?.addEventListener('input', e => handleSearch(e.target.value));
+
+  clearBtn?.addEventListener('click', () => {
+    if (desktopSearch) desktopSearch.value = '';
+    if (mobileSearch) mobileSearch.value = '';
+    handleSearch('');
+  });
+}
+
+/* ==========================================================================
+   CART OPERATIONS & DRAWER
+   ========================================================================== */
+function addToCart(productId) {
+  const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
-  const existing = cart.find(c => c.id === id);
-  if (existing) { existing.qty++; }
-  else { cart.push({ ...product, qty: 1 }); }
-  updateCartUI();
-  openDrawer();
+
+  const existing = cart.find(c => c.id === productId);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ ...product, qty: 1 });
+  }
+
+  updateCartDisplay();
+  openCartDrawer();
+  renderProductCatalog();
 }
 
-function removeFromCart(id) {
-  cart = cart.filter(c => c.id !== id);
-  updateCartUI();
+function changeCartQty(productId, delta) {
+  const item = cart.find(c => c.id === productId);
+  if (!item) return;
+
+  item.qty += delta;
+  if (item.qty <= 0) {
+    cart = cart.filter(c => c.id !== productId);
+  }
+
+  updateCartDisplay();
+  renderProductCatalog();
 }
 
-function updateCartUI() {
-  const total = cart.reduce((s, c) => s + c.price * c.qty, 0);
-  const count = cart.reduce((s, c) => s + c.qty, 0);
+function removeFromCart(productId) {
+  cart = cart.filter(c => c.id !== productId);
+  updateCartDisplay();
+  renderProductCatalog();
+}
 
-  // Badge
-  const badge = $('cartCount');
-  if (count > 0) { badge.textContent = count; badge.classList.add('show'); }
-  else { badge.classList.remove('show'); }
+function updateCartDisplay() {
+  const count = cart.reduce((sum, i) => sum + i.qty, 0);
+  const subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+  const deliveryFee = subtotal >= 1500 || subtotal === 0 ? 0 : 60;
+  const total = subtotal + deliveryFee;
 
-  // Drawer body
-  const body = $('drawerBody');
-  const footer = $('drawerFooter');
+  // Update Header Badges
+  const badgeCount = $('cartBadgeCount');
+  const peekTotal = $('peekTotal');
+  const drawerItemCount = $('drawerItemCount');
+  if (badgeCount) badgeCount.textContent = count;
+  if (peekTotal) peekTotal.textContent = `৳${subtotal}`;
+  if (drawerItemCount) drawerItemCount.textContent = `${count} items`;
 
-  if (!cart.length) {
-    body.innerHTML = '<p class="empty-cart">Your cart is empty. <a href="#products">Browse products →</a></p>';
+  // Free delivery progress bar
+  const shippingMsg = $('shippingMsg');
+  const shippingFill = $('shippingFill');
+  if (shippingMsg && shippingFill) {
+    if (subtotal >= 1500) {
+      shippingMsg.innerHTML = `🎉 You have unlocked <span class="badge-free">FREE DELIVERY!</span>`;
+      shippingFill.style.width = '100%';
+    } else {
+      const remaining = 1500 - subtotal;
+      const pct = Math.min(100, Math.round((subtotal / 1500) * 100));
+      shippingMsg.innerHTML = `Add <strong>৳${remaining}</strong> for <span class="badge-free">FREE DELIVERY</span>`;
+      shippingFill.style.width = `${pct}%`;
+    }
+  }
+
+  // Drawer Content
+  const body = $('cartDrawerBody');
+  const footer = $('cartDrawerFooter');
+
+  if (!body || !footer) return;
+
+  if (cart.length === 0) {
+    body.innerHTML = `
+      <div class="empty-cart-msg">
+        <i class="fas fa-shopping-basket"></i>
+        <h4>Your basket is empty</h4>
+        <p>Add farm-fresh chicken, boneless cuts, or ready-to-cook snacks to begin.</p>
+      </div>
+    `;
     footer.style.display = 'none';
     return;
   }
 
-  body.innerHTML = cart.map(c => `
-    <div class="cart-item">
-      <img src="${c.img}" alt="${c.name}">
-      <div class="cart-item-info">
-        <div class="cart-item-name">${c.name} × ${c.qty}</div>
-        <div class="cart-item-price">৳${c.price * c.qty}</div>
+  footer.style.display = 'block';
+  $('cartSubtotalVal').textContent = `৳${subtotal}`;
+  $('cartDeliveryVal').textContent = deliveryFee === 0 ? 'FREE' : `৳${deliveryFee}`;
+  $('cartTotalVal').textContent = `৳${total}`;
+
+  body.innerHTML = cart.map(item => `
+    <div class="drawer-cart-item">
+      <img src="${item.img}" alt="${item.name}" class="drawer-item-img">
+      <div class="drawer-item-details">
+        <div class="drawer-item-title">${item.name}</div>
+        <div class="drawer-item-price">৳${item.price} &bull; ${item.unit}</div>
+        <div class="drawer-qty-controls">
+          <button class="qty-btn" onclick="changeCartQty(${item.id}, -1)">-</button>
+          <span class="qty-val">${item.qty}</span>
+          <button class="qty-btn" onclick="changeCartQty(${item.id}, 1)">+</button>
+        </div>
       </div>
-      <button class="cart-item-remove" onclick="removeFromCart(${c.id})">${t('remove')}</button>
+      <button class="drawer-item-remove" onclick="removeFromCart(${item.id})" title="Remove">
+        <i class="fas fa-trash-alt"></i>
+      </button>
     </div>
   `).join('');
-
-  $('drawerTotal').textContent = `৳${total}`;
-  footer.style.display = 'block';
 }
 
-/* ---- Drawer ---- */
-function openDrawer() {
-  $('cartDrawer').classList.add('open');
-  $('drawerBackdrop').classList.add('open');
+function openCartDrawer() {
+  $('cartDrawer')?.classList.add('open');
+  $('cartDrawerOverlay')?.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeDrawer() {
-  $('cartDrawer').classList.remove('open');
-  $('drawerBackdrop').classList.remove('open');
+function closeCartDrawer() {
+  $('cartDrawer')?.classList.remove('open');
+  $('cartDrawerOverlay')?.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-/* ---- Modal ---- */
-function openModal(id) {
-  const p = PRODUCTS.find(x => x.id === id);
+/* ==========================================================================
+   PRODUCT QUICK VIEW MODAL
+   ========================================================================== */
+function openProductModal(productId) {
+  const p = PRODUCTS.find(x => x.id === productId);
   if (!p) return;
 
-  $('modalBody').innerHTML = `
-    <div class="modal-product-grid">
-      <div class="modal-img-wrap">
+  const contentArea = $('modalContentArea');
+  if (!contentArea) return;
+
+  contentArea.innerHTML = `
+    <div class="modal-grid-layout">
+      <div class="modal-img-frame">
         <img src="${p.img}" alt="${p.name}">
       </div>
-      <div class="modal-info">
-        <div class="modal-cat">${catLabel(p.cat)}</div>
-        <h2 class="modal-name">${isBn ? p.nameBn : p.name}</h2>
-        <div class="modal-price">৳${p.price} <span style="font-size:.85rem;font-weight:400;color:var(--text-light)">/ ${p.unit}</span></div>
-        <p class="modal-desc">${p.desc}</p>
-        <div class="modal-specs">
-          <div class="modal-spec"><i class="fas fa-map-marker-alt"></i> <strong>Origin:</strong>&nbsp; Sylhet & Bandarban, Bangladesh</div>
-          <div class="modal-spec"><i class="fas fa-tint-slash"></i> <strong>Moisture:</strong>&nbsp; &lt; 4.0% (Solar Precision)</div>
-          <div class="modal-spec"><i class="fas fa-flask"></i> <strong>Preservatives:</strong>&nbsp; Zero — 100% natural</div>
-          <div class="modal-spec"><i class="fas fa-box"></i> <strong>Packaging:</strong>&nbsp; Nitrogen-sealed food jar</div>
-          <div class="modal-spec"><i class="fas fa-certificate"></i> <strong>Certification:</strong>&nbsp; Lab-certified, batch #NB-2026-08</div>
+      <div class="modal-details-block">
+        <span class="product-cat-label">${p.catLabel}</span>
+        <h2>${isBangla ? p.nameBn : p.name}</h2>
+        <div class="modal-price-tag">৳${p.price} <span>/ ${p.unit}</span></div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">${p.desc}</p>
+        
+        <div class="modal-specs-list">
+          <div class="modal-spec-row"><i class="fas fa-shield-halved"></i> <strong>Halal Integrity:</strong>&nbsp; Hand-slaughtered by trained Muslim butchers</div>
+          <div class="modal-spec-row"><i class="fas fa-snowflake"></i> <strong>Storage State:</strong>&nbsp; Chilled (0&deg;C &ndash; 4&deg;C), Never Stale</div>
+          <div class="modal-spec-row"><i class="fas fa-hand-sparkles"></i> <strong>Dressing:</strong>&nbsp; 100% Cleaned, Feather-free, Ready to cook</div>
+          <div class="modal-spec-row"><i class="fas fa-truck-fast"></i> <strong>Delivery:</strong>&nbsp; Insulated cold-van dispatch within 2 hours</div>
         </div>
-        <button class="btn-primary btn-full" onclick="addToCart(${p.id}); closeModal()">
-          <i class="fas fa-plus"></i> ${t('addToCart')} — ৳${p.price}
+
+        <button class="btn-hero-primary" style="width: 100%; justify-content: center;" onclick="addToCart(${p.id}); closeProductModal();">
+          <i class="fas fa-shopping-basket"></i>
+          <span>Add to Basket &bull; ৳${p.price}</span>
         </button>
       </div>
     </div>
   `;
 
-  $('productModal').classList.add('open');
-  $('modalBackdrop').classList.add('open');
+  $('productModalCard')?.classList.add('open');
+  $('productModalBackdrop')?.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeModal() {
-  $('productModal').classList.remove('open');
-  $('modalBackdrop').classList.remove('open');
+function closeProductModal() {
+  $('productModalCard')?.classList.remove('open');
+  $('productModalBackdrop')?.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-/* ---- Order Form: populate product checkboxes ---- */
+/* ==========================================================================
+   POPULATE PRODUCT CHECKBOXES IN ORDER FORM
+   ========================================================================== */
 function populateOrderCheckboxes() {
-  const wrap = $('productCheckboxes');
-  if (!wrap) return;
-  wrap.innerHTML = PRODUCTS.slice(0, 8).map(p => `
-    <label class="product-checkbox-item">
-      <input type="checkbox" name="products" value="${p.id}">
-      ${p.name} (৳${p.price}/${p.unit})
+  const container = $('productSelectorBox');
+  if (!container) return;
+
+  container.innerHTML = PRODUCTS.map(p => `
+    <label class="product-check-item">
+      <input type="checkbox" name="orderItems" value="${p.name} (৳${p.price})">
+      <span>${p.name}</span>
     </label>
   `).join('');
 }
 
-/* ---- Order Form Submit ---- */
+/* ==========================================================================
+   EXPRESS ORDER FORM SUBMISSION
+   ========================================================================== */
 function initOrderForm() {
-  const form = $('orderForm');
+  const form = $('expressOrderForm');
   if (!form) return;
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = $('submitBtn');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing…';
 
-    const selected = [...$$('[name="products"]:checked')].map(el => {
-      const p = PRODUCTS.find(x => x.id === +el.value);
-      return p ? p.name : '';
-    }).filter(Boolean);
+    const submitBtn = $('submitOrderBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Placing Order...';
 
-    const payload = {
-      name: $('custName').value,
-      phone: $('custPhone').value,
-      city: $('custCity').value,
-      address: $('custAddress').value,
-      products: selected.join(', '),
-      payment: document.querySelector('[name="payment"]:checked')?.value || 'bkash',
-      notes: $('custNotes')?.value || ''
+    // Collect selected items from checkboxes or active cart
+    const selectedBoxes = [...$$('input[name="orderItems"]:checked')].map(c => c.value);
+    const cartItemsFormatted = cart.map(c => `${c.name} x${c.qty} (৳${c.price * c.qty})`);
+    const allSelectedItems = [...new Set([...selectedBoxes, ...cartItemsFormatted])];
+
+    const orderPayload = {
+      name: $('orderName').value,
+      phone: $('orderPhone').value,
+      area: $('orderArea').value,
+      address: $('orderAddress').value,
+      products: allSelectedItems.length > 0 ? allSelectedItems.join(', ') : 'Direct Call Inquired',
+      payment: document.querySelector('input[name="orderPayment"]:checked')?.value || 'cod',
+      notes: $('orderNotes')?.value || '',
+      source: 'Nobori Agro Fresh Poultry Store'
     };
 
     try {
       await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(orderPayload)
       });
-    } catch (_) { /* graceful — still show success */ }
+    } catch (_) {
+      // Graceful fallback
+    }
 
     form.style.display = 'none';
-    $('orderSuccess').style.display = 'block';
+    $('orderSuccessScreen').style.display = 'block';
+    
+    // Clear cart on success
+    cart = [];
+    updateCartDisplay();
   });
 }
 
-/* ---- Language Toggle ---- */
-function initLanguage() {
-  const btn = $('langBtn');
+function resetOrderForm() {
+  const form = $('expressOrderForm');
+  if (form) {
+    form.reset();
+    form.style.display = 'flex';
+  }
+  const success = $('orderSuccessScreen');
+  if (success) success.style.display = 'none';
+
+  const btn = $('submitOrderBtn');
+  if (btn) {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-lock"></i> <span>Confirm &amp; Place Order</span>';
+  }
+}
+
+/* ==========================================================================
+   LANGUAGE TOGGLE (EN <-> BN)
+   ========================================================================== */
+function initLanguageToggle() {
+  const btn = $('langToggleBtn');
   if (!btn) return;
+
   btn.addEventListener('click', () => {
-    isBn = !isBn;
-    btn.textContent = isBn ? 'English' : 'বাংলা';
-    renderProducts();
-    updateCartUI();
+    isBangla = !isBangla;
+    btn.querySelector('span').textContent = isBangla ? 'English' : 'বাংলা';
+    renderProductCatalog();
   });
 }
 
-/* ---- Navigation: scroll behavior ---- */
-function initNav() {
-  const header = $('navHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
-  // Hamburger
-  const ham = $('hamburger');
-  const menu = $('mobileMenu');
-  ham?.addEventListener('click', () => {
-    menu.classList.toggle('open');
-    ham.classList.toggle('active');
+/* ==========================================================================
+   MOBILE MENU & EVENT LISTENERS
+   ========================================================================== */
+function initMobileMenu() {
+  const btn = $('mobileMenuBtn');
+  const panel = $('mobileNavPanel');
+  btn?.addEventListener('click', () => {
+    panel?.classList.toggle('open');
   });
 
-  // Close mobile menu on link click
-  $$('.mob-link').forEach(a => {
-    a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      ham?.classList.remove('active');
+  $$('.mob-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      panel?.classList.remove('open');
     });
   });
 }
 
-/* ---- Announcement Bar ---- */
-function initAnnBar() {
-  $('annClose')?.addEventListener('click', () => {
-    const bar = $('announcementBar');
-    if (bar) { bar.style.height = bar.offsetHeight + 'px'; requestAnimationFrame(() => { bar.style.transition = 'height .3s'; bar.style.height = '0'; bar.style.overflow = 'hidden'; }); }
+function initEventListeners() {
+  // Cart Drawer triggers
+  $('cartTriggerBtn')?.addEventListener('click', openCartDrawer);
+  $('drawerCloseBtn')?.addEventListener('click', closeCartDrawer);
+  $('cartDrawerOverlay')?.addEventListener('click', closeCartDrawer);
+  $('continueShoppingBtn')?.addEventListener('click', closeCartDrawer);
+  $('checkoutDrawerBtn')?.addEventListener('click', () => {
+    closeCartDrawer();
   });
-}
 
-/* ---- Active nav link on scroll ---- */
-function initScrollSpy() {
-  const sections = ['hero', 'products', 'process', 'story', 'order'];
-  const links = $$('.nav-link');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const id = entry.target.id;
-        const active = document.querySelector(`.nav-link[href="#${id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.35 });
-  sections.forEach(id => { const el = $(id); if (el) observer.observe(el); });
-}
+  // Modal triggers
+  $('modalCloseTrigger')?.addEventListener('click', closeProductModal);
+  $('productModalBackdrop')?.addEventListener('click', closeProductModal);
 
-/* ---- Animate stats on scroll ---- */
-function animateNumber(el, target, suffix = '') {
-  let start = 0;
-  const duration = 1800;
-  const step = timestamp => {
-    if (!start) start = timestamp;
-    const progress = Math.min((timestamp - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    const val = Math.floor(ease * target);
-    el.textContent = (target >= 100 ? val.toLocaleString() : val) + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-
-function initStatsAnimation() {
-  const targets = [
-    { el: document.querySelector('.stat-number:nth-child(1)'), val: 340, suffix: '+' },
-  ];
-  const nums = $$('.stat-number');
-  const vals = [340, 98.4, 0, 100];
-  const suffs = ['+', '%', 'ppm', '%'];
-  const labels = ['340+', '98.4%', '0ppm', '100%'];
-  let animated = false;
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !animated) {
-      animated = true;
-      nums.forEach((el, i) => { el.textContent = labels[i]; });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeCartDrawer();
+      closeProductModal();
     }
-  }, { threshold: 0.5 });
-
-  const statsBar = document.querySelector('.stats-bar');
-  if (statsBar) observer.observe(statsBar);
-}
-
-/* ---- Cart drawer triggers ---- */
-function initCartDrawer() {
-  $('cartBtn')?.addEventListener('click', openDrawer);
-  $('drawerClose')?.addEventListener('click', closeDrawer);
-  $('drawerBackdrop')?.addEventListener('click', closeDrawer);
-  $('cartCheckoutBtn')?.addEventListener('click', () => {
-    closeDrawer();
-    setTimeout(() => document.querySelector('#order')?.scrollIntoView({ behavior: 'smooth' }), 200);
   });
 }
 
-/* ---- Modal triggers ---- */
-function initModal() {
-  $('modalClose')?.addEventListener('click', closeModal);
-  $('modalBackdrop')?.addEventListener('click', closeModal);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeDrawer(); } });
-}
-
-/* ---- Init ---- */
-function init() {
-  renderProducts();
-  initFilters();
-  initNav();
-  initAnnBar();
-  initLanguage();
-  initOrderForm();
+/* ==========================================================================
+   APP INITIALIZATION
+   ========================================================================== */
+function initializeApp() {
+  renderProductCatalog();
+  initFilterTabs();
+  initSearchInputs();
   populateOrderCheckboxes();
-  initCartDrawer();
-  initModal();
-  initScrollSpy();
-  initStatsAnimation();
+  initOrderForm();
+  initLanguageToggle();
+  initMobileMenu();
+  initEventListeners();
+  updateCartDisplay();
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
-  init();
+  initializeApp();
 }

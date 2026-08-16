@@ -1,4 +1,4 @@
-// Vercel Serverless Function for Nobori Agro Batch Pre-Orders & Inquiries
+// Vercel Serverless Function for Nobori Agro Fresh Poultry Orders & Delivery Inquiries
 module.exports = async (req, res) => {
     // Enable CORS
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,23 +12,23 @@ module.exports = async (req, res) => {
     if (req.method === 'POST') {
         try {
             const body = req.body || {};
-            const name = body.name || "Valued Patron";
+            const name = body.name || "Customer";
             const contact = body.phone || body.contact || "N/A";
             const address = body.address || "N/A";
-            const batch = body.batch || "NB-2026-08";
-            const items = body.items || [];
-            const scope = body.scope || "Nobori Agro Batch Pre-Order";
-            const order_id = body.orderId || `NB-${Date.now().toString().slice(-6)}`;
+            const area = body.area || "Dhaka Metro";
+            const products = body.products || "Fresh Poultry Items";
+            const payment = body.payment || "Cash on Delivery";
+            const notes = body.notes || "";
+            const order_id = `NA-${Date.now().toString().slice(-6)}`;
 
-            console.log(`[NOBORI AGRO PRE-ORDER] Order #${order_id} | ${name} (${contact}) | Batch: ${batch} | Items: ${items.length}`);
+            console.log(`[NOBORI AGRO ORDER] #${order_id} | ${name} (${contact}) | Area: ${area} | Products: ${products}`);
 
             return res.status(200).json({
                 success: true,
-                message: "Batch pre-order slot successfully secured on Nobori Agro headless API!",
+                message: "Fresh poultry order received! Our cold-chain dispatch desk will call you shortly.",
                 order_id: order_id,
-                batch: batch,
-                status: "Queued for Nitrogen Sealed Dispatch",
-                lead: { name, contact, address, scope, items_count: items.length }
+                delivery_status: "Processing Chilled Cold-Chain Dispatch",
+                lead: { name, contact, area, address, products, payment, notes }
             });
         } catch (error) {
             return res.status(500).json({ success: false, error: error.message });
@@ -37,8 +37,8 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({ 
         status: "active",
-        service: "Nobori Agro Headless WooCommerce Store API",
-        version: "2.4.0",
-        purity_standard: "100% Raw Botanical Purity (<4% Solar Moisture)"
+        service: "Nobori Agro Fresh Poultry & Cuts API",
+        version: "3.0.0",
+        standard: "100% Hand-Slaughtered Halal & 0-4°C Cold Chain Packaging"
     });
 };
