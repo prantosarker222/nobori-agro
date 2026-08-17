@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
 
             return res.status(200).json({
                 success: true,
-                message: "Fresh poultry order received! Our cold-chain dispatch desk will call you shortly.",
+                message: "Order received! Our cold-chain dispatch desk will call you shortly to confirm delivery.",
                 order_id: order_id,
                 delivery_status: "Processing Chilled Cold-Chain Dispatch",
                 lead: { name, contact, area, address, products, payment, notes }
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({ 
         status: "active",
-        service: "Nobori Agro Fresh Poultry & Cuts API",
+        service: "Nobori Agro Fresh Groceries & Cuts API",
         version: "3.0.0",
         standard: "100% Premium Quality & 0-4°C Cold Chain Packaging"
     });

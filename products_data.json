@@ -852,7 +852,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 450,
     "unit": "2 kg (2 Birds)",
-    "img": "whole_chicken_skin_on.jpg",
+    "img": "whole_broiler.jpg",
     "badge": "Twin Birds",
     "badgeType": "badge-accent",
     "desc": "Farm-fresh cleaned broiler chicken with natural skin for enhanced moisture during cooking."
@@ -930,7 +930,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 820,
     "unit": "2 Birds (~1.6kg)",
-    "img": "roast_chicken.jpg",
+    "img": "deshi_chicken.jpg",
     "badge": "Traditional",
     "badgeType": "",
     "desc": "Free-range local deshi chickens with deep natural meat aroma for home-style broth."
@@ -943,7 +943,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 540,
     "unit": "1 pc (~850g)",
-    "img": "roast_chicken.jpg",
+    "img": "deshi_chicken.jpg",
     "badge": "100% Organic",
     "badgeType": "badge-accent",
     "desc": "Raised purely on organic greens and natural grains. Zero commercial feeds."
@@ -956,7 +956,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 600,
     "unit": "8 pcs pack",
-    "img": "roast_chicken.jpg",
+    "img": "quail.jpg",
     "badge": "8 pcs Value",
     "badgeType": "",
     "desc": "Family value pack of 8 skinless, fully dressed tender quail birds. Nutrient-dense delicacy."
@@ -969,7 +969,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 950,
     "unit": "4 pcs (2 Pairs)",
-    "img": "roast_chicken.jpg",
+    "img": "pigeon.jpg",
     "badge": "Health Broth",
     "badgeType": "",
     "desc": "Clean dressed squab/pigeon pack of 4 birds for vitality and traditional healing broths."
@@ -982,7 +982,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 370,
     "unit": "1 kg pack",
-    "img": "liver_gizzard.jpg",
+    "img": "liver.jpg",
     "badge": "Cleaned",
     "badgeType": "",
     "desc": "Washed and cleaned fresh chicken liver and gizzard. High iron."
@@ -1008,7 +1008,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 270,
     "unit": "2 kg pack",
-    "img": "drumsticks.jpg",
+    "img": "chicken_broth.jpg",
     "badge": "2kg Stock",
     "badgeType": "",
     "desc": "Chicken back and neck bones for clear broth, ramen stock, and baby food."
@@ -1021,7 +1021,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 750,
     "unit": "1200g Loaf",
-    "img": "chicken_bologna.jpg",
+    "img": "bologna.jpg",
     "badge": "Jumbo Loaf",
     "badgeType": "badge-gold",
     "desc": "Premium seasoned chicken cold-cut loaf. Slice thin for sandwiches."
@@ -1034,7 +1034,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 450,
     "unit": "20 pcs pack",
-    "img": "chicken_samosa.jpg",
+    "img": "samosa.jpg",
     "badge": "Save ৳30",
     "badgeType": "badge-accent",
     "desc": "Party pack of 20 crispy chicken samosas. Deep fry or air fry straight from frozen."
@@ -1047,7 +1047,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 490,
     "unit": "20 pcs pack",
-    "img": "chicken_spring_roll.jpg",
+    "img": "spring_roll.jpg",
     "badge": "Family Pack",
     "badgeType": "",
     "desc": "Value bundle of 20 crunchy chicken spring rolls for evening snacks."
@@ -1060,7 +1060,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 560,
     "unit": "20 pcs pack",
-    "img": "chicken_sausage.jpg",
+    "img": "sausage.jpg",
     "badge": "20 pcs Jumbo",
     "badgeType": "",
     "desc": "Lightly smoked chicken sausage links in a 20-piece family breakfast pack."
@@ -1073,7 +1073,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 360,
     "unit": "10 pcs pack",
-    "img": "chicken_sausage.jpg",
+    "img": "sausage.jpg",
     "badge": "Cheese Burst",
     "badgeType": "badge-gold",
     "desc": "Chicken sausage infused with melty mozzarella and cheddar cheese chunks."
@@ -1086,7 +1086,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 590,
     "unit": "24 pcs pack",
-    "img": "chicken_nuggets.jpg",
+    "img": "nuggets.jpg",
     "badge": "Best Value",
     "badgeType": "badge-accent",
     "desc": "Mega box of 24 chicken nuggets. 100% pure chicken breast in golden breadcrumbs."
@@ -1099,7 +1099,7 @@
     "catLabel": "Frozen & Poultry",
     "price": 580,
     "unit": "40 pcs pack",
-    "img": "chicken_meatball.jpg",
+    "img": "meatball.jpg",
     "badge": "40 pcs Value",
     "badgeType": "",
     "desc": "Juicy seasoned chicken meatballs for pasta, soup, and sweet-sour glaze."

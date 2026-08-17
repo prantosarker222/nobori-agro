@@ -861,7 +861,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 450,
     "unit": "2 kg (2 Birds)",
-    "img": "whole_chicken_skin_on.jpg",
+    "img": "whole_broiler.jpg",
     "badge": "Twin Birds",
     "badgeType": "badge-accent",
     "desc": "Farm-fresh cleaned broiler chicken with natural skin for enhanced moisture during cooking."
@@ -939,7 +939,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 820,
     "unit": "2 Birds (~1.6kg)",
-    "img": "roast_chicken.jpg",
+    "img": "deshi_chicken.jpg",
     "badge": "Traditional",
     "badgeType": "",
     "desc": "Free-range local deshi chickens with deep natural meat aroma for home-style broth."
@@ -952,7 +952,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 540,
     "unit": "1 pc (~850g)",
-    "img": "roast_chicken.jpg",
+    "img": "deshi_chicken.jpg",
     "badge": "100% Organic",
     "badgeType": "badge-accent",
     "desc": "Raised purely on organic greens and natural grains. Zero commercial feeds."
@@ -965,7 +965,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 600,
     "unit": "8 pcs pack",
-    "img": "roast_chicken.jpg",
+    "img": "quail.jpg",
     "badge": "8 pcs Value",
     "badgeType": "",
     "desc": "Family value pack of 8 skinless, fully dressed tender quail birds. Nutrient-dense delicacy."
@@ -978,7 +978,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 950,
     "unit": "4 pcs (2 Pairs)",
-    "img": "roast_chicken.jpg",
+    "img": "pigeon.jpg",
     "badge": "Health Broth",
     "badgeType": "",
     "desc": "Clean dressed squab/pigeon pack of 4 birds for vitality and traditional healing broths."
@@ -991,7 +991,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 370,
     "unit": "1 kg pack",
-    "img": "liver_gizzard.jpg",
+    "img": "liver.jpg",
     "badge": "Cleaned",
     "badgeType": "",
     "desc": "Washed and cleaned fresh chicken liver and gizzard. High iron."
@@ -1017,7 +1017,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 270,
     "unit": "2 kg pack",
-    "img": "drumsticks.jpg",
+    "img": "chicken_broth.jpg",
     "badge": "2kg Stock",
     "badgeType": "",
     "desc": "Chicken back and neck bones for clear broth, ramen stock, and baby food."
@@ -1030,7 +1030,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 750,
     "unit": "1200g Loaf",
-    "img": "chicken_bologna.jpg",
+    "img": "bologna.jpg",
     "badge": "Jumbo Loaf",
     "badgeType": "badge-gold",
     "desc": "Premium seasoned chicken cold-cut loaf. Slice thin for sandwiches."
@@ -1043,7 +1043,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 450,
     "unit": "20 pcs pack",
-    "img": "chicken_samosa.jpg",
+    "img": "samosa.jpg",
     "badge": "Save ৳30",
     "badgeType": "badge-accent",
     "desc": "Party pack of 20 crispy chicken samosas. Deep fry or air fry straight from frozen."
@@ -1056,7 +1056,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 490,
     "unit": "20 pcs pack",
-    "img": "chicken_spring_roll.jpg",
+    "img": "spring_roll.jpg",
     "badge": "Family Pack",
     "badgeType": "",
     "desc": "Value bundle of 20 crunchy chicken spring rolls for evening snacks."
@@ -1069,7 +1069,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 560,
     "unit": "20 pcs pack",
-    "img": "chicken_sausage.jpg",
+    "img": "sausage.jpg",
     "badge": "20 pcs Jumbo",
     "badgeType": "",
     "desc": "Lightly smoked chicken sausage links in a 20-piece family breakfast pack."
@@ -1082,7 +1082,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 360,
     "unit": "10 pcs pack",
-    "img": "chicken_sausage.jpg",
+    "img": "sausage.jpg",
     "badge": "Cheese Burst",
     "badgeType": "badge-gold",
     "desc": "Chicken sausage infused with melty mozzarella and cheddar cheese chunks."
@@ -1095,7 +1095,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 590,
     "unit": "24 pcs pack",
-    "img": "chicken_nuggets.jpg",
+    "img": "nuggets.jpg",
     "badge": "Best Value",
     "badgeType": "badge-accent",
     "desc": "Mega box of 24 chicken nuggets. 100% pure chicken breast in golden breadcrumbs."
@@ -1108,7 +1108,7 @@ const PRODUCTS = [
     "catLabel": "Frozen & Poultry",
     "price": 580,
     "unit": "40 pcs pack",
-    "img": "chicken_meatball.jpg",
+    "img": "meatball.jpg",
     "badge": "40 pcs Value",
     "badgeType": "",
     "desc": "Juicy seasoned chicken meatballs for pasta, soup, and sweet-sour glaze."
@@ -1365,7 +1365,7 @@ function renderProductCatalog() {
       <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
         <i class="fas fa-search" style="font-size: 2.2rem; color: var(--text-light); margin-bottom: 0.85rem;"></i>
         <h3 style="font-family: var(--font-heading); color: var(--text-main); margin-bottom: 0.35rem;">No products found</h3>
-        <p style="font-size: 0.88rem;">Try searching for "Breast", "Nuggets", "Duck", or reset filters.</p>
+        <p style="font-size: 0.88rem;">Try searching for "Chanachur", "Fish", "Potato", "Chicken", or reset filters.</p>
       </div>
     `;
     return;
@@ -1378,7 +1378,7 @@ function renderProductCatalog() {
     return `
       <article class="product-item-card" data-id="${item.id}">
         <div class="product-thumb-box" onclick="openProductModal(${item.id})">
-          <img src="${item.img}" alt="${item.name}" loading="lazy">
+          <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.onerror=null;this.src='placeholder.jpg';">
           ${item.badge ? `<span class="card-badge-tag ${item.badgeType}">${item.badge}</span>` : ''}
           <span class="card-fresh-stamp"><i class="fas fa-check-circle"></i> Fresh</span>
         </div>
@@ -1578,7 +1578,7 @@ function updateCartDisplay() {
 
   body.innerHTML = cart.map(item => `
     <div class="drawer-cart-item">
-      <img src="${item.img}" alt="${item.name}" class="drawer-item-img">
+      <img src="${item.img}" alt="${item.name}" class="drawer-item-img" onerror="this.onerror=null;this.src='placeholder.jpg';">
       <div class="drawer-item-details">
         <div class="drawer-item-title">${item.name}</div>
         <div class="drawer-item-price">৳${item.price} &bull; ${item.unit}</div>
@@ -1620,7 +1620,7 @@ function openProductModal(productId) {
   contentArea.innerHTML = `
     <div class="modal-grid-layout">
       <div class="modal-img-frame">
-        <img src="${p.img}" alt="${p.name}">
+        <img src="${p.img}" alt="${p.name}" onerror="this.onerror=null;this.src='placeholder.jpg';">
       </div>
       <div class="modal-details-block">
         <span class="product-cat-label">${p.catLabel}</span>
@@ -1661,12 +1661,28 @@ function populateOrderCheckboxes() {
   const container = $('productSelectorBox');
   if (!container) return;
 
-  container.innerHTML = PRODUCTS.map(p => `
-    <label class="product-check-item">
-      <input type="checkbox" name="orderItems" value="${p.name} (৳${p.price})">
-      <span>${p.name}</span>
-    </label>
-  `).join('');
+  const categories = [
+    { key: 'snacks_dry', label: '🍿 1. Snacks & Dry Foods' },
+    { key: 'fish_veg', label: '🐟 2. Fish & Fresh Vegetables' },
+    { key: 'frozen_meat', label: '🍗 3. Frozen Food, Poultry & Mutton' }
+  ];
+
+  container.innerHTML = categories.map(cat => {
+    const catProducts = PRODUCTS.filter(p => p.cat === cat.key);
+    return `
+      <div class="product-selector-group">
+        <div class="product-selector-group-title">${cat.label}</div>
+        <div class="product-selector-group-items">
+          ${catProducts.map(p => `
+            <label class="product-check-item">
+              <input type="checkbox" name="orderItems" value="${p.name} (৳${p.price})">
+              <span>${p.name} — <strong>৳${p.price}</strong></span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 /* ==========================================================================
