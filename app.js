@@ -19,7 +19,8 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Family Pack",
     "badgeType": "badge-accent",
-    "desc": "Crispy, crunchy spicy traditional Chanachur with fried peanuts, yellow lentils, and seasoned sev noodles."
+    "desc": "Crispy, crunchy spicy traditional Chanachur with fried peanuts, yellow lentils, and seasoned sev noodles.",
+    "sku": "NA-SNK-001"
   },
   {
     "id": 2,
@@ -32,7 +33,8 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Extra Spicy",
     "badgeType": "badge-accent",
-    "desc": "Mustard-oil infused spicy chanachur blend packed with roasted peanuts and hot chili crunch."
+    "desc": "Mustard-oil infused spicy chanachur blend packed with roasted peanuts and hot chili crunch.",
+    "sku": "NA-SNK-002"
   },
   {
     "id": 3,
@@ -45,7 +47,8 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Twin Saver",
     "badgeType": "badge-gold",
-    "desc": "Smoky BBQ flavored modern chanachur snack with zesty seasoning in a double bundle pack."
+    "desc": "Smoky BBQ flavored modern chanachur snack with zesty seasoning in a double bundle pack.",
+    "sku": "NA-SNK-003"
   },
   {
     "id": 4,
@@ -58,7 +61,8 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Mega Pack",
     "badgeType": "",
-    "desc": "Authentic aroma and crunchy lentil nuggets with fried cashews and peanuts."
+    "desc": "Authentic aroma and crunchy lentil nuggets with fried cashews and peanuts.",
+    "sku": "NA-SNK-004"
   },
   {
     "id": 5,
@@ -71,7 +75,8 @@ const PRODUCTS = [
     "img": "chanachur.jpg",
     "badge": "Sweet & Sour",
     "badgeType": "badge-gold",
-    "desc": "Tangy tamarind, sweet raisins, and spicy crunchy chickpea flour sev for family tea time."
+    "desc": "Tangy tamarind, sweet raisins, and spicy crunchy chickpea flour sev for family tea time.",
+    "sku": "NA-SNK-005"
   },
   {
     "id": 6,
@@ -84,7 +89,8 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Party Box",
     "badgeType": "badge-accent",
-    "desc": "Multipack box of 6 crispy golden potato crinkle chips tossed with tangy tomato seasoning."
+    "desc": "Multipack box of 6 crispy golden potato crinkle chips tossed with tangy tomato seasoning.",
+    "sku": "NA-SNK-006"
   },
   {
     "id": 7,
@@ -97,7 +103,8 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Multipack",
     "badgeType": "badge-accent",
-    "desc": "Gourmet wave potato chips seasoned with creamy sour cream and chives in a value 4-pack."
+    "desc": "Gourmet wave potato chips seasoned with creamy sour cream and chives in a value 4-pack.",
+    "sku": "NA-SNK-007"
   },
   {
     "id": 8,
@@ -110,7 +117,8 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Classic Salt",
     "badgeType": "",
-    "desc": "Pure sliced thin farm potato crisps sprinkled with fine sea salt in a convenient multi-bundle."
+    "desc": "Pure sliced thin farm potato crisps sprinkled with fine sea salt in a convenient multi-bundle.",
+    "sku": "NA-SNK-008"
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@ const PRODUCTS = [
     "img": "nacho_chips.jpg",
     "badge": "Nacho Cheese",
     "badgeType": "badge-gold",
-    "desc": "Crunchy corn tortilla chips loaded with savory melted nacho cheese seasoning."
+    "desc": "Crunchy corn tortilla chips loaded with savory melted nacho cheese seasoning.",
+    "sku": "NA-SNK-009"
   },
   {
     "id": 10,
@@ -136,7 +145,8 @@ const PRODUCTS = [
     "img": "toast_biscuits.jpg",
     "badge": "Giant Saver",
     "badgeType": "badge-accent",
-    "desc": "Crisp twice-baked toast biscuits flavored with aromatic cardamom and sesame seeds."
+    "desc": "Crisp twice-baked toast biscuits flavored with aromatic cardamom and sesame seeds.",
+    "sku": "NA-SNK-010"
   },
   {
     "id": 11,
@@ -149,7 +159,8 @@ const PRODUCTS = [
     "img": "dry_cake.jpg",
     "badge": "Bakery Grade",
     "badgeType": "",
-    "desc": "Sweet golden crunchy dry cake slices baked with vanilla butter flavor for evening tea."
+    "desc": "Sweet golden crunchy dry cake slices baked with vanilla butter flavor for evening tea.",
+    "sku": "NA-SNK-011"
   },
   {
     "id": 12,
@@ -162,7 +173,8 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Twin Pack",
     "badgeType": "",
-    "desc": "Rich bakery cookies packed with roasted chopped peanut chunks in a twin value box."
+    "desc": "Rich bakery cookies packed with roasted chopped peanut chunks in a twin value box.",
+    "sku": "NA-SNK-012"
   },
   {
     "id": 13,
@@ -175,7 +187,8 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Pure Butter",
     "badgeType": "badge-gold",
-    "desc": "Assorted Danish butter cookies in a reusable royal blue embossed gift tin."
+    "desc": "Assorted Danish butter cookies in a reusable royal blue embossed gift tin.",
+    "sku": "NA-SNK-013"
   },
   {
     "id": 14,
@@ -188,7 +201,8 @@ const PRODUCTS = [
     "img": "potato_chips.jpg",
     "badge": "Viral Favorite",
     "badgeType": "badge-accent",
-    "desc": "Ultra-thin, paper-crisp potato crackers sprinkled with fiery spices in a wholesale box."
+    "desc": "Ultra-thin, paper-crisp potato crackers sprinkled with fiery spices in a wholesale box.",
+    "sku": "NA-SNK-014"
   },
   {
     "id": 15,
@@ -201,7 +215,8 @@ const PRODUCTS = [
     "img": "butter_cookies.jpg",
     "badge": "Family Bundle",
     "badgeType": "badge-accent",
-    "desc": "Rich, melt-in-the-mouth butter cookies with signature smile design in an 800g bundle."
+    "desc": "Rich, melt-in-the-mouth butter cookies with signature smile design in an 800g bundle.",
+    "sku": "NA-SNK-015"
   },
   {
     "id": 16,
@@ -214,7 +229,8 @@ const PRODUCTS = [
     "img": "chocolate_biscuits.jpg",
     "badge": "Party Pack",
     "badgeType": "",
-    "desc": "Rich dark cocoa biscuits filled with smooth vanilla cream in a 4-piece multipack."
+    "desc": "Rich dark cocoa biscuits filled with smooth vanilla cream in a 4-piece multipack.",
+    "sku": "NA-SNK-016"
   },
   {
     "id": 17,
@@ -227,7 +243,8 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Fresh Roast",
     "badgeType": "",
-    "desc": "Crispy fried golden peanuts tossed with fine salt in a reusable airtight 500g jar."
+    "desc": "Crispy fried golden peanuts tossed with fine salt in a reusable airtight 500g jar.",
+    "sku": "NA-SNK-017"
   },
   {
     "id": 18,
@@ -240,7 +257,8 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Chatpata",
     "badgeType": "badge-accent",
-    "desc": "Crunchy roasted peanuts coated in tangy chaat masala and chili in an airtight jar."
+    "desc": "Crunchy roasted peanuts coated in tangy chaat masala and chili in an airtight jar.",
+    "sku": "NA-SNK-018"
   },
   {
     "id": 19,
@@ -253,7 +271,8 @@ const PRODUCTS = [
     "img": "fried_peas.jpg",
     "badge": "Super Crunchy",
     "badgeType": "",
-    "desc": "Deep fried crispy whole green peas dusted with salt and hot spices."
+    "desc": "Deep fried crispy whole green peas dusted with salt and hot spices.",
+    "sku": "NA-SNK-019"
   },
   {
     "id": 20,
@@ -266,7 +285,8 @@ const PRODUCTS = [
     "img": "dal_bhaja.jpg",
     "badge": "Crispy Dal",
     "badgeType": "",
-    "desc": "Fried crunchy yellow lentils seasoned with black salt and red pepper."
+    "desc": "Fried crunchy yellow lentils seasoned with black salt and red pepper.",
+    "sku": "NA-SNK-020"
   },
   {
     "id": 21,
@@ -279,7 +299,8 @@ const PRODUCTS = [
     "img": "nimki.jpg",
     "badge": "Home Style",
     "badgeType": "badge-gold",
-    "desc": "Flaky triangular flour crisps flavored with black cumin seeds (kalo jeere)."
+    "desc": "Flaky triangular flour crisps flavored with black cumin seeds (kalo jeere).",
+    "sku": "NA-SNK-021"
   },
   {
     "id": 22,
@@ -292,7 +313,8 @@ const PRODUCTS = [
     "img": "nimki.jpg",
     "badge": "Artisanal",
     "badgeType": "",
-    "desc": "Layered crisp puff pastry dipped in light sugar syrup and ghee."
+    "desc": "Layered crisp puff pastry dipped in light sugar syrup and ghee.",
+    "sku": "NA-SNK-022"
   },
   {
     "id": 23,
@@ -305,7 +327,8 @@ const PRODUCTS = [
     "img": "roasted_peanuts.jpg",
     "badge": "Gourmet Nuts",
     "badgeType": "badge-gold",
-    "desc": "Slow-roasted whole cashews and California almonds with pink rock salt."
+    "desc": "Slow-roasted whole cashews and California almonds with pink rock salt.",
+    "sku": "NA-SNK-023"
   },
   {
     "id": 24,
@@ -318,7 +341,8 @@ const PRODUCTS = [
     "img": "puffed_rice.jpg",
     "badge": "100% Urea Free",
     "badgeType": "badge-accent",
-    "desc": "Naturally hand-roasted white puffed rice from village country paddy. 100% chemical free."
+    "desc": "Naturally hand-roasted white puffed rice from village country paddy. 100% chemical free.",
+    "sku": "NA-SNK-024"
   },
   {
     "id": 25,
@@ -331,7 +355,8 @@ const PRODUCTS = [
     "img": "puffed_rice.jpg",
     "badge": "Crispy Chira",
     "badgeType": "",
-    "desc": "Deep fried crispy flattened rice tossed with peanuts, curry leaves, and green chili."
+    "desc": "Deep fried crispy flattened rice tossed with peanuts, curry leaves, and green chili.",
+    "sku": "NA-SNK-025"
   },
   {
     "id": 26,
@@ -344,7 +369,8 @@ const PRODUCTS = [
     "img": "toast_biscuits.jpg",
     "badge": "Twin Pack",
     "badgeType": "",
-    "desc": "Light, airy salted square biscuits perfect for tea-time and cheese dips."
+    "desc": "Light, airy salted square biscuits perfect for tea-time and cheese dips.",
+    "sku": "NA-SNK-026"
   },
   {
     "id": 27,
@@ -357,7 +383,8 @@ const PRODUCTS = [
     "img": "nacho_chips.jpg",
     "badge": "Spicy Munch",
     "badgeType": "badge-accent",
-    "desc": "Crunchy kurkure puff twists with chatpata masala in a 4-pack party bundle."
+    "desc": "Crunchy kurkure puff twists with chatpata masala in a 4-pack party bundle.",
+    "sku": "NA-SNK-027"
   },
   {
     "id": 28,
@@ -370,7 +397,8 @@ const PRODUCTS = [
     "img": "jhal_muri.jpg",
     "badge": "Street Snack",
     "badgeType": "",
-    "desc": "Puffed rice blended with chanachur, spices, and fried peanuts. Just add oil and onions."
+    "desc": "Puffed rice blended with chanachur, spices, and fried peanuts. Just add oil and onions.",
+    "sku": "NA-SNK-028"
   },
   {
     "id": 29,
@@ -383,7 +411,8 @@ const PRODUCTS = [
     "img": "rui_fish.jpg",
     "badge": "Daily Catch",
     "badgeType": "badge-accent",
-    "desc": "Fresh large river Rui scaled, gutted, and portioned into 1kg net clean curry slices."
+    "desc": "Fresh large river Rui scaled, gutted, and portioned into 1kg net clean curry slices.",
+    "sku": "NA-FSH-029"
   },
   {
     "id": 30,
@@ -396,7 +425,8 @@ const PRODUCTS = [
     "img": "katla_fish.jpg",
     "badge": "Fatty Petti",
     "badgeType": "",
-    "desc": "Rich Katla belly portions sliced for traditional Bengali fish kalia."
+    "desc": "Rich Katla belly portions sliced for traditional Bengali fish kalia.",
+    "sku": "NA-FSH-030"
   },
   {
     "id": 31,
@@ -409,7 +439,8 @@ const PRODUCTS = [
     "img": "pabda_fish.jpg",
     "badge": "Sweet River",
     "badgeType": "badge-gold",
-    "desc": "Silky, delicate Pabda fish dressed and ready for mustard oil shorshe jhol."
+    "desc": "Silky, delicate Pabda fish dressed and ready for mustard oil shorshe jhol.",
+    "sku": "NA-FSH-031"
   },
   {
     "id": 32,
@@ -422,7 +453,8 @@ const PRODUCTS = [
     "img": "tengra_fish.jpg",
     "badge": "Haor Fresh",
     "badgeType": "",
-    "desc": "Small freshwater Tengra fish cleaned for potato and tomato curry."
+    "desc": "Small freshwater Tengra fish cleaned for potato and tomato curry.",
+    "sku": "NA-FSH-032"
   },
   {
     "id": 33,
@@ -435,7 +467,8 @@ const PRODUCTS = [
     "img": "shing_fish.jpg",
     "badge": "Nutritious",
     "badgeType": "badge-accent",
-    "desc": "Naturally wholesome live catfish dressed clean. Highly recommended health broth fish."
+    "desc": "Naturally wholesome live catfish dressed clean. Highly recommended health broth fish.",
+    "sku": "NA-FSH-033"
   },
   {
     "id": 34,
@@ -448,7 +481,8 @@ const PRODUCTS = [
     "img": "magur_fish.jpg",
     "badge": "Native Catch",
     "badgeType": "",
-    "desc": "Cleaned native Magur catfish portioned for nourishing light stew."
+    "desc": "Cleaned native Magur catfish portioned for nourishing light stew.",
+    "sku": "NA-FSH-034"
   },
   {
     "id": 35,
@@ -461,7 +495,8 @@ const PRODUCTS = [
     "img": "koi_fish.jpg",
     "badge": "Tel Koi Cut",
     "badgeType": "",
-    "desc": "Fat climbing perch Koi fish scaled and cleaned for traditional Tel Koi bhuna."
+    "desc": "Fat climbing perch Koi fish scaled and cleaned for traditional Tel Koi bhuna.",
+    "sku": "NA-FSH-035"
   },
   {
     "id": 36,
@@ -474,7 +509,8 @@ const PRODUCTS = [
     "img": "ilish_fish.jpg",
     "badge": "Padma King",
     "badgeType": "badge-gold",
-    "desc": "Authentic silver Padma river Ilish with maximum natural oil content and supreme aroma."
+    "desc": "Authentic silver Padma river Ilish with maximum natural oil content and supreme aroma.",
+    "sku": "NA-FSH-036"
   },
   {
     "id": 37,
@@ -487,7 +523,8 @@ const PRODUCTS = [
     "img": "ilish_fish.jpg",
     "badge": "Ready to Cook",
     "badgeType": "badge-gold",
-    "desc": "Convenient pre-cut thick Ilish slices ready for Shorshe Ilish and Bhaja."
+    "desc": "Convenient pre-cut thick Ilish slices ready for Shorshe Ilish and Bhaja.",
+    "sku": "NA-FSH-037"
   },
   {
     "id": 38,
@@ -500,7 +537,8 @@ const PRODUCTS = [
     "img": "prawns.jpg",
     "badge": "Deveined",
     "badgeType": "badge-accent",
-    "desc": "Black tiger sea prawns peeled, deveined with tail on for Chingri Malaikari."
+    "desc": "Black tiger sea prawns peeled, deveined with tail on for Chingri Malaikari.",
+    "sku": "NA-FSH-038"
   },
   {
     "id": 39,
@@ -513,7 +551,8 @@ const PRODUCTS = [
     "img": "jumbo_prawns.jpg",
     "badge": "Jumbo River",
     "badgeType": "badge-gold",
-    "desc": "Giant freshwater river prawns with rich head fat for royal roasts."
+    "desc": "Giant freshwater river prawns with rich head fat for royal roasts.",
+    "sku": "NA-FSH-039"
   },
   {
     "id": 40,
@@ -526,7 +565,8 @@ const PRODUCTS = [
     "img": "fish_fillet.jpg",
     "badge": "100% Boneless",
     "badgeType": "",
-    "desc": "Pure white boneless fish fillets. Ideal for fish fry, fish fingers, and baking."
+    "desc": "Pure white boneless fish fillets. Ideal for fish fry, fish fingers, and baking.",
+    "sku": "NA-FSH-040"
   },
   {
     "id": 41,
@@ -539,7 +579,8 @@ const PRODUCTS = [
     "img": "potatoes.jpg",
     "badge": "3kg Value",
     "badgeType": "",
-    "desc": "Firm red soil farm potatoes for rich curry gravies and aloo bhorta."
+    "desc": "Firm red soil farm potatoes for rich curry gravies and aloo bhorta.",
+    "sku": "NA-VEG-041"
   },
   {
     "id": 42,
@@ -552,7 +593,8 @@ const PRODUCTS = [
     "img": "potatoes.jpg",
     "badge": "5kg Wholesale",
     "badgeType": "badge-accent",
-    "desc": "Large smooth skin baking and frying white potatoes in an economical 5kg sack."
+    "desc": "Large smooth skin baking and frying white potatoes in an economical 5kg sack.",
+    "sku": "NA-VEG-042"
   },
   {
     "id": 43,
@@ -565,7 +607,8 @@ const PRODUCTS = [
     "img": "onions.jpg",
     "badge": "2kg Deshi",
     "badgeType": "badge-accent",
-    "desc": "Pungent, thin-skinned local red onions with intense natural aroma in a 2kg pack."
+    "desc": "Pungent, thin-skinned local red onions with intense natural aroma in a 2kg pack.",
+    "sku": "NA-VEG-043"
   },
   {
     "id": 44,
@@ -578,7 +621,8 @@ const PRODUCTS = [
     "img": "tomatoes.jpg",
     "badge": "2kg Farm Fresh",
     "badgeType": "",
-    "desc": "Juicy garden fresh red tomatoes for salads and rich curries in a 2kg family box."
+    "desc": "Juicy garden fresh red tomatoes for salads and rich curries in a 2kg family box.",
+    "sku": "NA-VEG-044"
   },
   {
     "id": 45,
@@ -591,7 +635,8 @@ const PRODUCTS = [
     "img": "garlic.jpg",
     "badge": "Kitchen Essential",
     "badgeType": "badge-accent",
-    "desc": "Fresh Deshi garlic and juicy ginger root combination for seamless cooking."
+    "desc": "Fresh Deshi garlic and juicy ginger root combination for seamless cooking.",
+    "sku": "NA-VEG-045"
   },
   {
     "id": 46,
@@ -604,7 +649,8 @@ const PRODUCTS = [
     "img": "green_chilies.jpg",
     "badge": "Spicy Combo",
     "badgeType": "",
-    "desc": "Crisp green chilies paired with aromatic garlic cloves for daily tempering."
+    "desc": "Crisp green chilies paired with aromatic garlic cloves for daily tempering.",
+    "sku": "NA-VEG-046"
   },
   {
     "id": 47,
@@ -617,7 +663,8 @@ const PRODUCTS = [
     "img": "cauliflower.jpg",
     "badge": "Twin Heads",
     "badgeType": "",
-    "desc": "Clean, tight white curd cauliflower freshly harvested in a twin bundle."
+    "desc": "Clean, tight white curd cauliflower freshly harvested in a twin bundle.",
+    "sku": "NA-VEG-047"
   },
   {
     "id": 48,
@@ -630,7 +677,8 @@ const PRODUCTS = [
     "img": "cabbage.jpg",
     "badge": "Twin Pack",
     "badgeType": "",
-    "desc": "Dense, crisp green cabbage for bhaji, salads, and rolls in a value 2-pack."
+    "desc": "Dense, crisp green cabbage for bhaji, salads, and rolls in a value 2-pack.",
+    "sku": "NA-VEG-048"
   },
   {
     "id": 49,
@@ -643,7 +691,8 @@ const PRODUCTS = [
     "img": "eggplant.jpg",
     "badge": "2kg Begun",
     "badgeType": "",
-    "desc": "Glossy purple long eggplants ideal for Begun Bhaja and shutki jhol."
+    "desc": "Glossy purple long eggplants ideal for Begun Bhaja and shutki jhol.",
+    "sku": "NA-VEG-049"
   },
   {
     "id": 50,
@@ -656,7 +705,8 @@ const PRODUCTS = [
     "img": "carrots.jpg",
     "badge": "2kg Crunch",
     "badgeType": "",
-    "desc": "Sweet, vibrant orange farm carrots for salads, halwa, and stews."
+    "desc": "Sweet, vibrant orange farm carrots for salads, halwa, and stews.",
+    "sku": "NA-VEG-050"
   },
   {
     "id": 51,
@@ -669,7 +719,8 @@ const PRODUCTS = [
     "img": "cucumbers.jpg",
     "badge": "2kg Salad",
     "badgeType": "",
-    "desc": "Crisp local green cucumbers packed with refreshing moisture."
+    "desc": "Crisp local green cucumbers packed with refreshing moisture.",
+    "sku": "NA-VEG-051"
   },
   {
     "id": 52,
@@ -682,7 +733,8 @@ const PRODUCTS = [
     "img": "bottle_gourd.jpg",
     "badge": "Twin Lau",
     "badgeType": "badge-accent",
-    "desc": "Tender young bottle gourd for Chingri Lau and light fish stews in a 2-piece set."
+    "desc": "Tender young bottle gourd for Chingri Lau and light fish stews in a 2-piece set.",
+    "sku": "NA-VEG-052"
   },
   {
     "id": 53,
@@ -695,7 +747,8 @@ const PRODUCTS = [
     "img": "raw_papaya.jpg",
     "badge": "Twin Pepe",
     "badgeType": "",
-    "desc": "Nutritious raw green papaya for curries, tenderizing meat, and salads."
+    "desc": "Nutritious raw green papaya for curries, tenderizing meat, and salads.",
+    "sku": "NA-VEG-053"
   },
   {
     "id": 54,
@@ -708,7 +761,8 @@ const PRODUCTS = [
     "img": "bottle_gourd.jpg",
     "badge": "2kg Potol",
     "badgeType": "",
-    "desc": "Young pointed gourds for potol bhaja and potol dorma."
+    "desc": "Young pointed gourds for potol bhaja and potol dorma.",
+    "sku": "NA-VEG-054"
   },
   {
     "id": 55,
@@ -721,7 +775,8 @@ const PRODUCTS = [
     "img": "bitter_gourd.jpg",
     "badge": "1kg Korola",
     "badgeType": "",
-    "desc": "Small crisp bitter gourds for crunchy potato bhaji and health juicing."
+    "desc": "Small crisp bitter gourds for crunchy potato bhaji and health juicing.",
+    "sku": "NA-VEG-055"
   },
   {
     "id": 56,
@@ -734,7 +789,8 @@ const PRODUCTS = [
     "img": "okra.jpg",
     "badge": "1kg Dherosh",
     "badgeType": "",
-    "desc": "Young tender ladyfingers for crispy bhaji and mustard fish curry."
+    "desc": "Young tender ladyfingers for crispy bhaji and mustard fish curry.",
+    "sku": "NA-VEG-056"
   },
   {
     "id": 57,
@@ -747,7 +803,8 @@ const PRODUCTS = [
     "img": "spinach.jpg",
     "badge": "6 Bunches",
     "badgeType": "badge-accent",
-    "desc": "Tender green spinach and vibrant red amaranth leaves in a wholesome 6-bunch family bundle."
+    "desc": "Tender green spinach and vibrant red amaranth leaves in a wholesome 6-bunch family bundle.",
+    "sku": "NA-VEG-057"
   },
   {
     "id": 58,
@@ -760,7 +817,8 @@ const PRODUCTS = [
     "img": "lemons.jpg",
     "badge": "Daily Fresh",
     "badgeType": "",
-    "desc": "Aromatic green coriander leaves, fresh green chilies, and juicy Kagoji lemons in one set."
+    "desc": "Aromatic green coriander leaves, fresh green chilies, and juicy Kagoji lemons in one set.",
+    "sku": "NA-VEG-058"
   },
   {
     "id": 59,
@@ -773,7 +831,8 @@ const PRODUCTS = [
     "img": "tomatoes.jpg",
     "badge": "All-in-One",
     "badgeType": "badge-gold",
-    "desc": "Hand-picked essential daily cooking vegetables bundled together for family savings."
+    "desc": "Hand-picked essential daily cooking vegetables bundled together for family savings.",
+    "sku": "NA-VEG-059"
   },
   {
     "id": 60,
@@ -786,7 +845,8 @@ const PRODUCTS = [
     "img": "breast_boneless.jpg",
     "badge": "Best Seller",
     "badgeType": "badge-accent",
-    "desc": "100% tender, skinless, boneless chicken breast fillet. High protein, frozen sealed."
+    "desc": "100% tender, skinless, boneless chicken breast fillet. High protein, frozen sealed.",
+    "sku": "NA-PLT-060"
   },
   {
     "id": 61,
@@ -799,7 +859,8 @@ const PRODUCTS = [
     "img": "thigh_boneless.jpg",
     "badge": "Juiciest Cut",
     "badgeType": "badge-gold",
-    "desc": "Succulent boneless chicken thigh meat. Naturally tender and juicy."
+    "desc": "Succulent boneless chicken thigh meat. Naturally tender and juicy.",
+    "sku": "NA-PLT-061"
   },
   {
     "id": 62,
@@ -812,7 +873,8 @@ const PRODUCTS = [
     "img": "drumsticks.jpg",
     "badge": "1kg Family Pack",
     "badgeType": "",
-    "desc": "Plump, skin-on fresh chicken drumsticks in an economical 1kg pack for frying and roasting."
+    "desc": "Plump, skin-on fresh chicken drumsticks in an economical 1kg pack for frying and roasting.",
+    "sku": "NA-PLT-062"
   },
   {
     "id": 63,
@@ -825,7 +887,8 @@ const PRODUCTS = [
     "img": "wings.jpg",
     "badge": "1kg Wings",
     "badgeType": "",
-    "desc": "Freshly portioned two-joint chicken wings. Great for glazed wings and BBQ platters."
+    "desc": "Freshly portioned two-joint chicken wings. Great for glazed wings and BBQ platters.",
+    "sku": "NA-PLT-063"
   },
   {
     "id": 64,
@@ -838,7 +901,8 @@ const PRODUCTS = [
     "img": "full_leg_boneless.jpg",
     "badge": "Chef Choice",
     "badgeType": "badge-gold",
-    "desc": "Thigh and drumstick combined, deboned and trimmed with precision for steaks."
+    "desc": "Thigh and drumstick combined, deboned and trimmed with precision for steaks.",
+    "sku": "NA-PLT-064"
   },
   {
     "id": 65,
@@ -851,7 +915,8 @@ const PRODUCTS = [
     "img": "full_leg.jpg",
     "badge": "Classic Cut",
     "badgeType": "",
-    "desc": "Whole chicken leg quarters (thigh + drumstick). Perfect for oven roasting and biryani."
+    "desc": "Whole chicken leg quarters (thigh + drumstick). Perfect for oven roasting and biryani.",
+    "sku": "NA-PLT-065"
   },
   {
     "id": 66,
@@ -864,7 +929,8 @@ const PRODUCTS = [
     "img": "whole_broiler.jpg",
     "badge": "Twin Birds",
     "badgeType": "badge-accent",
-    "desc": "Farm-fresh cleaned broiler chicken with natural skin for enhanced moisture during cooking."
+    "desc": "Farm-fresh cleaned broiler chicken with natural skin for enhanced moisture during cooking.",
+    "sku": "NA-PLT-066"
   },
   {
     "id": 67,
@@ -877,7 +943,8 @@ const PRODUCTS = [
     "img": "whole_chicken_skinless.jpg",
     "badge": "Clean Cut",
     "badgeType": "",
-    "desc": "Hygienically skinned and dressed whole chickens. Trimmed of excess fat."
+    "desc": "Hygienically skinned and dressed whole chickens. Trimmed of excess fat.",
+    "sku": "NA-PLT-067"
   },
   {
     "id": 68,
@@ -890,7 +957,8 @@ const PRODUCTS = [
     "img": "sonali_chicken.jpg",
     "badge": "Heritage Breed",
     "badgeType": "badge-gold",
-    "desc": "Firm indigenous crossbreed chicken. Deshi-like aromatic taste for roast and rezala."
+    "desc": "Firm indigenous crossbreed chicken. Deshi-like aromatic taste for roast and rezala.",
+    "sku": "NA-PLT-068"
   },
   {
     "id": 69,
@@ -903,7 +971,8 @@ const PRODUCTS = [
     "img": "sonali_chicken.jpg",
     "badge": "Family Feast",
     "badgeType": "",
-    "desc": "Fully mature farm-reared Sonali birds for rich slow-cooked curry feasts."
+    "desc": "Fully mature farm-reared Sonali birds for rich slow-cooked curry feasts.",
+    "sku": "NA-PLT-069"
   },
   {
     "id": 70,
@@ -916,7 +985,8 @@ const PRODUCTS = [
     "img": "deshi_duck.jpg",
     "badge": "Village Fresh",
     "badgeType": "badge-gold",
-    "desc": "Locally raised farm duck from Haor wetlands. Rich, savory dark meat for bhuna."
+    "desc": "Locally raised farm duck from Haor wetlands. Rich, savory dark meat for bhuna.",
+    "sku": "NA-PLT-070"
   },
   {
     "id": 71,
@@ -929,7 +999,8 @@ const PRODUCTS = [
     "img": "deshi_duck.jpg",
     "badge": "Winter Special",
     "badgeType": "badge-accent",
-    "desc": "Large Haor duck with rich natural fat layer for authentic duck bhuna."
+    "desc": "Large Haor duck with rich natural fat layer for authentic duck bhuna.",
+    "sku": "NA-PLT-071"
   },
   {
     "id": 72,
@@ -942,7 +1013,8 @@ const PRODUCTS = [
     "img": "deshi_chicken.jpg",
     "badge": "Traditional",
     "badgeType": "",
-    "desc": "Free-range local deshi chickens with deep natural meat aroma for home-style broth."
+    "desc": "Free-range local deshi chickens with deep natural meat aroma for home-style broth.",
+    "sku": "NA-PLT-072"
   },
   {
     "id": 73,
@@ -955,7 +1027,8 @@ const PRODUCTS = [
     "img": "deshi_chicken.jpg",
     "badge": "100% Organic",
     "badgeType": "badge-accent",
-    "desc": "Raised purely on organic greens and natural grains. Zero commercial feeds."
+    "desc": "Raised purely on organic greens and natural grains. Zero commercial feeds.",
+    "sku": "NA-PLT-073"
   },
   {
     "id": 74,
@@ -968,7 +1041,8 @@ const PRODUCTS = [
     "img": "quail.jpg",
     "badge": "8 pcs Value",
     "badgeType": "",
-    "desc": "Family value pack of 8 skinless, fully dressed tender quail birds. Nutrient-dense delicacy."
+    "desc": "Family value pack of 8 skinless, fully dressed tender quail birds. Nutrient-dense delicacy.",
+    "sku": "NA-PLT-074"
   },
   {
     "id": 75,
@@ -981,7 +1055,8 @@ const PRODUCTS = [
     "img": "pigeon.jpg",
     "badge": "Health Broth",
     "badgeType": "",
-    "desc": "Clean dressed squab/pigeon pack of 4 birds for vitality and traditional healing broths."
+    "desc": "Clean dressed squab/pigeon pack of 4 birds for vitality and traditional healing broths.",
+    "sku": "NA-PLT-075"
   },
   {
     "id": 76,
@@ -994,7 +1069,8 @@ const PRODUCTS = [
     "img": "liver.jpg",
     "badge": "Cleaned",
     "badgeType": "",
-    "desc": "Washed and cleaned fresh chicken liver and gizzard. High iron."
+    "desc": "Washed and cleaned fresh chicken liver and gizzard. High iron.",
+    "sku": "NA-PLT-076"
   },
   {
     "id": 77,
@@ -1007,7 +1083,8 @@ const PRODUCTS = [
     "img": "chicken_feet.jpg",
     "badge": "Collagen Rich",
     "badgeType": "",
-    "desc": "Cleaned and peeled chicken feet for rich natural bone broth."
+    "desc": "Cleaned and peeled chicken feet for rich natural bone broth.",
+    "sku": "NA-PLT-077"
   },
   {
     "id": 78,
@@ -1020,7 +1097,8 @@ const PRODUCTS = [
     "img": "chicken_broth.jpg",
     "badge": "2kg Stock",
     "badgeType": "",
-    "desc": "Chicken back and neck bones for clear broth, ramen stock, and baby food."
+    "desc": "Chicken back and neck bones for clear broth, ramen stock, and baby food.",
+    "sku": "NA-PLT-078"
   },
   {
     "id": 79,
@@ -1033,7 +1111,8 @@ const PRODUCTS = [
     "img": "bologna.jpg",
     "badge": "Jumbo Loaf",
     "badgeType": "badge-gold",
-    "desc": "Premium seasoned chicken cold-cut loaf. Slice thin for sandwiches."
+    "desc": "Premium seasoned chicken cold-cut loaf. Slice thin for sandwiches.",
+    "sku": "NA-FRZ-079"
   },
   {
     "id": 80,
@@ -1046,7 +1125,8 @@ const PRODUCTS = [
     "img": "samosa.jpg",
     "badge": "Save ৳30",
     "badgeType": "badge-accent",
-    "desc": "Party pack of 20 crispy chicken samosas. Deep fry or air fry straight from frozen."
+    "desc": "Party pack of 20 crispy chicken samosas. Deep fry or air fry straight from frozen.",
+    "sku": "NA-FRZ-080"
   },
   {
     "id": 81,
@@ -1059,7 +1139,8 @@ const PRODUCTS = [
     "img": "spring_roll.jpg",
     "badge": "Family Pack",
     "badgeType": "",
-    "desc": "Value bundle of 20 crunchy chicken spring rolls for evening snacks."
+    "desc": "Value bundle of 20 crunchy chicken spring rolls for evening snacks.",
+    "sku": "NA-FRZ-081"
   },
   {
     "id": 82,
@@ -1072,7 +1153,8 @@ const PRODUCTS = [
     "img": "sausage.jpg",
     "badge": "20 pcs Jumbo",
     "badgeType": "",
-    "desc": "Lightly smoked chicken sausage links in a 20-piece family breakfast pack."
+    "desc": "Lightly smoked chicken sausage links in a 20-piece family breakfast pack.",
+    "sku": "NA-FRZ-082"
   },
   {
     "id": 83,
@@ -1085,7 +1167,8 @@ const PRODUCTS = [
     "img": "sausage.jpg",
     "badge": "Cheese Burst",
     "badgeType": "badge-gold",
-    "desc": "Chicken sausage infused with melty mozzarella and cheddar cheese chunks."
+    "desc": "Chicken sausage infused with melty mozzarella and cheddar cheese chunks.",
+    "sku": "NA-FRZ-083"
   },
   {
     "id": 84,
@@ -1098,7 +1181,8 @@ const PRODUCTS = [
     "img": "nuggets.jpg",
     "badge": "Best Value",
     "badgeType": "badge-accent",
-    "desc": "Mega box of 24 chicken nuggets. 100% pure chicken breast in golden breadcrumbs."
+    "desc": "Mega box of 24 chicken nuggets. 100% pure chicken breast in golden breadcrumbs.",
+    "sku": "NA-FRZ-084"
   },
   {
     "id": 85,
@@ -1111,7 +1195,8 @@ const PRODUCTS = [
     "img": "meatball.jpg",
     "badge": "40 pcs Value",
     "badgeType": "",
-    "desc": "Juicy seasoned chicken meatballs for pasta, soup, and sweet-sour glaze."
+    "desc": "Juicy seasoned chicken meatballs for pasta, soup, and sweet-sour glaze.",
+    "sku": "NA-FRZ-085"
   },
   {
     "id": 86,
@@ -1124,7 +1209,8 @@ const PRODUCTS = [
     "img": "chicken_popcorn.jpg",
     "badge": "Crunchy",
     "badgeType": "badge-accent",
-    "desc": "Bite-sized chicken breast chunks in ultra-crispy southern spiced batter."
+    "desc": "Bite-sized chicken breast chunks in ultra-crispy southern spiced batter.",
+    "sku": "NA-FRZ-086"
   },
   {
     "id": 87,
@@ -1137,7 +1223,8 @@ const PRODUCTS = [
     "img": "burger_patty.jpg",
     "badge": "12 Patties",
     "badgeType": "badge-gold",
-    "desc": "Thick juicy seasoned minced chicken patties. Pan-fry in 3 minutes for burgers."
+    "desc": "Thick juicy seasoned minced chicken patties. Pan-fry in 3 minutes for burgers.",
+    "sku": "NA-FRZ-087"
   },
   {
     "id": 88,
@@ -1150,7 +1237,8 @@ const PRODUCTS = [
     "img": "shami_kabab.jpg",
     "badge": "Traditional",
     "badgeType": "",
-    "desc": "Slow-cooked shredded chicken with chana daal and aromatic spices in a 12-pack."
+    "desc": "Slow-cooked shredded chicken with chana daal and aromatic spices in a 12-pack.",
+    "sku": "NA-FRZ-088"
   },
   {
     "id": 89,
@@ -1163,7 +1251,8 @@ const PRODUCTS = [
     "img": "seekh_kabab.jpg",
     "badge": "Mughlai",
     "badgeType": "badge-gold",
-    "desc": "Minced chicken skewers blended with mint, coriander, and roasted spices."
+    "desc": "Minced chicken skewers blended with mint, coriander, and roasted spices.",
+    "sku": "NA-FRZ-089"
   },
   {
     "id": 90,
@@ -1176,7 +1265,8 @@ const PRODUCTS = [
     "img": "momos.jpg",
     "badge": "Tibetan Style",
     "badgeType": "badge-accent",
-    "desc": "Juicy chicken momos folded in translucent dough. Steam for 6 mins."
+    "desc": "Juicy chicken momos folded in translucent dough. Steam for 6 mins.",
+    "sku": "NA-FRZ-090"
   },
   {
     "id": 91,
@@ -1189,7 +1279,8 @@ const PRODUCTS = [
     "img": "frozen_peas.jpg",
     "badge": "1kg IQF Sweet",
     "badgeType": "badge-accent",
-    "desc": "Individually quick frozen tender green sweet peas. Ready to cook in 2 minutes."
+    "desc": "Individually quick frozen tender green sweet peas. Ready to cook in 2 minutes.",
+    "sku": "NA-FRZ-091"
   },
   {
     "id": 92,
@@ -1202,7 +1293,8 @@ const PRODUCTS = [
     "img": "sweet_corn.jpg",
     "badge": "1kg Golden Corn",
     "badgeType": "badge-gold",
-    "desc": "Juicy golden sweet corn kernels for salads, soups, and butter corn in a 1kg pack."
+    "desc": "Juicy golden sweet corn kernels for salads, soups, and butter corn in a 1kg pack.",
+    "sku": "NA-FRZ-092"
   },
   {
     "id": 93,
@@ -1215,7 +1307,8 @@ const PRODUCTS = [
     "img": "mixed_veg.jpg",
     "badge": "1kg Healthy Mix",
     "badgeType": "",
-    "desc": "Diced carrots, sweet corn, green peas, and green beans flash-frozen for fried rice."
+    "desc": "Diced carrots, sweet corn, green peas, and green beans flash-frozen for fried rice.",
+    "sku": "NA-FRZ-093"
   },
   {
     "id": 94,
@@ -1228,7 +1321,8 @@ const PRODUCTS = [
     "img": "french_fries.jpg",
     "badge": "2kg Jumbo Fries",
     "badgeType": "badge-accent",
-    "desc": "Crispy crinkle cut potato fries. Fry straight from freezer for 3 minutes."
+    "desc": "Crispy crinkle cut potato fries. Fry straight from freezer for 3 minutes.",
+    "sku": "NA-FRZ-094"
   },
   {
     "id": 95,
@@ -1241,7 +1335,8 @@ const PRODUCTS = [
     "img": "hash_browns.jpg",
     "badge": "12 pcs Breakfast",
     "badgeType": "",
-    "desc": "Shredded potato patties seasoned for golden pan-frying in a 12-piece pack."
+    "desc": "Shredded potato patties seasoned for golden pan-frying in a 12-piece pack.",
+    "sku": "NA-FRZ-095"
   },
   {
     "id": 96,
@@ -1254,7 +1349,8 @@ const PRODUCTS = [
     "img": "mutton_curry_cut.jpg",
     "badge": "100% Khashi",
     "badgeType": "badge-accent",
-    "desc": "Authentic young male castrated goat (Khashi). Mild aroma, succulent meat for rezala."
+    "desc": "Authentic young male castrated goat (Khashi). Mild aroma, succulent meat for rezala.",
+    "sku": "NA-MTN-096"
   },
   {
     "id": 97,
@@ -1267,7 +1363,8 @@ const PRODUCTS = [
     "img": "mutton_boneless.jpg",
     "badge": "Solid Khashi",
     "badgeType": "badge-gold",
-    "desc": "Pure deboned mutton pieces. Perfect for Mutton Biryani, Korma, and Haleem."
+    "desc": "Pure deboned mutton pieces. Perfect for Mutton Biryani, Korma, and Haleem.",
+    "sku": "NA-MTN-097"
   },
   {
     "id": 98,
@@ -1280,7 +1377,8 @@ const PRODUCTS = [
     "img": "mutton_leg_raan.jpg",
     "badge": "Raan Roast",
     "badgeType": "badge-gold",
-    "desc": "Whole goat leg quarter trimmed and scored for traditional slow roasted Raan Mussallam."
+    "desc": "Whole goat leg quarter trimmed and scored for traditional slow roasted Raan Mussallam.",
+    "sku": "NA-MTN-098"
   },
   {
     "id": 99,
@@ -1293,7 +1391,8 @@ const PRODUCTS = [
     "img": "mutton_chops.jpg",
     "badge": "Mutton Chops",
     "badgeType": "",
-    "desc": "Rib chop cuts with tender meat and rib bone. Marinate and pan sear with spices."
+    "desc": "Rib chop cuts with tender meat and rib bone. Marinate and pan sear with spices.",
+    "sku": "NA-MTN-099"
   },
   {
     "id": 100,
@@ -1306,7 +1405,8 @@ const PRODUCTS = [
     "img": "mutton_keema.jpg",
     "badge": "Mutton Keema",
     "badgeType": "",
-    "desc": "Fine minced fresh goat meat. Unbeatable rich aroma for keema matar and kofta."
+    "desc": "Fine minced fresh goat meat. Unbeatable rich aroma for keema matar and kofta.",
+    "sku": "NA-MTN-100"
   },
   {
     "id": 101,
@@ -1319,7 +1419,8 @@ const PRODUCTS = [
     "img": "mutton_paya.jpg",
     "badge": "Khashi Paya",
     "badgeType": "badge-gold",
-    "desc": "Carefully dressed young goat trotters for winter morning paya and naan in an 8-pack."
+    "desc": "Carefully dressed young goat trotters for winter morning paya and naan in an 8-pack.",
+    "sku": "NA-MTN-101"
   }
 ];
 
@@ -1384,7 +1485,7 @@ function renderProductCatalog() {
         </div>
 
         <div class="product-body-info">
-          <span class="product-cat-label">${item.catLabel}</span>
+          <div class="product-header-meta"><span class="product-cat-label">${item.catLabel}</span><span class="product-sku-badge">${item.sku}</span></div>
           <h3 class="product-item-title" onclick="openProductModal(${item.id})">${displayName}</h3>
           <p class="product-item-desc">${item.desc}</p>
           <div class="product-pack-spec">
